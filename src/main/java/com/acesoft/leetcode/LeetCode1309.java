@@ -41,39 +41,39 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1309 {
 
-    // Optimal solution
-    public static String freqAlphabets(String s) {
-        int i, index;
-        String map = "#abcdefghijklmnopqrstuvwxyz";
-        StringBuilder sb = new StringBuilder();
-        for (i = 0; i < s.length();) {
-            if (i + 2 < s.length() && s.charAt(i + 2) == '#') {
-                index = Integer.parseInt(s.substring(i, i + 2));
-                i = i + 3;
-            } else {
-                index = Character.getNumericValue(s.charAt(i++));
-            }
-            sb.append(map.charAt(index));
-        }
-        return sb.toString();
-    }
+	// Optimal solution
+	public static String freqAlphabets(String s) {
+		int i, index;
+		String map = "#abcdefghijklmnopqrstuvwxyz";
+		StringBuilder sb = new StringBuilder();
+		for (i = 0; i < s.length();) {
+			if (i + 2 < s.length() && s.charAt(i + 2) == '#') {
+				index = Integer.parseInt(s.substring(i, i + 2));
+				i = i + 3;
+			} else {
+				index = Character.getNumericValue(s.charAt(i++));
+			}
+			sb.append(map.charAt(index));
+		}
+		return sb.toString();
+	}
 
-    // Suboptimal solution
-    public static String freqAlphabets1(String s) {
-        char ch;
-        int i, padding;
-        String map = "#abcdefghijklmnopqrstuvwxyz";
-        StringBuilder sb = new StringBuilder();
-        for (i = s.length() - 1; i > -1; i--) {
-            ch = s.charAt(i);
-            if (ch == '#') {
-                padding = Integer.parseInt(s.substring(i - 2, i));
-                i = i - 2;
-            } else {
-                padding = Character.getNumericValue(s.charAt(i));
-            }
-            sb.insert(0, map.charAt(padding));
-        }
-        return sb.toString();
-    }
+	// Suboptimal solution
+	public static String freqAlphabets1(String s) {
+		char ch;
+		int i, padding;
+		String map = "#abcdefghijklmnopqrstuvwxyz";
+		StringBuilder sb = new StringBuilder();
+		for (i = s.length() - 1; i > -1; i--) {
+			ch = s.charAt(i);
+			if (ch == '#') {
+				padding = Integer.parseInt(s.substring(i - 2, i));
+				i = i - 2;
+			} else {
+				padding = Character.getNumericValue(s.charAt(i));
+			}
+			sb.insert(0, map.charAt(padding));
+		}
+		return sb.toString();
+	}
 }

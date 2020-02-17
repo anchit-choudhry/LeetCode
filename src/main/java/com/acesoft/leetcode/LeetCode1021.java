@@ -48,42 +48,42 @@ import java.util.Stack;
  */
 public class LeetCode1021 {
 
-    public String removeOuterParentheses(String S) {
-        int open = 0;
-        StringBuilder sb = new StringBuilder();
-        for (char ch : S.toCharArray()) {
-            if (ch == '(' && open++ > 0) {
-                sb.append(ch);
-            } else if (ch == ')' && --open > 0) {
-                sb.append(ch);
-            }
-        }
-        return sb.toString();
-    }
+	public String removeOuterParentheses(String S) {
+		int open = 0;
+		StringBuilder sb = new StringBuilder();
+		for (char ch : S.toCharArray()) {
+			if (ch == '(' && open++ > 0) {
+				sb.append(ch);
+			} else if (ch == ')' && --open > 0) {
+				sb.append(ch);
+			}
+		}
+		return sb.toString();
+	}
 
-    // Naive solution
-    public String removeOuterParentheses1(String S) {
-        Stack<Character> st = new Stack<>();
-        StringBuilder sb = new StringBuilder();
-        boolean wasEmpty;
-        for (char ch : S.toCharArray()) {
-            wasEmpty = st.empty();
-            if (ch == '(') {
-                st.push(ch);
-                if (wasEmpty) {
-                    continue;
-                }
-            } else {
-                if (wasEmpty) {
-                    continue;
-                }
-                st.pop();
-                if (st.empty()) {
-                    continue;
-                }
-            }
-            sb.append(ch);
-        }
-        return sb.toString();
-    }
+	// Naive solution
+	public String removeOuterParentheses1(String S) {
+		Stack<Character> st = new Stack<>();
+		StringBuilder sb = new StringBuilder();
+		boolean wasEmpty;
+		for (char ch : S.toCharArray()) {
+			wasEmpty = st.empty();
+			if (ch == '(') {
+				st.push(ch);
+				if (wasEmpty) {
+					continue;
+				}
+			} else {
+				if (wasEmpty) {
+					continue;
+				}
+				st.pop();
+				if (st.empty()) {
+					continue;
+				}
+			}
+			sb.append(ch);
+		}
+		return sb.toString();
+	}
 }

@@ -27,21 +27,21 @@ import java.util.Arrays;
  *  1 <= nums[i] <= 100
  */
 public class LeetCode1313 {
-    public int[] decompressRLElist(int[] nums) {
-        int i, count = 0;
-        for (i = 0; i < nums.length; i = i + 2) {
-            count += nums[i];
-        }
-        int[] arr = new int[count];
-        count = 0;
-        for (i = 0; i < nums.length; i = i + 2) {
-            // Should use below for optimal solution
-            Arrays.fill(arr, count, count += nums[i], nums[i + 1]);
-            /* Sub optimal solution
-            for (j = 0; j < nums[i]; j++) {
-                arr[count++] = nums[i + 1];
-            } */
-        }
-        return arr;
-    }
+	public int[] decompressRLElist(int[] nums) {
+		int i, count = 0;
+		for (i = 0; i < nums.length; i = i + 2) {
+			count += nums[i];
+		}
+		int[] arr = new int[count];
+		count = 0;
+		for (i = 0; i < nums.length; i = i + 2) {
+			// Should use below for optimal solution
+			Arrays.fill(arr, count, count += nums[i], nums[i + 1]);
+			/*
+			 * Sub optimal solution for (j = 0; j < nums[i]; j++) { arr[count++] = nums[i +
+			 * 1]; }
+			 */
+		}
+		return arr;
+	}
 }

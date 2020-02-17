@@ -40,14 +40,14 @@ import java.util.Set;
  */
 public class LeetCode1346 {
 
-    public boolean checkIfExist(int[] arr) {
-        Set<Integer> hs = new HashSet<>();
-        for (int num : arr) {
-            if (hs.contains(num * 2) || (hs.contains(num / 2) && num % 2 == 0)) {
-                return true;
-            }
-            hs.add(num);
-        }
-        return false;
-    }
+	public boolean checkIfExist(int[] arr) {
+		Set<Integer> hs = new HashSet<>();
+		for (int num : arr) {
+			if (hs.contains(num * 2) || (hs.contains(num / 2) && num % 2 == 0)) {
+				return true;
+			}
+			hs.add(num);
+		}
+		return false;
+	}
 }

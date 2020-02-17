@@ -37,57 +37,57 @@ import java.util.Map;
  *  1 <= num <= 10^4
  *  num's digits are 6 or 9.
  */
-public class Leetcode1323 {
+public class LeetCode1323 {
 
-    public int maximum69Number(int num) {
-        int maxNum = num, i = 0, pos = -1;
-        while (maxNum > 0) {
-            if (maxNum % 10 == 6) {
-                pos = i;
-            }
-            maxNum /= 10;
-            i++;
-        }
-        return pos > -1 ? 3 * (int) Math.pow(10, pos) + num : num;
-    }
+	public int maximum69Number(int num) {
+		int maxNum = num, i = 0, pos = -1;
+		while (maxNum > 0) {
+			if (maxNum % 10 == 6) {
+				pos = i;
+			}
+			maxNum /= 10;
+			i++;
+		}
+		return pos > -1 ? 3 * (int) Math.pow(10, pos) + num : num;
+	}
 
-    // Dumbest solution
-    public int maximum69Number1(int num) {
-        Map<Integer, Integer> hs = new HashMap<Integer, Integer>() {
-            private static final long serialVersionUID = 1L;
-            {
-                put(6, 9);
-                put(9, 9);
-                put(66, 96);
-                put(69, 99);
-                put(96, 99);
-                put(99, 99);
-                put(666, 966);
-                put(669, 969);
-                put(696, 996);
-                put(699, 999);
-                put(966, 996);
-                put(969, 999);
-                put(996, 999);
-                put(999, 999);
-                put(6666, 9666);
-                put(6669, 9669);
-                put(6696, 9696);
-                put(6699, 9699);
-                put(6966, 9966);
-                put(6969, 9969);
-                put(6996, 9996);
-                put(6999, 9999);
-                put(9666, 9966);
-                put(9669, 9969);
-                put(9696, 9996);
-                put(9699, 9999);
-                put(9966, 9996);
-                put(9969, 9999);
-                put(9996, 9999);
-                put(9999, 9999);
-            }
-        };
-        return hs.get(num);
-    }
+	// Dumbest solution
+	public int maximum69Number1(int num) {
+		Map<Integer, Integer> hs = new HashMap<Integer, Integer>() {
+			private static final long serialVersionUID = 1L;
+			{
+				put(6, 9);
+				put(9, 9);
+				put(66, 96);
+				put(69, 99);
+				put(96, 99);
+				put(99, 99);
+				put(666, 966);
+				put(669, 969);
+				put(696, 996);
+				put(699, 999);
+				put(966, 996);
+				put(969, 999);
+				put(996, 999);
+				put(999, 999);
+				put(6666, 9666);
+				put(6669, 9669);
+				put(6696, 9696);
+				put(6699, 9699);
+				put(6966, 9966);
+				put(6969, 9969);
+				put(6996, 9996);
+				put(6999, 9999);
+				put(9666, 9966);
+				put(9669, 9969);
+				put(9696, 9996);
+				put(9699, 9999);
+				put(9966, 9996);
+				put(9969, 9999);
+				put(9996, 9999);
+				put(9999, 9999);
+			}
+		};
+		return hs.get(num);
+	}
 }
