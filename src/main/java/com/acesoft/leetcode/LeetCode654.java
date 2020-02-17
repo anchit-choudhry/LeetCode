@@ -29,28 +29,28 @@ import com.acesoft.model.TreeNode;
  */
 public class LeetCode654 {
 
-	/* Naive solution using recursion */
-	public TreeNode constructMaximumBinaryTree(int[] nums) {
-		return returnMaxBinTree(nums, 0, nums.length, null);
-	}
+    /* Naive solution using recursion */
+    public TreeNode constructMaximumBinaryTree(int[] nums) {
+        return returnMaxBinTree(nums, 0, nums.length, null);
+    }
 
-	private TreeNode returnMaxBinTree(int[] nums, int start, int stop, TreeNode root) {
-		int i, maxIndex = -1, temp = -1;
-		for (i = start; i < stop; i++) {
-			if (temp < nums[i]) {
-				maxIndex = i;
-				temp = nums[i];
-			}
-		}
-		if (root == null && maxIndex > -1) {
-			root = new TreeNode(nums[maxIndex]);
-		}
-		if (start < maxIndex) {
-			root.setLeft(returnMaxBinTree(nums, start, maxIndex, root.getLeft()));
-		}
-		if (maxIndex + 1 < stop) {
-			root.setRight(returnMaxBinTree(nums, maxIndex + 1, stop, root.getRight()));
-		}
-		return root;
-	}
+    private TreeNode returnMaxBinTree(int[] nums, int start, int stop, TreeNode root) {
+        int i, maxIndex = -1, temp = -1;
+        for (i = start; i < stop; i++) {
+            if (temp < nums[i]) {
+                maxIndex = i;
+                temp = nums[i];
+            }
+        }
+        if (root == null && maxIndex > -1) {
+            root = new TreeNode(nums[maxIndex]);
+        }
+        if (start < maxIndex) {
+            root.setLeft(returnMaxBinTree(nums, start, maxIndex, root.getLeft()));
+        }
+        if (maxIndex + 1 < stop) {
+            root.setRight(returnMaxBinTree(nums, maxIndex + 1, stop, root.getRight()));
+        }
+        return root;
+    }
 }

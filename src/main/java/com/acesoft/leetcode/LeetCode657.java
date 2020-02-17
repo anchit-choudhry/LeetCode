@@ -20,38 +20,38 @@ package com.acesoft.leetcode;
  */
 public class LeetCode657 {
 
-	enum move {
-		D, L, R, U
-	}
+    enum move {
+        D, L, R, U
+    }
 
-	/* Naive solution */
-	public boolean judgeCircle(String moves) {
-		int[] doneMoves = new int[4];
-		for (int i = 0; i < moves.length(); i++) {
-			doneMoves[move.valueOf(String.valueOf(moves.charAt(i))).ordinal()] += 1;
-		}
-		return doneMoves[0] == doneMoves[1] && doneMoves[2] == doneMoves[3];
-	}
+    /* Naive solution */
+    public boolean judgeCircle(String moves) {
+        int[] doneMoves = new int[4];
+        for (int i = 0; i < moves.length(); i++) {
+            doneMoves[move.valueOf(String.valueOf(moves.charAt(i))).ordinal()] += 1;
+        }
+        return doneMoves[0] == doneMoves[1] && doneMoves[2] == doneMoves[3];
+    }
 
-	/* Better solution with less Space complexity */
-	public boolean judgeCircle1(String moves) {
-		int count = 0;
-		for (int i = 0; i < moves.length(); i++) {
-			switch (moves.charAt(i)) {
-			case 'U':
-				count += 2;
-				break;
-			case 'D':
-				count -= 2;
-				break;
-			case 'L':
-				count++;
-				break;
-			case 'R':
-				count--;
-				break;
-			}
-		}
-		return count == 0;
-	}
+    /* Better solution with less Space complexity */
+    public boolean judgeCircle1(String moves) {
+        int count = 0;
+        for (int i = 0; i < moves.length(); i++) {
+            switch (moves.charAt(i)) {
+                case 'U':
+                    count += 2;
+                    break;
+                case 'D':
+                    count -= 2;
+                    break;
+                case 'L':
+                    count++;
+                    break;
+                case 'R':
+                    count--;
+                    break;
+            }
+        }
+        return count == 0;
+    }
 }

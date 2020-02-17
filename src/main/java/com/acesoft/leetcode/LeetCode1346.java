@@ -14,7 +14,7 @@ import java.util.Set;
  *  i != j
  *  0 <= i, j < arr.length
  *  arr[i] == 2 * arr[j]
- * 
+ *
  *
  *  Example 1:
  *
@@ -31,7 +31,7 @@ import java.util.Set;
  *  Input: arr = [3,1,7,11]
  *  Output: false
  *  Explanation: In this case does not exist N and M, such that N = 2 * M.
- * 
+ *
  *
  *  Constraints:
  *
@@ -40,14 +40,14 @@ import java.util.Set;
  */
 public class LeetCode1346 {
 
-	public boolean checkIfExist(int[] arr) {
-		Set<Integer> hs = new HashSet<>();
-		for (int num : arr) {
-			if (hs.contains(num * 2) || (hs.contains(num / 2) && num % 2 == 0)) {
-				return true;
-			}
-			hs.add(num);
-		}
-		return false;
-	}
+    public boolean checkIfExist(int[] arr) {
+        Set<Integer> hs = new HashSet<>();
+        for (int num : arr) {
+            if (hs.contains(num * 2) || (hs.contains(num / 2) && num % 2 == 0)) {
+                return true;
+            }
+            hs.add(num);
+        }
+        return false;
+    }
 }

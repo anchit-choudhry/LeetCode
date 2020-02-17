@@ -21,12 +21,12 @@ package com.acesoft.leetcode;
  */
 public class LeetCode344 {
 
-	public void reverseString(char[] s) {
-		int i, len = s.length, temp;
-		for (i = 0; i < len / 2; i++) {
-			temp = s[i];
-			s[i] = s[len - 1 - i];
-			s[len - 1 - i] = (char) temp;
-		}
-	}
+    public void reverseString(char[] s) {
+        int i, len = s.length, temp;
+        for (i = 0; i < len / 2; i++) {
+            temp = s[i];
+            s[i] = s[len - 1 - i];
+            s[len - 1 - i] = (char) temp;
+        }
+    }
 }

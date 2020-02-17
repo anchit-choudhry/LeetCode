@@ -1,7 +1,7 @@
 package com.acesoft.leetcode;
 
 /*
- *  https://leetcode.com/problems/stone-game 
+ *  https://leetcode.com/problems/stone-game
  *
  *  Alex and Lee play a game with piles of stones.  There are an even number of piles arranged in a
  *  row, and each pile has a positive integer number of stones piles[i].
@@ -13,13 +13,13 @@ package com.acesoft.leetcode;
  *  of stones from either the beginning or the end of the row.  This continues until there are no
  *  more piles left, at which point the person with the most stones wins.
  *
- *  Assuming Alex and Lee play optimally, return True if and only if Alex wins the game.  
+ *  Assuming Alex and Lee play optimally, return True if and only if Alex wins the game.
  *
  *  Example 1:
  *
  *  Input: [5,3,4,5]
  *  Output: true
- *  Explanation: 
+ *  Explanation:
  *  Alex starts first, and can only take the first 5 or the last 5.
  *  Say he takes the first 5, so that the row becomes [3, 4, 5].
  *  If Lee takes 3, then the board is [4, 5], and Alex takes 5 to win with 10 points.
@@ -35,8 +35,8 @@ package com.acesoft.leetcode;
  */
 public class LeetCode877 {
 
-	/* Most optimal solution */
-	public boolean stoneGame(int[] piles) {
-		return true;
-	}
+    /* Most optimal solution */
+    public boolean stoneGame(int[] piles) {
+        return true;
+    }
 }

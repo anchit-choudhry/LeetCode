@@ -20,9 +20,9 @@ package com.acesoft.leetcode;
  *  Example:
  *  Input: grid = [[3,0,8,4],[2,4,5,7],[9,2,6,3],[0,3,1,0]]
  *  Output: 35
- *  Explanation: 
+ *  Explanation:
  *  The grid is:
- *  [ [3, 0, 8, 4], 
+ *  [ [3, 0, 8, 4],
  *    [2, 4, 5, 7],
  *    [9, 2, 6, 3],
  *    [0, 3, 1, 0] ]
@@ -45,36 +45,36 @@ package com.acesoft.leetcode;
  */
 public class LeetCode807 {
 
-	/*
-	 * Solution using rows^cols and DP to not calculate the max of rows and cols
-	 * every time
-	 */
-	public int maxIncreaseKeepingSkyline(int[][] grid) {
-		int rows = grid.length, cols = grid[0].length, sum = 0, temp;
-		int[] rowsMax = new int[rows], colsMax = new int[cols];
-		for (int i = 0; i < rows; i++) {
-			for (int j = 0; j < cols; j++) {
-				if (rowsMax[i] == 0) {
-					temp = -1;
-					for (int k = 0; k < cols; k++) {
-						if (grid[i][k] >= temp) {
-							temp = grid[i][k];
-						}
-					}
-					rowsMax[i] = temp;
-				}
-				if (colsMax[j] == 0) {
-					temp = -1;
-					for (int[] ints : grid) {
-						if (ints[j] >= temp) {
-							temp = ints[j];
-						}
-					}
-					colsMax[j] = temp;
-				}
-				sum += (Math.min(colsMax[j], rowsMax[i])) - grid[i][j];
-			}
-		}
-		return sum;
-	}
+    /*
+     * Solution using rows^cols and DP to not calculate the max of rows and cols
+     * every time
+     */
+    public int maxIncreaseKeepingSkyline(int[][] grid) {
+        int rows = grid.length, cols = grid[0].length, sum = 0, temp;
+        int[] rowsMax = new int[rows], colsMax = new int[cols];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (rowsMax[i] == 0) {
+                    temp = -1;
+                    for (int k = 0; k < cols; k++) {
+                        if (grid[i][k] >= temp) {
+                            temp = grid[i][k];
+                        }
+                    }
+                    rowsMax[i] = temp;
+                }
+                if (colsMax[j] == 0) {
+                    temp = -1;
+                    for (int[] ints : grid) {
+                        if (ints[j] >= temp) {
+                            temp = ints[j];
+                        }
+                    }
+                    colsMax[j] = temp;
+                }
+                sum += (Math.min(colsMax[j], rowsMax[i])) - grid[i][j];
+            }
+        }
+        return sum;
+    }
 }

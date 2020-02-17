@@ -26,28 +26,28 @@ import java.util.Set;
  */
 public class LeetCode217 {
 
-	// Naive solution
-	public boolean containsDuplicate(int[] nums) {
-		int i;
-		Set<Integer> num = new HashSet<>();
-		for (i = 0; i < nums.length; i++) {
-			if (num.contains(nums[i])) {
-				return true;
-			}
-			num.add(nums[i]);
-		}
-		return false;
-	}
+    // Naive solution
+    public boolean containsDuplicate(int[] nums) {
+        int i;
+        Set<Integer> num = new HashSet<>();
+        for (i = 0; i < nums.length; i++) {
+            if (num.contains(nums[i])) {
+                return true;
+            }
+            num.add(nums[i]);
+        }
+        return false;
+    }
 
-	// Optimal solution
-	public boolean containsDuplicate1(int[] nums) {
-		int i;
-		Set<Integer> num = new HashSet<>();
-		for (i = 0; i < nums.length; i++) {
-			if (!num.add(nums[i])) {
-				return true;
-			}
-		}
-		return false;
-	}
+    // Optimal solution
+    public boolean containsDuplicate1(int[] nums) {
+        int i;
+        Set<Integer> num = new HashSet<>();
+        for (i = 0; i < nums.length; i++) {
+            if (!num.add(nums[i])) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

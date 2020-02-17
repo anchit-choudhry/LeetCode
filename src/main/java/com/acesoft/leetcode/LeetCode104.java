@@ -25,19 +25,19 @@ import com.acesoft.model.TreeNode;
  */
 public class LeetCode104 {
 
-	public int maxDep(TreeNode root, int count) {
-		if (root == null) {
-			return 0;
-		}
-		if (root.getLeft() == null && root.getRight() == null) {
-			return count;
-		}
-		int left = maxDep(root.getLeft(), count + 1);
-		int right = maxDep(root.getRight(), count + 1);
-		return Math.max(left, right);
-	}
+    public int maxDep(TreeNode root, int count) {
+        if (root == null) {
+            return 0;
+        }
+        if (root.getLeft() == null && root.getRight() == null) {
+            return count;
+        }
+        int left = maxDep(root.getLeft(), count + 1);
+        int right = maxDep(root.getRight(), count + 1);
+        return Math.max(left, right);
+    }
 
-	public int maxDepth(TreeNode root) {
-		return maxDep(root, 1);
-	}
+    public int maxDepth(TreeNode root) {
+        return maxDep(root, 1);
+    }
 }

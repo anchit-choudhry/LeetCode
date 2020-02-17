@@ -11,7 +11,7 @@ package com.acesoft.leetcode;
  *  Returns the product of the last k numbers in the current list.
  *  You can assume that always the current list has at least k numbers.
  *  At any time, the product of any contiguous sequence of numbers will fit into a single 32-bit
- *  integer without overflowing. 
+ *  integer without overflowing.
  *
  *  Example:
  *
@@ -33,8 +33,8 @@ package com.acesoft.leetcode;
  *  productOfNumbers.getProduct(3); // return 40. The product of the last 3 numbers is 2 * 5 * 4 = 40
  *  productOfNumbers.getProduct(4); // return 0. The product of the last 4 numbers is 0 * 2 * 5 * 4 = 0
  *  productOfNumbers.add(8);        // [3,0,2,5,4,8]
- *  productOfNumbers.getProduct(2); // return 32. The product of the last 2 numbers is 4 * 8 = 32 
- * 
+ *  productOfNumbers.getProduct(2); // return 32. The product of the last 2 numbers is 4 * 8 = 32
+ *
  *  Constraints:
  *
  *  There will be at most 40000 operations considering both add and getProduct.
@@ -43,30 +43,30 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1352 {
 
-	static class ProductOfNumbers {
+    static class ProductOfNumbers {
 
-		public int[] arr;
-		public int count;
+        public int[] arr;
+        public int count;
 
-		public ProductOfNumbers() {
-			arr = new int[40000];
-			count = 0;
-		}
+        public ProductOfNumbers() {
+            arr = new int[40000];
+            count = 0;
+        }
 
-		public void add(int num) {
-			arr[count++] = num;
-		}
+        public void add(int num) {
+            arr[count++] = num;
+        }
 
-		public int getProduct(int k) {
-			if (k > count) {
-				return -1;
-			}
-			int product = 1, i = 0;
-			while (k-- > 0) {
-				product *= arr[count - ++i];
-			}
-			return product;
-		}
-	}
+        public int getProduct(int k) {
+            if (k > count) {
+                return -1;
+            }
+            int product = 1, i = 0;
+            while (k-- > 0) {
+                product *= arr[count - ++i];
+            }
+            return product;
+        }
+    }
 
 }

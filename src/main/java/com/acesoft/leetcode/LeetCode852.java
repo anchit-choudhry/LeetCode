@@ -25,48 +25,48 @@ package com.acesoft.leetcode;
  */
 public class LeetCode852 {
 
-	private boolean checkAllElemsLess(int[] A, int start, int stop, int num) {
-		if (start < 0 || start >= stop) {
-			return true;
-		}
-		for (int i = start; i < stop; i++) {
-			if (A[i] > num) {
-				return false;
-			}
-		}
-		return true;
-	}
+    private boolean checkAllElemsLess(int[] A, int start, int stop, int num) {
+        if (start < 0 || start >= stop) {
+            return true;
+        }
+        for (int i = start; i < stop; i++) {
+            if (A[i] > num) {
+                return false;
+            }
+        }
+        return true;
+    }
 
-	/* Naive solution */
-	public int peakIndexInMountainArray(int[] A) {
-		for (int i = 0; i < A.length; i++) {
-			if (checkAllElemsLess(A, i - 1, i, A[i]) && checkAllElemsLess(A, i + 1, A.length, A[i])) {
-				return i;
-			}
-		}
-		return -1;
-	}
+    /* Naive solution */
+    public int peakIndexInMountainArray(int[] A) {
+        for (int i = 0; i < A.length; i++) {
+            if (checkAllElemsLess(A, i - 1, i, A[i]) && checkAllElemsLess(A, i + 1, A.length, A[i])) {
+                return i;
+            }
+        }
+        return -1;
+    }
 
-	/* Optimal solution using O(N) */
-	public int peakIndexInMountainArray1(int[] A) {
-		int i = 0;
-		while (A[i] < A[i + 1]) {
-			i++;
-		}
-		return i;
-	}
+    /* Optimal solution using O(N) */
+    public int peakIndexInMountainArray1(int[] A) {
+        int i = 0;
+        while (A[i] < A[i + 1]) {
+            i++;
+        }
+        return i;
+    }
 
-	/* Most optimal solution using Binary Search O(log N) */
-	public int peakIndexInMountainArray2(int[] A) {
-		int low = 0, mid, high = A.length - 1;
-		while (low < high) {
-			mid = low + (high - low) / 2;
-			if (A[mid] < A[mid + 1]) {
-				low = mid + 1;
-			} else {
-				high = mid;
-			}
-		}
-		return low;
-	}
+    /* Most optimal solution using Binary Search O(log N) */
+    public int peakIndexInMountainArray2(int[] A) {
+        int low = 0, mid, high = A.length - 1;
+        while (low < high) {
+            mid = low + (high - low) / 2;
+            if (A[mid] < A[mid + 1]) {
+                low = mid + 1;
+            } else {
+                high = mid;
+            }
+        }
+        return low;
+    }
 }

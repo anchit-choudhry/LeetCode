@@ -11,7 +11,7 @@ import java.util.Arrays;
  *  For each such pair, there are a elements with value b in the decompressed list.
  *
  *  Return the decompressed list.
- * 
+ *
  *  Example 1:
  *
  *  Input: nums = [1,2,3,4]
@@ -27,21 +27,21 @@ import java.util.Arrays;
  *  1 <= nums[i] <= 100
  */
 public class LeetCode1313 {
-	public int[] decompressRLElist(int[] nums) {
-		int i, count = 0;
-		for (i = 0; i < nums.length; i = i + 2) {
-			count += nums[i];
-		}
-		int[] arr = new int[count];
-		count = 0;
-		for (i = 0; i < nums.length; i = i + 2) {
-			// Should use below for optimal solution
-			Arrays.fill(arr, count, count += nums[i], nums[i + 1]);
-			/*
-			 * Sub optimal solution for (j = 0; j < nums[i]; j++) { arr[count++] = nums[i +
-			 * 1]; }
-			 */
-		}
-		return arr;
-	}
+    public int[] decompressRLElist(int[] nums) {
+        int i, count = 0;
+        for (i = 0; i < nums.length; i = i + 2) {
+            count += nums[i];
+        }
+        int[] arr = new int[count];
+        count = 0;
+        for (i = 0; i < nums.length; i = i + 2) {
+            // Should use below for optimal solution
+            Arrays.fill(arr, count, count += nums[i], nums[i + 1]);
+            /*
+             * Sub optimal solution for (j = 0; j < nums[i]; j++) { arr[count++] = nums[i +
+             * 1]; }
+             */
+        }
+        return arr;
+    }
 }

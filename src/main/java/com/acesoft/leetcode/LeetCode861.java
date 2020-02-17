@@ -30,30 +30,30 @@ package com.acesoft.leetcode;
  *  A[i][j] is 0 or 1
  */
 public class LeetCode861 {
-	public static void main(String[] args) {
-		int[][] matrix = new int[][] { { 0, 0, 1, 1 }, { 1, 0, 1, 0 }, { 1, 1, 0, 0 } };
-		new LeetCode861().matrixScore(matrix);
-	}
+    public static void main(String[] args) {
+        int[][] matrix = new int[][]{{0, 0, 1, 1}, {1, 0, 1, 0}, {1, 1, 0, 0}};
+        new LeetCode861().matrixScore(matrix);
+    }
 
-	public int matrixScore(int[][] A) {
-		if (A.length < 1) {
-			return 0;
-		}
-		int sum = 0;
-		for (int i = 0; i < A.length; i++) {
-			if (A[i][0] == 1) {
-				continue;
-			}
-			for (int j = 0; j < A[i].length; j++) {
-				A[i][j] = A[i][j] == 0 ? 1 : 0;
-			}
-		}
-		for (int[] ints : A) {
-			for (int anInt : ints) {
-				System.out.print(anInt + " ");
-			}
-			System.out.println();
-		}
-		return sum;
-	}
+    public int matrixScore(int[][] A) {
+        if (A.length < 1) {
+            return 0;
+        }
+        int sum = 0;
+        for (int i = 0; i < A.length; i++) {
+            if (A[i][0] == 1) {
+                continue;
+            }
+            for (int j = 0; j < A[i].length; j++) {
+                A[i][j] = A[i][j] == 0 ? 1 : 0;
+            }
+        }
+        for (int[] ints : A) {
+            for (int anInt : ints) {
+                System.out.print(anInt + " ");
+            }
+            System.out.println();
+        }
+        return sum;
+    }
 }

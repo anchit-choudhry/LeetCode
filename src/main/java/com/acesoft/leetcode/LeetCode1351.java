@@ -3,7 +3,7 @@ package com.acesoft.leetcode;
 /*
  *  https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix
  *
- *  Given a m * n matrix grid which is sorted in non-increasing order both row-wise and column-wise. 
+ *  Given a m * n matrix grid which is sorted in non-increasing order both row-wise and column-wise.
  *
  *  Return the number of negative numbers in grid.
  *
@@ -33,16 +33,16 @@ package com.acesoft.leetcode;
  *  -100 <= grid[i][j] <= 100
  */
 public class LeetCode1351 {
-	public int countNegatives(int[][] grid) {
-		int rows = grid.length, cols = grid[0].length, i, j, count = 0;
-		for (i = 0; i < rows; i++) {
-			for (j = 0; j < cols; j++) {
-				if (grid[i][j] < 0) {
-					count += cols - j;
-					break;
-				}
-			}
-		}
-		return count;
-	}
+    public int countNegatives(int[][] grid) {
+        int rows = grid.length, cols = grid[0].length, i, j, count = 0;
+        for (i = 0; i < rows; i++) {
+            for (j = 0; j < cols; j++) {
+                if (grid[i][j] < 0) {
+                    count += cols - j;
+                    break;
+                }
+            }
+        }
+        return count;
+    }
 }

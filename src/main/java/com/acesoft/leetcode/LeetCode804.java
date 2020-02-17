@@ -25,7 +25,7 @@ import java.util.Set;
  *  Example:
  *  Input: words = ["gin", "zen", "gig", "msg"]
  *  Output: 2
- *  Explanation: 
+ *  Explanation:
  *  The transformation of each word is:
  *  "gin" -> "--...-."
  *  "zen" -> "--...-."
@@ -42,19 +42,19 @@ import java.util.Set;
  */
 public class LeetCode804 {
 
-	/* Naive solution */
-	public int uniqueMorseRepresentations(String[] words) {
-		String[] chars = new String[] { ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-",
-				".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--",
-				"--.." };
-		Set<String> morseCodes = new HashSet<>();
-		for (String word : words) {
-			StringBuilder morseCode = new StringBuilder();
-			for (int i = 0; i < word.length(); i++) {
-				morseCode.append(chars[word.charAt(i) - 97]);
-			}
-			morseCodes.add(morseCode.toString());
-		}
-		return morseCodes.size();
-	}
+    /* Naive solution */
+    public int uniqueMorseRepresentations(String[] words) {
+        String[] chars = new String[]{".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-",
+                ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--",
+                "--.."};
+        Set<String> morseCodes = new HashSet<>();
+        for (String word : words) {
+            StringBuilder morseCode = new StringBuilder();
+            for (int i = 0; i < word.length(); i++) {
+                morseCode.append(chars[word.charAt(i) - 97]);
+            }
+            morseCodes.add(morseCode.toString());
+        }
+        return morseCodes.size();
+    }
 }
