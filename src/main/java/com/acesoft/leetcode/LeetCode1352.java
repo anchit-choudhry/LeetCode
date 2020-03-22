@@ -4,11 +4,11 @@ package com.acesoft.leetcode;
  *  Implement the class ProductOfNumbers that supports two methods:
  *
  *  1. add(int num)
- *
  *  Adds the number num to the back of the current list of numbers.
- *  2. getProduct(int k)
  *
+ *  2. getProduct(int k)
  *  Returns the product of the last k numbers in the current list.
+ *
  *  You can assume that always the current list has at least k numbers.
  *  At any time, the product of any contiguous sequence of numbers will fit into a single 32-bit
  *  integer without overflowing.
@@ -18,7 +18,6 @@ package com.acesoft.leetcode;
  *  Input
  *  ["ProductOfNumbers","add","add","add","add","add","getProduct","getProduct","getProduct","add","getProduct"]
  *  [[],[3],[0],[2],[5],[4],[2],[3],[4],[8],[2]]
- *
  *  Output
  *  [null,null,null,null,null,null,20,40,0,null,32]
  *
@@ -36,7 +35,6 @@ package com.acesoft.leetcode;
  *  productOfNumbers.getProduct(2); // return 32. The product of the last 2 numbers is 4 * 8 = 32
  *
  *  Constraints:
- *
  *  There will be at most 40000 operations considering both add and getProduct.
  *  0 <= num <= 100
  *  1 <= k <= 40000
@@ -68,5 +66,4 @@ public class LeetCode1352 {
             return product;
         }
     }
-
 }

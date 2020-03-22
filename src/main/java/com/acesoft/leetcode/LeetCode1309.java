@@ -12,29 +12,24 @@ package com.acesoft.leetcode;
  *
  *  It's guaranteed that a unique mapping will always exist.
  *
- *
- *
  *  Example 1:
- *
  *  Input: s = "10#11#12"
  *  Output: "jkab"
  *  Explanation: "j" -> "10#" , "k" -> "11#" , "a" -> "1" , "b" -> "2".
- *  Example 2:
  *
+ *  Example 2:
  *  Input: s = "1326#"
  *  Output: "acz"
- *  Example 3:
  *
+ *  Example 3:
  *  Input: s = "25#"
  *  Output: "y"
- *  Example 4:
  *
+ *  Example 4:
  *  Input: s = "12345678910#11#12#13#14#15#16#17#18#19#20#21#22#23#24#25#26#"
  *  Output: "abcdefghijklmnopqrstuvwxyz"
  *
- *
  *  Constraints:
- *
  *  1 <= s.length <= 1000
  *  s[i] only contains digits letters ('0'-'9') and '#' letter.
  *  s will be valid string such that mapping is always possible.
@@ -42,7 +37,7 @@ package com.acesoft.leetcode;
 public class LeetCode1309 {
 
     // Optimal solution
-    public static String freqAlphabets(String s) {
+    public String freqAlphabets(String s) {
         int i, index;
         String map = "#abcdefghijklmnopqrstuvwxyz";
         StringBuilder sb = new StringBuilder();
@@ -59,7 +54,7 @@ public class LeetCode1309 {
     }
 
     // Suboptimal solution
-    public static String freqAlphabets1(String s) {
+    public String freqAlphabets1(String s) {
         char ch;
         int i, padding;
         String map = "#abcdefghijklmnopqrstuvwxyz";

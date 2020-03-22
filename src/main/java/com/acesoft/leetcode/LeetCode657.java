@@ -24,7 +24,7 @@ public class LeetCode657 {
         D, L, R, U
     }
 
-    /* Naive solution */
+    // Naive solution
     public boolean judgeCircle(String moves) {
         int[] doneMoves = new int[4];
         for (int i = 0; i < moves.length(); i++) {
@@ -33,7 +33,7 @@ public class LeetCode657 {
         return doneMoves[0] == doneMoves[1] && doneMoves[2] == doneMoves[3];
     }
 
-    /* Better solution with less Space complexity */
+    // Better solution with less Space complexity
     public boolean judgeCircle1(String moves) {
         int count = 0;
         for (int i = 0; i < moves.length(); i++) {

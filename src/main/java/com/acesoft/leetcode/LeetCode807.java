@@ -45,10 +45,7 @@ package com.acesoft.leetcode;
  */
 public class LeetCode807 {
 
-    /*
-     * Solution using rows^cols and DP to not calculate the max of rows and cols
-     * every time
-     */
+    // Solution using rows^cols and DP to not calculate the max of rows and cols every time
     public int maxIncreaseKeepingSkyline(int[][] grid) {
         int rows = grid.length, cols = grid[0].length, sum = 0, temp;
         int[] rowsMax = new int[rows], colsMax = new int[cols];

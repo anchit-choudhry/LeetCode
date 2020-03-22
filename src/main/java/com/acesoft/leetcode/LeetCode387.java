@@ -7,12 +7,12 @@ package com.acesoft.leetcode;
  *  doesn't exist, return -1.
  *
  *  Examples:
- *
  *  s = "leetcode"
  *  return 0.
  *
  *  s = "loveleetcode",
  *  return 2.
+ *
  *  Note: You may assume the string contain only lowercase letters.
  */
 public class LeetCode387 {

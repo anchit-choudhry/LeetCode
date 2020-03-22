@@ -31,7 +31,7 @@ import com.acesoft.model.TreeNode;
  */
 public class LeetCode617 {
 
-    /* Naive solution */
+    // Naive solution
     private TreeNode mergeBT(TreeNode t1, TreeNode t2, TreeNode mergedTree) {
         if (t1 == null && t2 == null) {
             return null;
@@ -42,10 +42,10 @@ public class LeetCode617 {
         } else {
             mergedTree = new TreeNode(t1.getVal() + t2.getVal());
         }
-        mergedTree.setLeft(
-                mergeBT(t1 == null ? null : t1.getLeft(), t2 == null ? null : t2.getLeft(), mergedTree.getLeft()));
-        mergedTree.setRight(
-                mergeBT(t1 == null ? null : t1.getRight(), t2 == null ? null : t2.getRight(), mergedTree.getRight()));
+        mergedTree.setLeft(mergeBT(t1 == null ? null : t1.getLeft(), t2 == null ? null : t2.getLeft(),
+                mergedTree.getLeft()));
+        mergedTree.setRight(mergeBT(t1 == null ? null : t1.getRight(), t2 == null ? null : t2.getRight(),
+                mergedTree.getRight()));
         return mergedTree;
     }
 

@@ -12,9 +12,7 @@ import java.util.List;
  *  of five output “Buzz”. For numbers which are multiples of both three and five output “FizzBuzz”.
  *
  *  Example:
- *
  *  n = 15,
- *
  *  Return:
  *  [
  *      "1",

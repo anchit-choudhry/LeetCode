@@ -19,7 +19,7 @@ import java.util.Map;
  */
 public class LeetCode1 {
 
-    /* Naive solution */
+    // Naive solution
     public int[] twoSum(int[] nums, int target) {
         int elemTwo;
         for (int i = 0; i < nums.length; i++) {
@@ -36,7 +36,7 @@ public class LeetCode1 {
         return new int[2];
     }
 
-    /* Improved solution */
+    // Improved solution
     public int[] twoSum1(int[] nums, int target) {
         int elemTwo, index;
         Map<Integer, Integer> dict = new HashMap<>();
@@ -61,7 +61,7 @@ public class LeetCode1 {
         return new int[2];
     }
 
-    /* Improved solution #2 */
+    // Improved solution #2
     public int[] twoSum2(int[] nums, int target) {
         int elemTwo;
         Map<Integer, Integer> dict = new HashMap<>();

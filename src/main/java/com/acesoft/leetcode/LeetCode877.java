@@ -16,7 +16,6 @@ package com.acesoft.leetcode;
  *  Assuming Alex and Lee play optimally, return True if and only if Alex wins the game.
  *
  *  Example 1:
- *
  *  Input: [5,3,4,5]
  *  Output: true
  *  Explanation:
@@ -27,7 +26,6 @@ package com.acesoft.leetcode;
  *  This demonstrated that taking the first 5 was a winning move for Alex, so we return true.
  *
  *  Note:
- *
  *  2 <= piles.length <= 500
  *  piles.length is even.
  *  1 <= piles[i] <= 500
@@ -35,7 +33,7 @@ package com.acesoft.leetcode;
  */
 public class LeetCode877 {
 
-    /* Most optimal solution */
+    // Most optimal solution
     public boolean stoneGame(int[] piles) {
         return true;
     }

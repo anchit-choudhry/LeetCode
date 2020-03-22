@@ -14,26 +14,18 @@ package com.acesoft.leetcode;
  *  Return the highest possible score.
  *
  *  Example 1:
- *
  *  Input: [[0,0,1,1],[1,0,1,0],[1,1,0,0]]
  *  Output: 39
- *
  *  Explanation:
- *
  *  Toggled to [[1,1,1,1],[1,0,0,1],[1,1,1,1]].
  *  0b1111 + 0b1001 + 0b1111 = 15 + 9 + 15 = 39
  *
  *  Note:
- *
  *  1 <= A.length <= 20
  *  1 <= A[0].length <= 20
  *  A[i][j] is 0 or 1
  */
 public class LeetCode861 {
-    public static void main(String[] args) {
-        int[][] matrix = new int[][] { { 0, 0, 1, 1 }, { 1, 0, 1, 0 }, { 1, 1, 0, 0 } };
-        new LeetCode861().matrixScore(matrix);
-    }
 
     public int matrixScore(int[][] A) {
         if (A.length < 1) {

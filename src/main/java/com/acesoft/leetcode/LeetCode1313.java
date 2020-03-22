@@ -13,7 +13,6 @@ import java.util.Arrays;
  *  Return the decompressed list.
  *
  *  Example 1:
- *
  *  Input: nums = [1,2,3,4]
  *  Output: [2,4,4,4]
  *  Explanation: The first pair [1,2] means we have freq = 1 and val = 2 so we generate the array [2].
@@ -21,12 +20,12 @@ import java.util.Arrays;
  *  At the end the concatenation [2] + [4,4,4] is [2,4,4,4].
  *
  *  Constraints:
- *
  *  2 <= nums.length <= 100
  *  nums.length % 2 == 0
  *  1 <= nums[i] <= 100
  */
 public class LeetCode1313 {
+
     public int[] decompressRLElist(int[] nums) {
         int i, count = 0;
         for (i = 0; i < nums.length; i = i + 2) {
@@ -37,10 +36,7 @@ public class LeetCode1313 {
         for (i = 0; i < nums.length; i = i + 2) {
             // Should use below for optimal solution
             Arrays.fill(arr, count, count += nums[i], nums[i + 1]);
-            /*
-             * Sub optimal solution for (j = 0; j < nums[i]; j++) { arr[count++] = nums[i +
-             * 1]; }
-             */
+            // Sub optimal solution: for (j = 0; j < nums[i]; j++) { arr[count++] = nums[i + 1]; }
         }
         return arr;
     }

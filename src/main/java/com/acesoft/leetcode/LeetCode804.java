@@ -35,18 +35,17 @@ import java.util.Set;
  *  There are 2 different transformations, "--...-." and "--...--.".
  *
  *  Note:
- *
  *  The length of words will be at most 100.
  *  Each words[i] will have length in range [1, 12].
  *  words[i] will only consist of lowercase letters.
  */
 public class LeetCode804 {
 
-    /* Naive solution */
+    // Naive solution
     public int uniqueMorseRepresentations(String[] words) {
-        String[] chars = new String[] { ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-",
-                ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--",
-                "--.." };
+        String[] chars = new String[] { ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....",
+                "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-",
+                "..-", "...-", ".--", "-..-", "-.--", "--.." };
         Set<String> morseCodes = new HashSet<>();
         for (String word : words) {
             StringBuilder morseCode = new StringBuilder();

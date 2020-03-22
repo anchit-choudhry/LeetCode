@@ -10,15 +10,14 @@ package com.acesoft.leetcode;
  *  Given an array that is definitely a mountain, return any i such that A[0] < A[1] < ... A[i-1] < A[i] > A[i+1] > ... > A[A.length - 1].
  *
  *  Example 1:
- *
  *  Input: [0,1,0]
  *  Output: 1
- *  Example 2:
  *
+ *  Example 2:
  *  Input: [0,2,1,0]
  *  Output: 1
- *  Note:
  *
+ *  Note:
  *  3 <= A.length <= 10000
  *  0 <= A[i] <= 10^6
  *  A is a mountain, as defined above.
@@ -37,7 +36,7 @@ public class LeetCode852 {
         return true;
     }
 
-    /* Naive solution */
+    // Naive solution
     public int peakIndexInMountainArray(int[] A) {
         for (int i = 0; i < A.length; i++) {
             if (checkAllElemsLess(A, i - 1, i, A[i]) && checkAllElemsLess(A, i + 1, A.length, A[i])) {
@@ -47,7 +46,7 @@ public class LeetCode852 {
         return -1;
     }
 
-    /* Optimal solution using O(N) */
+    // Optimal solution using O(N)
     public int peakIndexInMountainArray1(int[] A) {
         int i = 0;
         while (A[i] < A[i + 1]) {
@@ -56,7 +55,7 @@ public class LeetCode852 {
         return i;
     }
 
-    /* Most optimal solution using Binary Search O(log N) */
+    // Most optimal solution using Binary Search O(log N)
     public int peakIndexInMountainArray2(int[] A) {
         int low = 0, mid, high = A.length - 1;
         while (low < high) {

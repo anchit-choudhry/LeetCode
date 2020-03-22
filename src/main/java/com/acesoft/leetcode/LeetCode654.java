@@ -15,7 +15,6 @@ import com.acesoft.model.TreeNode;
  *  Example 1:
  *  Input: [3, 2, 1, 6, 0, 5]
  *  Output: return the tree root node representing the following tree:
- *
  *        6
  *      /   \
  *     3     5
@@ -29,7 +28,7 @@ import com.acesoft.model.TreeNode;
  */
 public class LeetCode654 {
 
-    /* Naive solution using recursion */
+    // Naive solution using recursion
     public TreeNode constructMaximumBinaryTree(int[] nums) {
         return returnMaxBinTree(nums, 0, nums.length, null);
     }

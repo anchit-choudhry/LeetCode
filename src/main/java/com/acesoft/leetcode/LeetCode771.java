@@ -28,7 +28,7 @@ import java.util.Set;
  */
 public class LeetCode771 {
 
-    /* Naive solution but very fast */
+    // Naive solution but very fast
     public int numJewelsInStones(String J, String S) {
         if (J == null || S == null || J.length() == 0 || S.length() == 0) {
             return 0;
@@ -42,10 +42,7 @@ public class LeetCode771 {
         return sum;
     }
 
-    /*
-     * Solution using Set; useful when number of Jewels are large to have fast
-     * lookup
-     */
+    // Solution using Set; useful when number of Jewels are large to have fast lookup
     public int numJewelsInStones1(String J, String S) {
         if (J == null || S == null || J.length() == 0 || S.length() == 0) {
             return 0;
@@ -63,7 +60,7 @@ public class LeetCode771 {
         return sum;
     }
 
-    /* Solution storing Jewels as int of ASCII characters */
+    // Solution storing Jewels as int of ASCII characters
     public int numJewelsInStones2(String J, String S) {
         if (J == null || S == null || J.length() == 0 || S.length() == 0) {
             return 0;
