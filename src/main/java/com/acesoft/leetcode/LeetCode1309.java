@@ -46,7 +46,7 @@ public class LeetCode1309 {
         int i, index;
         String map = "#abcdefghijklmnopqrstuvwxyz";
         StringBuilder sb = new StringBuilder();
-        for (i = 0; i < s.length(); ) {
+        for (i = 0; i < s.length();) {
             if (i + 2 < s.length() && s.charAt(i + 2) == '#') {
                 index = Integer.parseInt(s.substring(i, i + 2));
                 i = i + 3;

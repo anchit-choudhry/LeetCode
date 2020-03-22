@@ -28,7 +28,7 @@ public class LeetCode867 {
     public int[][] transpose(int[][] A) {
         int rows = A.length, cols = A[0].length;
         if (cols < 1) {
-            return new int[][]{};
+            return new int[][] {};
         }
         int[][] B = new int[cols][rows];
         for (int i = 0; i < rows; i++) {

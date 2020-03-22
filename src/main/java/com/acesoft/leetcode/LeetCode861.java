@@ -31,7 +31,7 @@ package com.acesoft.leetcode;
  */
 public class LeetCode861 {
     public static void main(String[] args) {
-        int[][] matrix = new int[][]{{0, 0, 1, 1}, {1, 0, 1, 0}, {1, 1, 0, 0}};
+        int[][] matrix = new int[][] { { 0, 0, 1, 1 }, { 1, 0, 1, 0 }, { 1, 1, 0, 0 } };
         new LeetCode861().matrixScore(matrix);
     }
 

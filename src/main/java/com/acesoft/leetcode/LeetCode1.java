@@ -29,7 +29,7 @@ public class LeetCode1 {
                     continue;
                 }
                 if (nums[j] == elemTwo) {
-                    return new int[]{i, j};
+                    return new int[] { i, j };
                 }
             }
         }
@@ -48,13 +48,13 @@ public class LeetCode1 {
              */
             if (nums[i] == elemTwo && dict.containsKey(elemTwo)) {
                 index = dict.get(elemTwo);
-                return new int[]{index, i};
+                return new int[] { index, i };
             }
             dict.put(nums[i], i);
             if (dict.containsKey(elemTwo)) {
                 index = dict.get(elemTwo);
                 if (index != i) {
-                    return new int[]{index, i};
+                    return new int[] { index, i };
                 }
             }
         }
@@ -68,7 +68,7 @@ public class LeetCode1 {
         for (int i = 0; i < nums.length; i++) {
             elemTwo = target - nums[i];
             if (dict.containsKey(elemTwo)) {
-                return new int[]{dict.get(elemTwo), i};
+                return new int[] { dict.get(elemTwo), i };
             }
             dict.put(nums[i], i);
         }

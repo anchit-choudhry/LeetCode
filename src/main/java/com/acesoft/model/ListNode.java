@@ -13,12 +13,12 @@ public class ListNode {
         return next;
     }
 
-    public void setNext(ListNode next) {
-        this.next = next;
-    }
-
     public int getVal() {
         return val;
+    }
+
+    public void setNext(ListNode next) {
+        this.next = next;
     }
 
     public void setVal(int val) {

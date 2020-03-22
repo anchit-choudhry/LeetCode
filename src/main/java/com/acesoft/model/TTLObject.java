@@ -14,12 +14,12 @@ public class TTLObject {
         return timestamp;
     }
 
-    public void setTimestamp(long timestampV) {
-        this.timestamp = timestampV;
-    }
-
     public String getValue() {
         return value;
+    }
+
+    public void setTimestamp(long timestampV) {
+        this.timestamp = timestampV;
     }
 
     public void setValue(String val) {

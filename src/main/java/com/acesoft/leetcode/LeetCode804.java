@@ -44,9 +44,9 @@ public class LeetCode804 {
 
     /* Naive solution */
     public int uniqueMorseRepresentations(String[] words) {
-        String[] chars = new String[]{".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-",
+        String[] chars = new String[] { ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-",
                 ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--",
-                "--.."};
+                "--.." };
         Set<String> morseCodes = new HashSet<>();
         for (String word : words) {
             StringBuilder morseCode = new StringBuilder();
