@@ -36,10 +36,10 @@ public class LeetCode21 {
         }
         return sorted.getNext();
     }
-    
+
     // Recursive solution
     public ListNode mergeTwoLists2(ListNode l1, ListNode l2) {
-        if (l1 == null ) {
+        if (l1 == null) {
             return l2;
         }
         if (l2 == null) {
