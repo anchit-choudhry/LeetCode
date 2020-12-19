@@ -1,14 +1,28 @@
 package com.acesoft.model;
 
 /*
- *  Definition for a binary tree node.
+ * Definition for a binary tree node.
  *
- *  public class TreeNode {
- *      int val;
- *      TreeNode left;
- *      TreeNode right;
- *      TreeNode(int x) { val = x; }
- *  }
+ * public class TreeNode {
+ *
+ *     int val;
+ *
+ *     TreeNode left;
+ *
+ *     TreeNode right;
+ *
+ *     TreeNode() {}
+ *
+ *     TreeNode(int val) {
+ *         this.val = val;
+ *     }
+ *
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
  */
 public class TreeNode {
 
@@ -18,6 +32,12 @@ public class TreeNode {
 
     public TreeNode(int x) {
         val = x;
+    }
+
+    public TreeNode(int x, TreeNode leftT, TreeNode rightT) {
+        val = x;
+        left = leftT;
+        right = rightT;
     }
 
     public TreeNode getLeft() {
