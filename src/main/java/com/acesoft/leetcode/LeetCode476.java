@@ -28,7 +28,7 @@ public class LeetCode476 {
     public int findComplement(int num) {
         int i = 0, j = 0;
         while (i < num) {
-            i += Math.pow(2, j++);
+            i += (int) Math.pow(2, j++);
         }
         return i - num;
     }

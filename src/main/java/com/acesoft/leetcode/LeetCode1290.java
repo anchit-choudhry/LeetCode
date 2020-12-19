@@ -58,7 +58,7 @@ public class LeetCode1290 {
         }
         tmp = head;
         while (tmp != null) {
-            sum += tmp.getVal() * Math.pow(2, count - i);
+            sum += tmp.getVal() * (int) Math.pow(2, count - i);
             i++;
             tmp = tmp.getNext();
         }
