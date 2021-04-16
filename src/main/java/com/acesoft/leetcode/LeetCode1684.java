@@ -33,13 +33,13 @@ public class LeetCode1684 {
     public int countConsistentStrings(String allowed, String[] words) {
         int[] alphabets = new int[26];
         for (char allow : allowed.toCharArray()) {
-            alphabets[(int) allow - 97]++;
+            alphabets[allow - 97]++;
         }
         int count = 0;
         for (String word : words) {
             boolean flag = true;
             for (char letter : word.toCharArray()) {
-                if (alphabets[(int) letter - 97] == 0) {
+                if (alphabets[letter - 97] == 0) {
                     flag = false;
                     break;
                 }

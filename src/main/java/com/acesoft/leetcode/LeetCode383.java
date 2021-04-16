@@ -29,10 +29,10 @@ public class LeetCode383 {
     public boolean canConstruct(String ransomNote, String magazine) {
         int[] chars = new int[26];
         for (char ch : magazine.toCharArray()) {
-            chars[(int) ch - 97]++;
+            chars[ch - 97]++;
         }
         for (char ch : ransomNote.toCharArray()) {
-            if (--chars[(int) ch - 97] < 0) {
+            if (--chars[ch - 97] < 0) {
                 return false;
             }
         }
