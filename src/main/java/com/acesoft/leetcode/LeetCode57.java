@@ -48,7 +48,7 @@ public class LeetCode57 {
         if (intervals.length == 0) {
             return new int[][] { newInterval };
         }
-        List<int[]> merged = new ArrayList();
+        List<int[]> merged = new ArrayList<>();
         int[][] combinedIntervals = new int[intervals.length + 1][2];
         for (int[] arr : intervals) {
             combinedIntervals[i++] = arr;

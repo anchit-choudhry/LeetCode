@@ -1,7 +1,5 @@
 package com.acesoft.leetcode;
 
-import java.lang.Integer;
-
 /*
  * https://leetcode.com/problems/find-the-highest-altitude
  * 

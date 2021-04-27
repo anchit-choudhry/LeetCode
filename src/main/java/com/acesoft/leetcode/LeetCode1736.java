@@ -1,7 +1,5 @@
 package com.acesoft.leetcode;
 
-import java.lang.Integer;
-
 /*
  * https://leetcode.com/problems/latest-time-by-replacing-hidden-digits
  * 
