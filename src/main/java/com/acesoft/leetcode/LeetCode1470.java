@@ -26,6 +26,7 @@ package com.acesoft.leetcode;
  *  1 <= nums[i] <= 10^3
  */
 public class LeetCode1470 {
+
     public int[] shuffle(int[] nums, int n) {
         int[] newArray = new int[n * 2];
         for (int i = 0; i < n; i++) {

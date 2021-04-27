@@ -30,6 +30,7 @@ package com.acesoft.leetcode;
  * 0 <= first <= 105 
  */
 public class LeetCode1720 {
+
     public int[] decode(int[] encoded, int first) {
         int[] decoded = new int[encoded.length + 1];
         decoded[0] = first;

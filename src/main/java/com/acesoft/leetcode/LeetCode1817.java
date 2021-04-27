@@ -50,6 +50,7 @@ import java.util.Set;
  * k is in the range [The maximum UAM for a user, 105].
  */
 public class LeetCode1817 {
+
     public int[] findingUsersActiveMinutes(int[][] logs, int k) {
         Map<Integer, Set<Integer>> data = new HashMap<>();
         int[] arr = new int[k];

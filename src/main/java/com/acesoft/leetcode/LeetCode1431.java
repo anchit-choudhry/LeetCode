@@ -44,6 +44,7 @@ import java.util.List;
  *  1 <= extraCandies <= 50
  */
 public class LeetCode1431 {
+
     public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
         int max = -1;
         List<Boolean> moreC = new ArrayList<>(candies.length);

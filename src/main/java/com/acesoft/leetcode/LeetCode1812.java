@@ -31,6 +31,7 @@ package com.acesoft.leetcode;
  * '1' <= coordinates[1] <= '8'
  */
 public class LeetCode1812 {
+
     public boolean squareIsWhite(String coordinates) {
         int cor1 = coordinates.charAt(0) - 96;
         int cor2 = coordinates.charAt(1) - 48;

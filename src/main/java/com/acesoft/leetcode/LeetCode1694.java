@@ -58,6 +58,7 @@ package com.acesoft.leetcode;
  * There are at least two digits in number.
  */
 public class LeetCode1694 {
+
     public String reformatNumber(String number) {
         int len = 0, i = 0, tmp;
         StringBuilder result = new StringBuilder();

@@ -30,6 +30,7 @@ package com.acesoft.leetcode;
  *  word1[i] and word2[i] consist of lowercase letters.
  */
 public class LeetCode1662 {
+
     public boolean arrayStringsAreEqual(String[] word1, String[] word2) {
         int iWord1 = 0, jWord1 = 0, iWord2 = 0, jWord2 = 0;
         while (iWord1 < word1.length && iWord2 < word2.length) {

@@ -36,6 +36,7 @@ package com.acesoft.leetcode;
  *  1 <= n <= 200
  */
 public class LeetCode1688 {
+
     // Suboptimal solution
     public int numberOfMatches(int n) {
         if (n == 1) {

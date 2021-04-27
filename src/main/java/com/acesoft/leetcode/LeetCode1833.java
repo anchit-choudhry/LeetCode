@@ -37,6 +37,7 @@ import java.util.Arrays;
  * 1 <= coins <= 10^8
  */
 public class LeetCode1833 {
+
     public int maxIceCream(int[] costs, int coins) {
         Arrays.sort(costs);
         int bars = 0;

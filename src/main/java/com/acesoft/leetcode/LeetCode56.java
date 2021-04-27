@@ -26,6 +26,7 @@ import java.util.List;
  * 0 <= starti <= endi <= 10^4
  */
 public class LeetCode56 {
+
     public int[][] merge(int[][] intervals) {
         int i = 0;
         List<int[]> merged = new ArrayList<>();

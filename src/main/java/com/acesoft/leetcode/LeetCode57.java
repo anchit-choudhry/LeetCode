@@ -42,6 +42,7 @@ import java.util.List;
  * 0 <= newInterval[0] <= newInterval[1] <= 10^5
  */
 public class LeetCode57 {
+
     public int[][] insert(int[][] intervals, int[] newInterval) {
         int[][] result;
         int i = 0;

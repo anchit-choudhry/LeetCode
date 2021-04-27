@@ -39,6 +39,7 @@ package com.acesoft.leetcode;
  *  1 <= accounts[i][j] <= 100
  */
 public class LeetCode1672 {
+
     public int maximumWealth(int[][] accounts) {
         int maxSum = 0, tempSum;
         for (int i = 0; i < accounts.length; i++) {

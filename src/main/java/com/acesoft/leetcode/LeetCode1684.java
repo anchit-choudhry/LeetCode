@@ -30,6 +30,7 @@ package com.acesoft.leetcode;
  *  words[i] and allowed contain only lowercase English letters.
  */
 public class LeetCode1684 {
+
     public int countConsistentStrings(String allowed, String[] words) {
         int[] alphabets = new int[26];
         for (char allow : allowed.toCharArray()) {

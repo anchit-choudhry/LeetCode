@@ -33,6 +33,7 @@ package com.acesoft.leetcode;
  * 1 <= truckSize <= 10^6
  */
 public class LeetCode1710 {
+
     public int maximumUnits(int[][] boxTypes, int truckSize) {
         int[] buckets = new int[1001];
         int i, maxSize = 0;

@@ -25,6 +25,7 @@ package com.acesoft.leetcode;
  * -100 <= gain[i] <= 100
  */
 public class LeetCode1732 {
+
     public int largestAltitude(int[] gain) {
         int altChange = 0, highestAlt = Integer.MIN_VALUE;
         for (int altGain : gain) {

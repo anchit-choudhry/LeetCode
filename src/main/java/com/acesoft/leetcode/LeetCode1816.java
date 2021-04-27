@@ -40,6 +40,7 @@ package com.acesoft.leetcode;
  * There are no leading or trailing spaces.
  */
 public class LeetCode1816 {
+
     public String truncateSentence(String s, int k) {
         int pos = 0, spaces = 0;
         for (char ch : s.toCharArray()) {

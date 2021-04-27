@@ -35,6 +35,7 @@ package com.acesoft.leetcode;
  * command consists of "G", "()", and/or "(al)" in some order.
  */
 public class LeetCode1678 {
+
     public String interpret(String command) {
         return command.replace("()", "o").replace("(al)", "al");
     }

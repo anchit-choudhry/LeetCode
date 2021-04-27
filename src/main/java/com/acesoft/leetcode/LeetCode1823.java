@@ -44,6 +44,7 @@ import java.util.Queue;
  * 1 <= k <= n <= 500
  */
 public class LeetCode1823 {
+
     public int findTheWinner(int n, int k) {
         Queue<Integer> circle = new LinkedList<>();
         for (int i = 0; i < n; i++) {

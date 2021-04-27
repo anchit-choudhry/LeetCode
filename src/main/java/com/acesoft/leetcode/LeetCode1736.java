@@ -29,6 +29,7 @@ package com.acesoft.leetcode;
  * It is guaranteed that you can produce a valid time from the given string.
  */
 public class LeetCode1736 {
+
     public String maximumTime(String time) {
         char[] timeC = time.toCharArray();
         if (time.charAt(0) == '?' && time.charAt(1) == '?') {

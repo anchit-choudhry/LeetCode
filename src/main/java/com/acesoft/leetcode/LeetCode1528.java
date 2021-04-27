@@ -40,6 +40,7 @@ package com.acesoft.leetcode;
  *  All values of indices are unique (i.e. indices is a permutation of the integers from 0 to n - 1).
  */
 public class LeetCode1528 {
+
     public String restoreString(String s, int[] indices) {
         char[] str = new char[indices.length];
         int i = 0;

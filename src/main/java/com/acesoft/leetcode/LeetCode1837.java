@@ -24,6 +24,7 @@ package com.acesoft.leetcode;
  * 2 <= k <= 10
  */
 public class LeetCode1837 {
+
     public int sumBase(int n, int k) {
         int sum = 0;
         while (n != 0) {

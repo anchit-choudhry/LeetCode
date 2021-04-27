@@ -35,6 +35,7 @@ package com.acesoft.leetcode;
  * s consists of uppercase and lowercase letters.
  */
 public class LeetCode1704 {
+
     public boolean halvesAreAlike(String s) {
         int i = 0, len = s.length(), left = 0, right = 0;
         String ch = "aAeEiIoOuU";

@@ -32,6 +32,7 @@ package com.acesoft.leetcode;
  * li != wi
  */
 public class LeetCode1725 {
+
     public int countGoodRectangles(int[][] rectangles) {
         int max = -1, freq = 0, i, temp;
         for (i = 0; i < rectangles.length; i++) {

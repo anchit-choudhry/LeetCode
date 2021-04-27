@@ -26,6 +26,7 @@ package com.acesoft.leetcode;
  *  -10^6 <= nums[i] <= 10^6
  */
 public class LeetCode1480 {
+
     public int[] runningSum(int[] nums) {
         for (int i = 1; i < nums.length; i++) {
             nums[i] += nums[i - 1];

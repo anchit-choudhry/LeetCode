@@ -31,6 +31,7 @@ package com.acesoft.leetcode;
  *  sequence and word contains only lowercase English letters.
  */
 public class LeetCode1668 {
+
     public int maxRepeating(String sequence, String word) {
         int count = 0;
         String newString = word;

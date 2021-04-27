@@ -28,6 +28,7 @@ package com.acesoft.leetcode;
  * 1 <= nums[i] <= 100
  */
 public class LeetCode1748 {
+
     public int sumOfUnique(int[] nums) {
         int[] arr = new int[100];
         int sum = 0;

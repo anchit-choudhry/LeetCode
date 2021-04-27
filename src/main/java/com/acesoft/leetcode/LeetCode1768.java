@@ -38,6 +38,7 @@ package com.acesoft.leetcode;
  * word1 and word2 consist of lowercase English letters.
  */
 public class LeetCode1768 {
+
     public String mergeAlternately(String word1, String word2) {
         StringBuilder sb = new StringBuilder();
         int w1 = word1.length(), w2 = word2.length(), first = 0, second = 0;

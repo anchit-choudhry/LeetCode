@@ -34,6 +34,7 @@ package com.acesoft.leetcode;
  * n == nums.length
  */
 public class Leetcode1486 {
+
     public int xorOperation(int n, int start) {
         int i, two = 2, xor = start;
         for (i = 1; i < n; i++) {

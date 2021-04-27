@@ -30,6 +30,7 @@ package com.acesoft.leetcode;
  * 0 <= digits[i] <= 9
  */
 public class LeetCode66 {
+
     public int[] plusOne(int[] digits) {
         int i, carry = 0;
         for (i = digits.length - 1; i >= 0; i--) {
