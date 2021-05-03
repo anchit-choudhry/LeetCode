@@ -22,22 +22,20 @@ import java.util.Map;
 public class LeetCode169 {
 
     public int majorityElement(int[] nums) {
-        Map<Integer, Integer> count = new HashMap<>();
-        int i, num = 0;
-        for (i = 0; i < nums.length; i++) {
-            if (count.containsKey(nums[i])) {
-                count.put(nums[i], count.get(nums[i]) + 1);
+        Map<Integer, Integer> majority = new HashMap<>();
+        int size = nums.length / 2, temp;
+        for (int num : nums) {
+            temp = majority.getOrDefault(num, 0);
+            if (temp == 0) {
+                majority.put(num, 1);
             } else {
-                count.put(nums[i], 1);
+                if (temp + 1 > size) {
+                    return num;
+                } else {
+                    majority.put(num, temp + 1);
+                }
             }
         }
-        i = 0;
-        for (Map.Entry<Integer, Integer> entry : count.entrySet()) {
-            if (entry.getValue() > i) {
-                num = entry.getKey();
-                i = entry.getValue();
-            }
-        }
-        return num;
+        return nums.length == 1 ? nums[0] : -1;
     }
 }
