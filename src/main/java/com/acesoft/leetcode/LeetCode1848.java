@@ -1,5 +1,7 @@
 package com.acesoft.leetcode;
 
+import java.lang.Math;
+
 /*
  * https://leetcode.com/problems/minimum-distance-to-the-target-element
  * 

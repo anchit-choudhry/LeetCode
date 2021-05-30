@@ -1,5 +1,7 @@
 package com.acesoft.leetcode;
 
+import java.lang.Math;
+
 /*
  *  https://leetcode.com/problems/max-increase-to-keep-city-skyline
  *
