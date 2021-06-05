@@ -36,10 +36,10 @@ package com.acesoft.leetcode;
  */
 public class LeetCode200 {
 
-    char[][] grid;
-    int m, n;
+    private char[][] grid;
+    private int m, n;
 
-    public void checkIsland(int x, int y) {
+    private void checkIsland(int x, int y) {
         if (x < 0 || x >= grid.length || y < 0 || y >= grid[0].length || grid[x][y] == '0') {
             return;
         }

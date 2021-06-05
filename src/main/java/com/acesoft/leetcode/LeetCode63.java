@@ -32,7 +32,7 @@ package com.acesoft.leetcode;
  */
 public class LeetCode63 {
 
-    int[][] cache;
+    private int[][] cache;
 
     private int checkValidPath(int m, int n) {
         if (m < 0 || n < 0 || cache[m][n] == Integer.MIN_VALUE) {

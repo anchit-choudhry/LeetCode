@@ -20,7 +20,7 @@ package com.acesoft.leetcode;
  */
 public class LeetCode657 {
 
-    enum move {
+    private enum move {
         D, L, R, U
     }
 

@@ -30,7 +30,7 @@ package com.acesoft.leetcode;
  */
 public class LeetCode509 {
 
-    int[] cache = new int[31];
+    private int[] cache = new int[31];
 
     public int fib(int n) {
         if (n == 0) {

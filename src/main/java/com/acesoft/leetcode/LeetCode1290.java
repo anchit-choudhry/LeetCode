@@ -1,7 +1,5 @@
 package com.acesoft.leetcode;
 
-import java.lang.Math;
-
 import com.acesoft.model.ListNode;
 
 /*

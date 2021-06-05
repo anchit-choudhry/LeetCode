@@ -43,7 +43,7 @@ public class LeetCode1845 {
 
     class SeatManager {
 
-        TreeSet<Integer> seats = new TreeSet<>();
+        private TreeSet<Integer> seats = new TreeSet<>();
 
         public SeatManager(int n) {
             for (int i = 1; i <= n; i++) {

@@ -1,7 +1,5 @@
 package com.acesoft.leetcode;
 
-import java.lang.Math;
-
 /*
  * https://leetcode.com/problems/number-of-rectangles-that-can-form-the-largest-square
  * 

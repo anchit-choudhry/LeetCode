@@ -1,7 +1,5 @@
 package com.acesoft.leetcode;
 
-import java.lang.Math;
-
 /*
  *  https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side
  *

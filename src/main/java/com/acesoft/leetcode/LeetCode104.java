@@ -1,7 +1,5 @@
 package com.acesoft.leetcode;
 
-import java.lang.Math;
-
 import com.acesoft.model.TreeNode;
 
 /*
@@ -25,7 +23,7 @@ import com.acesoft.model.TreeNode;
  */
 public class LeetCode104 {
 
-    public int maxDep(TreeNode root, int count) {
+    private int maxDep(TreeNode root, int count) {
         if (root == null) {
             return 0;
         }

@@ -27,7 +27,7 @@ package com.acesoft.leetcode;
  */
 public class Leetcode70 {
 
-    int[] cache = new int[46];
+    private int[] cache = new int[46];
 
     public int climbStairs(int n) {
         if (n < 2) {
