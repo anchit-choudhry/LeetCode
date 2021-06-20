@@ -7,7 +7,7 @@ public class LeetCode13 {
 
     // Suboptimal solution
     public int romanToInt(String s) {
-        Map<String, Integer> sToV = new HashMap<String, Integer>() {
+        Map<String, Integer> sToV = new HashMap<>() {
             private static final long serialVersionUID = 1L;
             {
                 put("I", 1);

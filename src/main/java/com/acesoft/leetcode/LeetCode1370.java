@@ -45,7 +45,7 @@ package com.acesoft.leetcode;
  *  Example 5:
  *  Input: s = "spo"
  *  Output: "ops"
- * 
+ *
  *  Constraints:
  *  1 <= s.length <= 500
  *  s contains only lower-case English letters.

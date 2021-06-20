@@ -3,7 +3,7 @@ package com.acesoft.leetcode;
 import com.acesoft.model.TreeNode;
 
 /*
- *  https://leetcode.com/problems/invert-binary-tree  
+ *  https://leetcode.com/problems/invert-binary-tree
  *
  *  Invert a binary tree.
  *

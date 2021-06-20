@@ -42,7 +42,7 @@ public class LeetCode1361 {
             return false;
         }
         int i;
-        Set<Integer> hs = new HashSet<Integer>();
+        Set<Integer> hs = new HashSet<>();
         for (i = 0; i < n; i++) {
             if (leftChild[i] != -1) {
                 if (i >= leftChild[i] || hs.contains(leftChild[i])) {

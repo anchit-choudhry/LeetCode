@@ -50,7 +50,7 @@ public class LeetCode1323 {
 
     // Dumbest solution
     public int maximum69Number1(int num) {
-        Map<Integer, Integer> hs = new HashMap<Integer, Integer>() {
+        Map<Integer, Integer> hs = new HashMap<>() {
             private static final long serialVersionUID = 1L;
             {
                 put(6, 9);

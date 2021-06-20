@@ -30,7 +30,7 @@ import com.acesoft.model.ListNode;
  *  Example 5:
  *  Input: head = [0,0]
  *  Output: 0
- * 
+ *
  *  Constraints:
  *  The Linked List is not empty.
  *  Number of nodes will not exceed 30.

@@ -41,7 +41,7 @@ import java.util.Set;
  * The user with ID=2 performed actions at minutes 2 and 3. Hence, they have a UAM of 2.
  * There is one user with a UAM of 1 and one with a UAM of 2.
  * Hence, answer[1] = 1, answer[2] = 1, and the remaining values are 0.
- *  
+ *
  *
  * Constraints:
  * 1 <= logs.length <= 104

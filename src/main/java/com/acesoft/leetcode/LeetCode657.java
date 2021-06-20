@@ -38,18 +38,18 @@ public class LeetCode657 {
         int count = 0;
         for (int i = 0; i < moves.length(); i++) {
             switch (moves.charAt(i)) {
-                case 'U':
-                    count += 2;
-                    break;
-                case 'D':
-                    count -= 2;
-                    break;
-                case 'L':
-                    count++;
-                    break;
-                case 'R':
-                    count--;
-                    break;
+            case 'U':
+                count += 2;
+                break;
+            case 'D':
+                count -= 2;
+                break;
+            case 'L':
+                count++;
+                break;
+            case 'R':
+                count--;
+                break;
             }
         }
         return count == 0;

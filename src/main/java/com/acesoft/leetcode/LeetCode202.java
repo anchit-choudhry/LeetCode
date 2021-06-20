@@ -15,11 +15,11 @@ import java.util.Set;
  *
  *  Return True if n is a happy number, and False if not.
  *
- *  Example: 
+ *  Example:
  *  Input: 19
  *  Output: true
  *
- *  Explanation: 
+ *  Explanation:
  *  1^2 + 9^2 = 82
  *  8^2 + 2^2 = 68
  *  6^2 + 8^2 = 100

@@ -6,7 +6,7 @@ package com.acesoft.leetcode;
  *  Given an integer num, find the closest two integers in absolute difference whose product
  *  equals num + 1 or num + 2.
  *
- *  Return the two integers in any order. 
+ *  Return the two integers in any order.
  *
  *  Example 1:
  *  Input: num = 8
@@ -21,7 +21,7 @@ package com.acesoft.leetcode;
  *  Example 3:
  *  Input: num = 999
  *  Output: [40,25]
- * 
+ *
  *  Constraints:
  *  1 <= num <= 10^9
  */

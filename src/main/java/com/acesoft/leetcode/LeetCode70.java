@@ -25,7 +25,7 @@ package com.acesoft.leetcode;
  * Constraints:
  * 1 <= n <= 45
  */
-public class Leetcode70 {
+public class LeetCode70 {
 
     private int[] cache = new int[46];
 

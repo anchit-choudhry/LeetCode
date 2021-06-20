@@ -34,7 +34,7 @@ package com.acesoft.leetcode;
  *  Example 5:
  *  Input: s = "ab123"
  *  Output: "1a2b3"
- * 
+ *
  *  Constraints:
  *  1 <= s.length <= 500
  *  s consists of only lowercase English letters and/or digits.
