@@ -31,7 +31,27 @@ package com.acesoft.leetcode;
  */
 public class LeetCode66 {
 
+    // Optimal solution
     public int[] plusOne(int[] digits) {
+        int carry = 1, i;
+        for (i = digits.length - 1; i > -1; i--) {
+            if (carry == 1) {
+                if (digits[i] == 9) {
+                    digits[i] = 0;
+                    carry = 1;
+                } else {
+                    digits[i]++;
+                    return digits;
+                }
+            }
+        }
+        int[] newDigits = new int[digits.length + 1];
+        newDigits[0] = 1;
+        return newDigits;
+    }
+
+    // Suboptimal solution
+    public int[] plusOne1(int[] digits) {
         int i, carry = 0;
         for (i = digits.length - 1; i >= 0; i--) {
             digits[i] = i == digits.length - 1 ? digits[i] + 1 + carry : digits[i] + carry;

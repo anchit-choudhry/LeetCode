@@ -24,8 +24,23 @@ package com.acesoft.leetcode;
  */
 public class LeetCode7 {
 
-    // Suboptimal solution
+    // Optimal solution
     public int reverse(int x) {
+        int num = 0, exp = 0, copy = x;
+        while (copy != 0) {
+            exp++;
+            copy /= 10;
+        }
+        copy = x;
+        while (copy != 0) {
+            num += Math.pow(10, --exp) * (copy % 10);
+            copy /= 10;
+        }
+        return num == Integer.MAX_VALUE || num == Integer.MIN_VALUE ? 0 : num;
+    }
+
+    // Suboptimal solution
+    public int reverse1(int x) {
         if (x == 0) {
             return x;
         }

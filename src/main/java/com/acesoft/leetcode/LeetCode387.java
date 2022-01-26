@@ -17,6 +17,7 @@ package com.acesoft.leetcode;
  */
 public class LeetCode387 {
 
+    // Suboptimal solution
     public int firstUniqChar(String s) {
         int[] alphabets = new int[26];
         int i;
@@ -31,6 +32,7 @@ public class LeetCode387 {
         return -1;
     }
 
+    // Optimal solution
     public int firstUniqChar1(String s) {
         int[] alphabets = new int[26];
         int i, index = Integer.MAX_VALUE;
