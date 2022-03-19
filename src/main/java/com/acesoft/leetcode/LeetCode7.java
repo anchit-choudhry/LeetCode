@@ -33,7 +33,7 @@ public class LeetCode7 {
         }
         copy = x;
         while (copy != 0) {
-            num += Math.pow(10, --exp) * (copy % 10);
+            num += (int) Math.pow(10, --exp) * (copy % 10);
             copy /= 10;
         }
         return num == Integer.MAX_VALUE || num == Integer.MIN_VALUE ? 0 : num;

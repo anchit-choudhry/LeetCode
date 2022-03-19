@@ -61,7 +61,7 @@ public class LeetCode2165 {
         }
         j = 0;
         for (i = len - 1; i > -1; i--) {
-            result += Math.pow(10, j++) * digits[i];
+            result += (long) Math.pow(10, j++) * digits[i];
         }
         return num > -1 ? result : result * -1;
     }
