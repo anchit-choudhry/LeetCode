@@ -21,8 +21,8 @@ import java.util.stream.Collectors;
  * Example 1:
  * Input: s = "is2 sentence4 This1 a3"
  * Output: "This is a sentence"
- * Explanation: Sort the words in s to their original positions "This1 is2 a3 sentence4", then remove
- * the numbers.
+ * Explanation: Sort the words in s to their original positions "This1 is2 a3 sentence4", then
+ * remove the numbers.
  *
  * Example 2:
  * Input: s = "Myself2 Me1 I4 and3"
@@ -41,8 +41,11 @@ public class LeetCode1859 {
 
     public String sortSentence(String s) {
         String[] splits = s.split(" ");
-        Arrays.sort(splits, (a, b) -> Integer.compare(Integer.parseInt(String.valueOf(a.charAt(a.length() - 1))),
-                Integer.parseInt(String.valueOf(b.charAt(b.length() - 1)))));
-        return Arrays.stream(splits).map(x -> x.substring(0, x.length() - 1)).collect(Collectors.joining(" "));
+        Arrays.sort(splits,
+                (a, b) -> Integer.compare(
+                        Integer.parseInt(String.valueOf(a.charAt(a.length() - 1))),
+                        Integer.parseInt(String.valueOf(b.charAt(b.length() - 1)))));
+        return Arrays.stream(splits).map(x -> x.substring(0, x.length() - 1))
+                .collect(Collectors.joining(" "));
     }
 }

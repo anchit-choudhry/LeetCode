@@ -18,16 +18,17 @@ import com.acesoft.model.TTLObject;
  *  What does the memory usage look like of your solution? What strategies could you employ to
  *  guarantee that entries in the map will eventually be deleted?
  */
-public class TTLMapProblem {
+public final class TTLMapProblem {
 
     private static long now = 0L;
-    private static Map<String, TTLObject> TTLMap = new HashMap<>();
 
+    private static Map<String, TTLObject> TTLMap = new HashMap<>();
     private static void initMap() {
-        RandomStringGenerator generator = new RandomStringGenerator.Builder().withinRange('a', 'z').build();
+        RandomStringGenerator generator = new RandomStringGenerator.Builder().withinRange('a', 'z')
+                .build();
         for (int i = 1; i <= 100; i++) {
-            TTLMap.put(generator.generate(1, i),
-                    new TTLObject(generator.generate(1, i), ThreadLocalRandom.current().nextLong(0, Long.MAX_VALUE)));
+            TTLMap.put(generator.generate(1, i), new TTLObject(generator.generate(1, i),
+                    ThreadLocalRandom.current().nextLong(0, Long.MAX_VALUE)));
         }
     }
 
@@ -47,7 +48,8 @@ public class TTLMapProblem {
     private static void retrieveMap() {
         System.out.println(TTLMap.size());
         String results = TTLMap.entrySet().stream().filter(x -> x.getValue().getTimestamp() > now)
-                .map(x -> x.getKey() + "#" + x.getValue().getValue()).collect(Collectors.joining("\n"));
+                .map(x -> x.getKey() + "#" + x.getValue().getValue())
+                .collect(Collectors.joining("\n"));
         System.out.println(results);
         System.out.println(results.split("\n").length);
     }
@@ -55,5 +57,9 @@ public class TTLMapProblem {
     private static String retriveElement(String key) {
         TTLObject keyVal = TTLMap.get(key);
         return keyVal == null ? null : keyVal.getTimestamp() > now ? keyVal.getValue() : null;
+    }
+
+    private TTLMapProblem() {
+        // This constructor is intentionally empty. Nothing special is needed here.
     }
 }

@@ -33,8 +33,8 @@ package com.acesoft.leetcode;
 public class LeetCode1913 {
 
     public int maxProductDifference(int[] nums) {
-        int smallest = Integer.MAX_VALUE, secondSmallest = Integer.MAX_VALUE, largest = Integer.MIN_VALUE,
-                secondLargest = Integer.MIN_VALUE;
+        int smallest = Integer.MAX_VALUE, secondSmallest = Integer.MAX_VALUE,
+                largest = Integer.MIN_VALUE, secondLargest = Integer.MIN_VALUE;
         for (int num : nums) {
             if (num >= largest) {
                 secondLargest = largest;

@@ -27,12 +27,12 @@ public class LeetCode867 {
         if (cols < 1) {
             return new int[][] {};
         }
-        int[][] B = new int[cols][rows];
+        int[][] b = new int[cols][rows];
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
-                B[j][i] = A[i][j];
+                b[j][i] = A[i][j];
             }
         }
-        return B;
+        return b;
     }
 }

@@ -43,8 +43,8 @@ public class LeetCode20 {
         for (char ch : s.toCharArray()) {
             if (ch == '(' || ch == '{' || ch == '[') {
                 st.push(ch);
-            } else if (st.empty() || (ch == ')' && st.pop() != '(') || (ch == '}' && st.pop() != '{')
-                    || (ch == ']' && st.pop() != '[')) {
+            } else if (st.empty() || (ch == ')' && st.pop() != '(')
+                    || (ch == '}' && st.pop() != '{') || (ch == ']' && st.pop() != '[')) {
                 return false;
             }
         }

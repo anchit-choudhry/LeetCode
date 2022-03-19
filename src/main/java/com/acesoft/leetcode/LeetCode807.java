@@ -69,7 +69,7 @@ public class LeetCode807 {
                     }
                     colsMax[j] = temp;
                 }
-                sum += (Math.min(colsMax[j], rowsMax[i])) - grid[i][j];
+                sum += Math.min(colsMax[j], rowsMax[i]) - grid[i][j];
             }
         }
         return sum;

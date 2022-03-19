@@ -42,7 +42,8 @@ public class LeetCode64 {
             cache[m][n] = grid[m][n] + getShortestPath(m - 1, n, grid);
             return cache[m][n];
         }
-        cache[m][n] = grid[m][n] + Math.min(getShortestPath(m - 1, n, grid), getShortestPath(m, n - 1, grid));
+        cache[m][n] = grid[m][n]
+                + Math.min(getShortestPath(m - 1, n, grid), getShortestPath(m, n - 1, grid));
         return cache[m][n];
     }
 

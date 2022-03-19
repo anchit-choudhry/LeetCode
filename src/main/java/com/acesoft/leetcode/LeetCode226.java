@@ -44,7 +44,10 @@ public class LeetCode226 {
 
     // Suboptimal solution
     private TreeNode swapTreeNodes(int v, TreeNode left, TreeNode right) {
-        return new TreeNode(v, right == null ? null : swapTreeNodes(right.getVal(), right.getLeft(), right.getRight()),
-                left == null ? null : swapTreeNodes(left.getVal(), left.getLeft(), left.getRight()));
+        return new TreeNode(v,
+                right == null ? null
+                        : swapTreeNodes(right.getVal(), right.getLeft(), right.getRight()),
+                left == null ? null
+                        : swapTreeNodes(left.getVal(), left.getLeft(), left.getRight()));
     }
 }

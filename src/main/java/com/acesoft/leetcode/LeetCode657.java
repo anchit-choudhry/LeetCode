@@ -20,7 +20,7 @@ package com.acesoft.leetcode;
  */
 public class LeetCode657 {
 
-    private enum move {
+    private enum MOVE {
         D, L, R, U
     }
 
@@ -28,7 +28,7 @@ public class LeetCode657 {
     public boolean judgeCircle(String moves) {
         int[] doneMoves = new int[4];
         for (int i = 0; i < moves.length(); i++) {
-            doneMoves[move.valueOf(String.valueOf(moves.charAt(i))).ordinal()] += 1;
+            doneMoves[MOVE.valueOf(String.valueOf(moves.charAt(i))).ordinal()] += 1;
         }
         return doneMoves[0] == doneMoves[1] && doneMoves[2] == doneMoves[3];
     }

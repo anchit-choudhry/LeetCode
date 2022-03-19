@@ -41,7 +41,7 @@ public class LeetCode1773 {
 
     public int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
         Map<String, Integer> ruleKeyToIndex = Map.of("type", 0, "color", 1, "name", 2);
-        return Math
-                .toIntExact(items.stream().filter(x -> x.get(ruleKeyToIndex.get(ruleKey)).equals(ruleValue)).count());
+        return Math.toIntExact(items.stream()
+                .filter(x -> x.get(ruleKeyToIndex.get(ruleKey)).equals(ruleValue)).count());
     }
 }

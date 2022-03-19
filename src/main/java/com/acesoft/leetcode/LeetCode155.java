@@ -54,6 +54,7 @@ class MinStack {
 
     // initialize your data structure here
     public MinStack() {
+        // This constructor is intentionally empty. Nothing special is needed here.
     }
 
     public int getMin() {

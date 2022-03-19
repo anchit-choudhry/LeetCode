@@ -39,6 +39,7 @@ public class LeetCode728 {
             }
             return true;
         };
-        return IntStream.rangeClosed(left, right).filter(isSelfDiv).boxed().collect(Collectors.toList());
+        return IntStream.rangeClosed(left, right).filter(isSelfDiv).boxed()
+                .collect(Collectors.toList());
     }
 }

@@ -39,7 +39,8 @@ public class LeetCode852 {
     // Naive solution
     public int peakIndexInMountainArray(int[] A) {
         for (int i = 0; i < A.length; i++) {
-            if (checkAllElemsLess(A, i - 1, i, A[i]) && checkAllElemsLess(A, i + 1, A.length, A[i])) {
+            if (checkAllElemsLess(A, i - 1, i, A[i])
+                    && checkAllElemsLess(A, i + 1, A.length, A[i])) {
                 return i;
             }
         }

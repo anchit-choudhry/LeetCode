@@ -65,7 +65,7 @@ public class LeetCode844 {
             return false;
         }
         while (tt.size() != 0) {
-            if (tt.pop() != ss.pop()) {
+            if (!tt.pop().equals(ss.pop())) {
                 return false;
             }
         }
