@@ -23,6 +23,7 @@ public final class TTLMapProblem {
     private static long now = 0L;
 
     private static Map<String, TTLObject> TTLMap = new HashMap<>();
+
     private static void initMap() {
         RandomStringGenerator generator = new RandomStringGenerator.Builder().withinRange('a', 'z')
                 .build();

@@ -108,7 +108,7 @@ public class LeetCode2166 {
         }
     }
 
-    /**
+    /*
      * Your Bitset object will be instantiated and called as such:
      * Bitset obj = new Bitset(size);
      * obj.fix(idx);
@@ -119,5 +119,4 @@ public class LeetCode2166 {
      * int param_6 = obj.count();
      * String param_7 = obj.toString();
      */
-
 }
