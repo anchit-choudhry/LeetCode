@@ -1,0 +1,46 @@
+package com.acesoft.leetcode;
+
+/*
+ *  https://leetcode.com/problems/find-closest-number-to-zero
+ *
+ *  Given an integer array nums of size n, return the number with the value closest to 0 in nums.
+ *  If there are multiple answers, return the number with the largest value.
+ *
+ *  Example 1:
+ *  Input: nums = [-4,-2,1,4,8]
+ *  Output: 1
+ *  Explanation:
+ *  The distance from -4 to 0 is |-4| = 4.
+ *  The distance from -2 to 0 is |-2| = 2.
+ *  The distance from 1 to 0 is |1| = 1.
+ *  The distance from 4 to 0 is |4| = 4.
+ *  The distance from 8 to 0 is |8| = 8.
+ *  Thus, the closest number to 0 in the array is 1.
+ *
+ *  Example 2:
+ *  Input: nums = [2,-1,1]
+ *  Output: 1
+ *  Explanation: 1 and -1 are both the closest numbers to 0, so 1 being larger is returned.
+ *
+ *  Constraints:
+ *  1 <= n <= 1000
+ *  -10^5 <= nums[i] <= 10^5
+ *
+ */
+public class LeetCode2239 {
+
+    public int findClosestNumber(int[] nums) {
+        int diff = Integer.MAX_VALUE, outNum = Integer.MIN_VALUE, currDiff;
+        for (int num : nums) {
+            currDiff = Math.abs(num - 0);
+            if (currDiff <= diff) {
+                if (currDiff == diff && num < outNum) {
+                    continue;
+                }
+                diff = currDiff;
+                outNum = num;
+            }
+        }
+        return outNum;
+    }
+}
