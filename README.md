@@ -6,6 +6,7 @@
 [![Lint Code Base](https://github.com/anchit-choudhry/LeetCode/actions/workflows/super-linter.yml/badge.svg)](https://github.com/anchit-choudhry/LeetCode/actions/workflows/super-linter.yml)
 [![pmd](https://github.com/anchit-choudhry/LeetCode/actions/workflows/pmd.yml/badge.svg)](https://github.com/anchit-choudhry/LeetCode/actions/workflows/pmd.yml)
 
-LeetCode Problems: https://leetcode.com/problemset/all
+LeetCode Problems: [https://leetcode.com/problemset/all](https://leetcode.com/problemset/all)
 
-Please feel free to reach out to me for questions/corrections. Open to PRs for optimizing the current solutions
+Please feel free to reach out to me for questions/corrections.
+Open to PRs for optimizing the current solutions
