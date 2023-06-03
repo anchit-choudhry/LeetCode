@@ -27,28 +27,28 @@ import java.util.List;
  */
 public class LeetCode56 {
 
-    public int[][] merge(int[][] intervals) {
-        int i = 0;
-        List<int[]> merged = new ArrayList<>();
-        Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
-        merged.add(intervals[0]);
-        for (int[] interval : intervals) {
-            int[] temp = merged.get(merged.size() - 1);
-            if (temp[1] >= interval[0]) {
-                if (temp[1] >= interval[1]) {
-                    continue;
-                } else {
-                    merged.remove(merged.size() - 1);
-                    merged.add(new int[] { temp[0], interval[1] });
-                }
-            } else {
-                merged.add(interval);
-            }
+  public int[][] merge(int[][] intervals) {
+    int i = 0;
+    List<int[]> merged = new ArrayList<>();
+    Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
+    merged.add(intervals[0]);
+    for (int[] interval : intervals) {
+      int[] temp = merged.get(merged.size() - 1);
+      if (temp[1] >= interval[0]) {
+        if (temp[1] >= interval[1]) {
+          continue;
+        } else {
+          merged.remove(merged.size() - 1);
+          merged.add(new int[]{temp[0], interval[1]});
         }
-        int[][] result = new int[merged.size()][2];
-        for (int[] arr : merged) {
-            result[i++] = arr;
-        }
-        return result;
+      } else {
+        merged.add(interval);
+      }
     }
+    int[][] result = new int[merged.size()][2];
+    for (int[] arr : merged) {
+      result[i++] = arr;
+    }
+    return result;
+  }
 }

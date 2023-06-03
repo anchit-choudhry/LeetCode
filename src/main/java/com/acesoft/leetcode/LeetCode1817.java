@@ -51,16 +51,16 @@ import java.util.Set;
  */
 public class LeetCode1817 {
 
-    public int[] findingUsersActiveMinutes(int[][] logs, int k) {
-        Map<Integer, Set<Integer>> data = new HashMap<>();
-        int[] arr = new int[k];
-        for (int[] log : logs) {
-            data.putIfAbsent(log[0], new HashSet<Integer>());
-            data.get(log[0]).add(log[1]);
-        }
-        for (Set<Integer> vals : data.values()) {
-            arr[vals.size() - 1]++;
-        }
-        return arr;
+  public int[] findingUsersActiveMinutes(int[][] logs, int k) {
+    Map<Integer, Set<Integer>> data = new HashMap<>();
+    int[] arr = new int[k];
+    for (int[] log : logs) {
+      data.putIfAbsent(log[0], new HashSet<Integer>());
+      data.get(log[0]).add(log[1]);
     }
+    for (Set<Integer> vals : data.values()) {
+      arr[vals.size() - 1]++;
+    }
+    return arr;
+  }
 }

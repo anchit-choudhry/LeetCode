@@ -23,14 +23,14 @@ import com.acesoft.model.ListNode;
  */
 public class LeetCode83 {
 
-    public ListNode deleteDuplicates(ListNode head) {
-        ListNode current = head;
-        while (current != null) {
-            while (current.getNext() != null && current.getVal() == current.getNext().getVal()) {
-                current.setNext(current.getNext().getNext());
-            }
-            current = current.getNext();
-        }
-        return head;
+  public ListNode deleteDuplicates(ListNode head) {
+    ListNode current = head;
+    while (current != null) {
+      while (current.getNext() != null && current.getVal() == current.getNext().getVal()) {
+        current.setNext(current.getNext().getNext());
+      }
+      current = current.getNext();
     }
+    return head;
+  }
 }

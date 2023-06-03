@@ -30,15 +30,15 @@ package com.acesoft.leetcode;
  */
 public class LeetCode832 {
 
-    public int[][] flipAndInvertImage(int[][] A) {
-        int rows = A.length, cols = A[0].length, i, j;
-        for (i = 0; i < rows; i++) {
-            for (j = 0; cols % 2 == 0 ? j < cols / 2 : j <= cols / 2; j++) {
-                if (A[i][j] == A[i][cols - j - 1]) {
-                    A[i][j] = A[i][cols - j - 1] = A[i][j] == 0 ? 1 : 0;
-                }
-            }
+  public int[][] flipAndInvertImage(int[][] A) {
+    int rows = A.length, cols = A[0].length, i, j;
+    for (i = 0; i < rows; i++) {
+      for (j = 0; cols % 2 == 0 ? j < cols / 2 : j <= cols / 2; j++) {
+        if (A[i][j] == A[i][cols - j - 1]) {
+          A[i][j] = A[i][cols - j - 1] = A[i][j] == 0 ? 1 : 0;
         }
-        return A;
+      }
     }
+    return A;
+  }
 }

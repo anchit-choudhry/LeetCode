@@ -36,17 +36,17 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1704 {
 
-    public boolean halvesAreAlike(String s) {
-        int i = 0, len = s.length(), left = 0, right = 0;
-        String ch = "aAeEiIoOuU";
-        for (i = 0; i < len / 2; i++) {
-            if (ch.indexOf(s.charAt(i)) > -1) {
-                left++;
-            }
-            if (ch.indexOf(s.charAt(len - i - 1)) > -1) {
-                right++;
-            }
-        }
-        return left == right;
+  public boolean halvesAreAlike(String s) {
+    int i = 0, len = s.length(), left = 0, right = 0;
+    String ch = "aAeEiIoOuU";
+    for (i = 0; i < len / 2; i++) {
+      if (ch.indexOf(s.charAt(i)) > -1) {
+        left++;
+      }
+      if (ch.indexOf(s.charAt(len - i - 1)) > -1) {
+        right++;
+      }
     }
+    return left == right;
+  }
 }

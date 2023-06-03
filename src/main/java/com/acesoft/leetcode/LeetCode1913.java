@@ -32,23 +32,23 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1913 {
 
-    public int maxProductDifference(int[] nums) {
-        int smallest = Integer.MAX_VALUE, secondSmallest = Integer.MAX_VALUE,
-                largest = Integer.MIN_VALUE, secondLargest = Integer.MIN_VALUE;
-        for (int num : nums) {
-            if (num >= largest) {
-                secondLargest = largest;
-                largest = num;
-            } else if (num > secondLargest) {
-                secondLargest = num;
-            }
-            if (num <= smallest) {
-                secondSmallest = smallest;
-                smallest = num;
-            } else if (num < secondSmallest) {
-                secondSmallest = num;
-            }
-        }
-        return (largest * secondLargest) - (smallest * secondSmallest);
+  public int maxProductDifference(int[] nums) {
+    int smallest = Integer.MAX_VALUE, secondSmallest = Integer.MAX_VALUE,
+        largest = Integer.MIN_VALUE, secondLargest = Integer.MIN_VALUE;
+    for (int num : nums) {
+      if (num >= largest) {
+        secondLargest = largest;
+        largest = num;
+      } else if (num > secondLargest) {
+        secondLargest = num;
+      }
+      if (num <= smallest) {
+        secondSmallest = smallest;
+        smallest = num;
+      } else if (num < secondSmallest) {
+        secondSmallest = num;
+      }
     }
+    return (largest * secondLargest) - (smallest * secondSmallest);
+  }
 }

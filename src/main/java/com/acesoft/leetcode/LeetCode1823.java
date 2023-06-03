@@ -45,17 +45,17 @@ import java.util.Queue;
  */
 public class LeetCode1823 {
 
-    public int findTheWinner(int n, int k) {
-        Queue<Integer> circle = new LinkedList<>();
-        for (int i = 0; i < n; i++) {
-            circle.offer(i + 1);
-        }
-        while (circle.size() > 1) {
-            for (int i = 0; i < k - 1; i++) {
-                circle.offer(circle.poll());
-            }
-            circle.poll();
-        }
-        return circle.poll();
+  public int findTheWinner(int n, int k) {
+    Queue<Integer> circle = new LinkedList<>();
+    for (int i = 0; i < n; i++) {
+      circle.offer(i + 1);
     }
+    while (circle.size() > 1) {
+      for (int i = 0; i < k - 1; i++) {
+        circle.offer(circle.poll());
+      }
+      circle.poll();
+    }
+    return circle.poll();
+  }
 }

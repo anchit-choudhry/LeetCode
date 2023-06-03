@@ -38,16 +38,16 @@ import java.util.Arrays;
  */
 public class LeetCode1833 {
 
-    public int maxIceCream(int[] costs, int coins) {
-        Arrays.sort(costs);
-        int bars = 0;
-        for (int cost : costs) {
-            coins -= cost;
-            if (coins < 0) {
-                break;
-            }
-            bars++;
-        }
-        return bars;
+  public int maxIceCream(int[] costs, int coins) {
+    Arrays.sort(costs);
+    int bars = 0;
+    for (int cost : costs) {
+      coins -= cost;
+      if (coins < 0) {
+        break;
+      }
+      bars++;
     }
+    return bars;
+  }
 }

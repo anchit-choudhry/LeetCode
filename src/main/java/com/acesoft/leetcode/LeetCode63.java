@@ -32,32 +32,32 @@ package com.acesoft.leetcode;
  */
 public class LeetCode63 {
 
-    private int[][] cache;
+  private int[][] cache;
 
-    private int checkValidPath(int m, int n) {
-        if (m < 0 || n < 0 || cache[m][n] == Integer.MIN_VALUE) {
-            return 0;
-        }
-        if (m == 0 && n == 0) {
-            return 1;
-        }
-        if (cache[m][n] != 0) {
-            return cache[m][n];
-        }
-        cache[m][n] = checkValidPath(m - 1, n) + checkValidPath(m, n - 1);
-        return cache[m][n];
+  private int checkValidPath(int m, int n) {
+    if (m < 0 || n < 0 || cache[m][n] == Integer.MIN_VALUE) {
+      return 0;
     }
+    if (m == 0 && n == 0) {
+      return 1;
+    }
+    if (cache[m][n] != 0) {
+      return cache[m][n];
+    }
+    cache[m][n] = checkValidPath(m - 1, n) + checkValidPath(m, n - 1);
+    return cache[m][n];
+  }
 
-    public int uniquePathsWithObstacles(int[][] obstacleGrid) {
-        int m = obstacleGrid.length, n = obstacleGrid[0].length, i, j;
-        cache = obstacleGrid;
-        for (i = 0; i < m; i++) {
-            for (j = 0; j < n; j++) {
-                if (cache[i][j] == 1) {
-                    cache[i][j] = Integer.MIN_VALUE;
-                }
-            }
+  public int uniquePathsWithObstacles(int[][] obstacleGrid) {
+    int m = obstacleGrid.length, n = obstacleGrid[0].length, i, j;
+    cache = obstacleGrid;
+    for (i = 0; i < m; i++) {
+      for (j = 0; j < n; j++) {
+        if (cache[i][j] == 1) {
+          cache[i][j] = Integer.MIN_VALUE;
         }
-        return checkValidPath(m - 1, n - 1);
+      }
     }
+    return checkValidPath(m - 1, n - 1);
+  }
 }

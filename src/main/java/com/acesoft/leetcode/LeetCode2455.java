@@ -25,15 +25,15 @@ package com.acesoft.leetcode;
  */
 public class LeetCode2455 {
 
-    public int averageValue(int[] nums) {
-        int count = 0, sum = 0;
-        for (int num : nums) {
-            if (num % 3 != 0 || num % 2 != 0) {
-                continue;
-            }
-            sum += num;
-            count++;
-        }
-        return count == 0 ? 0 : sum / count;
+  public int averageValue(int[] nums) {
+    int count = 0, sum = 0;
+    for (int num : nums) {
+      if (num % 3 != 0 || num % 2 != 0) {
+        continue;
+      }
+      sum += num;
+      count++;
     }
+    return count == 0 ? 0 : sum / count;
+  }
 }

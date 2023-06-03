@@ -31,21 +31,21 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1662 {
 
-    public boolean arrayStringsAreEqual(String[] word1, String[] word2) {
-        int iWord1 = 0, jWord1 = 0, iWord2 = 0, jWord2 = 0;
-        while (iWord1 < word1.length && iWord2 < word2.length) {
-            if (word1[iWord1].charAt(jWord1++) != word2[iWord2].charAt(jWord2++)) {
-                return false;
-            }
-            if (jWord1 == word1[iWord1].length()) {
-                iWord1++;
-                jWord1 = 0;
-            }
-            if (jWord2 == word2[iWord2].length()) {
-                iWord2++;
-                jWord2 = 0;
-            }
-        }
-        return iWord1 + iWord2 == word1.length + word2.length;
+  public boolean arrayStringsAreEqual(String[] word1, String[] word2) {
+    int iWord1 = 0, jWord1 = 0, iWord2 = 0, jWord2 = 0;
+    while (iWord1 < word1.length && iWord2 < word2.length) {
+      if (word1[iWord1].charAt(jWord1++) != word2[iWord2].charAt(jWord2++)) {
+        return false;
+      }
+      if (jWord1 == word1[iWord1].length()) {
+        iWord1++;
+        jWord1 = 0;
+      }
+      if (jWord2 == word2[iWord2].length()) {
+        iWord2++;
+        jWord2 = 0;
+      }
     }
+    return iWord1 + iWord2 == word1.length + word2.length;
+  }
 }

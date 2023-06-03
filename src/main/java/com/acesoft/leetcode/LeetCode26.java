@@ -47,18 +47,18 @@ package com.acesoft.leetcode;
  */
 public class LeetCode26 {
 
-    public int removeDuplicates(int[] nums) {
-        if (nums.length < 2) {
-            return nums.length;
-        }
-        int lastSeen = nums[0], i, count = 1;
-        for (i = 1; i < nums.length; i++) {
-            if (lastSeen == nums[i]) {
-                continue;
-            }
-            lastSeen = nums[i];
-            nums[count++] = nums[i];
-        }
-        return count;
+  public int removeDuplicates(int[] nums) {
+    if (nums.length < 2) {
+      return nums.length;
     }
+    int lastSeen = nums[0], i, count = 1;
+    for (i = 1; i < nums.length; i++) {
+      if (lastSeen == nums[i]) {
+        continue;
+      }
+      lastSeen = nums[i];
+      nums[count++] = nums[i];
+    }
+    return count;
+  }
 }

@@ -37,24 +37,24 @@ package com.acesoft.leetcode;
  */
 public class LeetCode62 {
 
-    private int[][] cache;
+  private int[][] cache;
 
-    private int isValidUniquePath(int m, int n) {
-        if (m < 0 || n < 0) {
-            return 0;
-        }
-        if (m == 0 && n == 0) {
-            return 1;
-        }
-        if (cache[m][n] > 0) {
-            return cache[m][n];
-        }
-        cache[m][n] = isValidUniquePath(m - 1, n) + isValidUniquePath(m, n - 1);
-        return cache[m][n];
+  private int isValidUniquePath(int m, int n) {
+    if (m < 0 || n < 0) {
+      return 0;
     }
+    if (m == 0 && n == 0) {
+      return 1;
+    }
+    if (cache[m][n] > 0) {
+      return cache[m][n];
+    }
+    cache[m][n] = isValidUniquePath(m - 1, n) + isValidUniquePath(m, n - 1);
+    return cache[m][n];
+  }
 
-    public int uniquePaths(int m, int n) {
-        cache = new int[m][n];
-        return isValidUniquePath(m - 1, n - 1);
-    }
+  public int uniquePaths(int m, int n) {
+    cache = new int[m][n];
+    return isValidUniquePath(m - 1, n - 1);
+  }
 }

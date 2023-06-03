@@ -35,15 +35,15 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1342 {
 
-    public int numberOfSteps(int num) {
-        int count = 0;
-        if (num < 2) {
-            return num;
-        }
-        while (num != 1) {
-            num = num % 2 == 0 ? num / 2 : --num;
-            count++;
-        }
-        return ++count;
+  public int numberOfSteps(int num) {
+    int count = 0;
+    if (num < 2) {
+      return num;
     }
+    while (num != 1) {
+      num = num % 2 == 0 ? num / 2 : --num;
+      count++;
+    }
+    return ++count;
+  }
 }

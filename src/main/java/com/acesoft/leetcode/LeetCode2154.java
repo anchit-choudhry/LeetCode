@@ -39,16 +39,16 @@ import java.util.Set;
  */
 public class LeetCode2154 {
 
-    public int findFinalValue(int[] nums, int original) {
-        Set<Integer> numsAsSet = new HashSet<>();
-        for (int num : nums) {
-            if (num >= original) {
-                numsAsSet.add(num);
-            }
-        }
-        while (numsAsSet.contains(original)) {
-            original *= 2;
-        }
-        return original;
+  public int findFinalValue(int[] nums, int original) {
+    Set<Integer> numsAsSet = new HashSet<>();
+    for (int num : nums) {
+      if (num >= original) {
+        numsAsSet.add(num);
+      }
     }
+    while (numsAsSet.contains(original)) {
+      original *= 2;
+    }
+    return original;
+  }
 }

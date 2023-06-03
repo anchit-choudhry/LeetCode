@@ -47,13 +47,13 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1450 {
 
-    public int busyStudent(int[] startTime, int[] endTime, int queryTime) {
-        int i, sum = 0;
-        for (i = 0; i < startTime.length; i++) {
-            if (queryTime >= startTime[i] && queryTime <= endTime[i]) {
-                sum++;
-            }
-        }
-        return sum;
+  public int busyStudent(int[] startTime, int[] endTime, int queryTime) {
+    int i, sum = 0;
+    for (i = 0; i < startTime.length; i++) {
+      if (queryTime >= startTime[i] && queryTime <= endTime[i]) {
+        sum++;
+      }
     }
+    return sum;
+  }
 }

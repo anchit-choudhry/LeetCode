@@ -29,17 +29,17 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1748 {
 
-    public int sumOfUnique(int[] nums) {
-        int[] arr = new int[100];
-        int sum = 0;
-        for (int num : nums) {
-            arr[num - 1]++;
-        }
-        for (int i = 0; i < 100; i++) {
-            if (arr[i] == 1) {
-                sum += i + 1;
-            }
-        }
-        return sum;
+  public int sumOfUnique(int[] nums) {
+    int[] arr = new int[100];
+    int sum = 0;
+    for (int num : nums) {
+      arr[num - 1]++;
     }
+    for (int i = 0; i < 100; i++) {
+      if (arr[i] == 1) {
+        sum += i + 1;
+      }
+    }
+    return sum;
+  }
 }

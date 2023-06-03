@@ -26,7 +26,7 @@ package com.acesoft.leetcode;
  */
 public class LeetCode2278 {
 
-    public int percentageLetter(String s, char letter) {
-        return (int) s.chars().filter(ch -> ch == letter).count() * 100 / s.length();
-    }
+  public int percentageLetter(String s, char letter) {
+    return (int) s.chars().filter(ch -> ch == letter).count() * 100 / s.length();
+  }
 }

@@ -35,42 +35,42 @@ import java.util.List;
  */
 public class LeetCode890 {
 
-    public List<String> findAndReplacePattern(String[] words, String pattern) {
-        boolean flag;
-        char ch;
-        int i, chAsInt, index;
+  public List<String> findAndReplacePattern(String[] words, String pattern) {
+    boolean flag;
+    char ch;
+    int i, chAsInt, index;
 
-        boolean[] visited = new boolean[26];
-        int[] alphabets = new int[26];
+    boolean[] visited = new boolean[26];
+    int[] alphabets = new int[26];
 
-        List<String> matches = new ArrayList<>();
+    List<String> matches = new ArrayList<>();
 
-        for (String word : words) {
-            flag = true;
-            Arrays.fill(alphabets, 0);
-            Arrays.fill(visited, false);
+    for (String word : words) {
+      flag = true;
+      Arrays.fill(alphabets, 0);
+      Arrays.fill(visited, false);
 
-            for (i = 0; i < word.length(); i++) {
-                ch = word.charAt(i);
-                chAsInt = ch - 'a';
-                index = pattern.charAt(i) - 'a';
+      for (i = 0; i < word.length(); i++) {
+        ch = word.charAt(i);
+        chAsInt = ch - 'a';
+        index = pattern.charAt(i) - 'a';
 
-                if ((visited[chAsInt] && alphabets[index] != ch)
-                        || (!visited[chAsInt] && alphabets[index] != 0)) {
-                    flag = false;
-                    break;
-                } else {
-                    if (alphabets[index] != 0) {
-                        continue;
-                    }
-                    alphabets[index] = ch;
-                    visited[chAsInt] = true;
-                }
-            }
-            if (flag) {
-                matches.add(word);
-            }
+        if ((visited[chAsInt] && alphabets[index] != ch)
+            || (!visited[chAsInt] && alphabets[index] != 0)) {
+          flag = false;
+          break;
+        } else {
+          if (alphabets[index] != 0) {
+            continue;
+          }
+          alphabets[index] = ch;
+          visited[chAsInt] = true;
         }
-        return matches;
+      }
+      if (flag) {
+        matches.add(word);
+      }
     }
+    return matches;
+  }
 }

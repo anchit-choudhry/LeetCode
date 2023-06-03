@@ -28,19 +28,20 @@ package com.acesoft.leetcode;
  * 0 <= prices[i] <= 104
  */
 public class LeetCode121 {
-    public int maxProfit(int[] prices) {
-        if (prices.length < 2) {
-            return 0;
-        }
-        int buy = prices[0], maxProfit = 0, profit, i;
-        for (i = 1; i < prices.length; i++) {
-            if (prices[i] > buy) {
-                profit = prices[i] - buy;
-                maxProfit = maxProfit < profit ? profit : maxProfit;
-            } else if (prices[i] < buy) {
-                buy = prices[i];
-            }
-        }
-        return maxProfit;
+
+  public int maxProfit(int[] prices) {
+    if (prices.length < 2) {
+      return 0;
     }
+    int buy = prices[0], maxProfit = 0, profit, i;
+    for (i = 1; i < prices.length; i++) {
+      if (prices[i] > buy) {
+        profit = prices[i] - buy;
+        maxProfit = maxProfit < profit ? profit : maxProfit;
+      } else if (prices[i] < buy) {
+        buy = prices[i];
+      }
+    }
+    return maxProfit;
+  }
 }

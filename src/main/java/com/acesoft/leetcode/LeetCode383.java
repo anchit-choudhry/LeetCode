@@ -26,16 +26,16 @@ package com.acesoft.leetcode;
  */
 public class LeetCode383 {
 
-    public boolean canConstruct(String ransomNote, String magazine) {
-        int[] chars = new int[26];
-        for (char ch : magazine.toCharArray()) {
-            chars[ch - 97]++;
-        }
-        for (char ch : ransomNote.toCharArray()) {
-            if (--chars[ch - 97] < 0) {
-                return false;
-            }
-        }
-        return true;
+  public boolean canConstruct(String ransomNote, String magazine) {
+    int[] chars = new int[26];
+    for (char ch : magazine.toCharArray()) {
+      chars[ch - 97]++;
     }
+    for (char ch : ransomNote.toCharArray()) {
+      if (--chars[ch - 97] < 0) {
+        return false;
+      }
+    }
+    return true;
+  }
 }

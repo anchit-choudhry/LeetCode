@@ -31,9 +31,9 @@ import com.acesoft.model.ListNode;
  */
 public class LeetCode237 {
 
-    // Dumbest problem
-    public void deleteNode(ListNode node) {
-        node.setVal(node.getNext().getVal());
-        node.setNext(node.getNext().getNext());
-    }
+  // Dumbest problem
+  public void deleteNode(ListNode node) {
+    node.setVal(node.getNext().getVal());
+    node.setNext(node.getNext().getNext());
+  }
 }

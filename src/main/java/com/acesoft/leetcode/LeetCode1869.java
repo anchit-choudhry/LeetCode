@@ -42,23 +42,23 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1869 {
 
-    public boolean checkZeroOnes(String s) {
-        int ones = 0, tempOnes = 0, tempZeros = 0, zeros = 0;
-        for (char ch : s.toCharArray()) {
-            if (ch == '0') {
-                if (tempOnes > ones) {
-                    ones = tempOnes;
-                }
-                tempOnes = 0;
-                tempZeros++;
-            } else {
-                if (tempZeros > zeros) {
-                    zeros = tempZeros;
-                }
-                tempZeros = 0;
-                tempOnes++;
-            }
+  public boolean checkZeroOnes(String s) {
+    int ones = 0, tempOnes = 0, tempZeros = 0, zeros = 0;
+    for (char ch : s.toCharArray()) {
+      if (ch == '0') {
+        if (tempOnes > ones) {
+          ones = tempOnes;
         }
-        return Math.max(ones, tempOnes) > Math.max(zeros, tempZeros);
+        tempOnes = 0;
+        tempZeros++;
+      } else {
+        if (tempZeros > zeros) {
+          zeros = tempZeros;
+        }
+        tempZeros = 0;
+        tempOnes++;
+      }
     }
+    return Math.max(ones, tempOnes) > Math.max(zeros, tempZeros);
+  }
 }

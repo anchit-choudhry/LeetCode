@@ -36,29 +36,29 @@ import java.util.Set;
  */
 public class LeetCode1361 {
 
-    // Suboptimal solution
-    public boolean validateBinaryTreeNodes(int n, int[] leftChild, int[] rightChild) {
-        if (n == 1 && leftChild[0] - rightChild[0] == 0) {
-            return false;
-        }
-        int i;
-        Set<Integer> hs = new HashSet<>();
-        for (i = 0; i < n; i++) {
-            if (leftChild[i] != -1) {
-                if (i >= leftChild[i] || hs.contains(leftChild[i])) {
-                    return false;
-                } else {
-                    hs.add(leftChild[i]);
-                }
-            }
-            if (rightChild[i] != -1) {
-                if (i >= rightChild[i] || hs.contains(rightChild[i])) {
-                    return false;
-                } else {
-                    hs.add(rightChild[i]);
-                }
-            }
-        }
-        return hs.size() == n - 1;
+  // Suboptimal solution
+  public boolean validateBinaryTreeNodes(int n, int[] leftChild, int[] rightChild) {
+    if (n == 1 && leftChild[0] - rightChild[0] == 0) {
+      return false;
     }
+    int i;
+    Set<Integer> hs = new HashSet<>();
+    for (i = 0; i < n; i++) {
+      if (leftChild[i] != -1) {
+        if (i >= leftChild[i] || hs.contains(leftChild[i])) {
+          return false;
+        } else {
+          hs.add(leftChild[i]);
+        }
+      }
+      if (rightChild[i] != -1) {
+        if (i >= rightChild[i] || hs.contains(rightChild[i])) {
+          return false;
+        } else {
+          hs.add(rightChild[i]);
+        }
+      }
+    }
+    return hs.size() == n - 1;
+  }
 }

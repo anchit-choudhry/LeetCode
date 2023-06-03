@@ -40,11 +40,11 @@ package com.acesoft.leetcode;
  */
 public class LeetCode2073 {
 
-    public int timeRequiredToBuy(int[] tickets, int k) {
-        int count = 0, i;
-        for (i = 0; i < tickets.length; i++) {
-            count += Math.min(i > k ? tickets[k] - 1 : tickets[k], tickets[i]);
-        }
-        return count;
+  public int timeRequiredToBuy(int[] tickets, int k) {
+    int count = 0, i;
+    for (i = 0; i < tickets.length; i++) {
+      count += Math.min(i > k ? tickets[k] - 1 : tickets[k], tickets[i]);
     }
+    return count;
+  }
 }

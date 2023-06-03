@@ -39,18 +39,18 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1768 {
 
-    public String mergeAlternately(String word1, String word2) {
-        StringBuilder sb = new StringBuilder();
-        int w1 = word1.length(), w2 = word2.length(), first = 0, second = 0;
-        while (first < w1 && second < w2) {
-            sb.append(word1.charAt(first++)).append(word2.charAt(second++));
-        }
-        while (first < w1) {
-            sb.append(word1.charAt(first++));
-        }
-        while (second < w2) {
-            sb.append(word2.charAt(second++));
-        }
-        return sb.toString();
+  public String mergeAlternately(String word1, String word2) {
+    StringBuilder sb = new StringBuilder();
+    int w1 = word1.length(), w2 = word2.length(), first = 0, second = 0;
+    while (first < w1 && second < w2) {
+      sb.append(word1.charAt(first++)).append(word2.charAt(second++));
     }
+    while (first < w1) {
+      sb.append(word1.charAt(first++));
+    }
+    while (second < w2) {
+      sb.append(word2.charAt(second++));
+    }
+    return sb.toString();
+  }
 }

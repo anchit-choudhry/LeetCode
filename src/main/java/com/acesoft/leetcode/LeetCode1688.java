@@ -37,17 +37,17 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1688 {
 
-    // Suboptimal solution
-    public int numberOfMatches(int n) {
-        if (n == 1) {
-            return 0;
-        }
-        int matches = n % 2 == 0 ? n / 2 : (n - 1) / 2;
-        return matches + numberOfMatches(n % 2 == 0 ? matches : matches + 1);
+  // Suboptimal solution
+  public int numberOfMatches(int n) {
+    if (n == 1) {
+      return 0;
     }
+    int matches = n % 2 == 0 ? n / 2 : (n - 1) / 2;
+    return matches + numberOfMatches(n % 2 == 0 ? matches : matches + 1);
+  }
 
-    // Optimal solution
-    public int numberOfMatches1(int n) {
-        return n - 1;
-    }
+  // Optimal solution
+  public int numberOfMatches1(int n) {
+    return n - 1;
+  }
 }

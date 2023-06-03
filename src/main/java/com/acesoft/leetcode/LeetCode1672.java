@@ -40,17 +40,17 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1672 {
 
-    public int maximumWealth(int[][] accounts) {
-        int maxSum = 0, tempSum;
-        for (int[] account : accounts) {
-            tempSum = 0;
-            for (int j = 0; j < accounts[0].length; j++) {
-                tempSum += account[j];
-            }
-            if (maxSum < tempSum) {
-                maxSum = tempSum;
-            }
-        }
-        return maxSum;
+  public int maximumWealth(int[][] accounts) {
+    int maxSum = 0, tempSum;
+    for (int[] account : accounts) {
+      tempSum = 0;
+      for (int j = 0; j < accounts[0].length; j++) {
+        tempSum += account[j];
+      }
+      if (maxSum < tempSum) {
+        maxSum = tempSum;
+      }
     }
+    return maxSum;
+  }
 }

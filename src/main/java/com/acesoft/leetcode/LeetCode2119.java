@@ -31,7 +31,7 @@ package com.acesoft.leetcode;
  */
 public class LeetCode2119 {
 
-    public boolean isSameAfterReversals(int num) {
-        return num % 10 != 0 || num == 0;
-    }
+  public boolean isSameAfterReversals(int num) {
+    return num % 10 != 0 || num == 0;
+  }
 }

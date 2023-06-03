@@ -31,26 +31,26 @@ package com.acesoft.leetcode;
  */
 public class LeetCode125 {
 
-    public boolean isPalindrome(String s) {
-        int start = 0, end = s.length() - 1;
-        char left, right;
-        while (start < end) {
-            left = s.charAt(start);
-            right = s.charAt(end);
-            if (!Character.isLetterOrDigit(left)) {
-                start++;
-                continue;
-            }
-            if (!Character.isLetterOrDigit(right)) {
-                end--;
-                continue;
-            }
-            if (Character.toLowerCase(left) != Character.toLowerCase(right)) {
-                return false;
-            }
-            start++;
-            end--;
-        }
-        return true;
+  public boolean isPalindrome(String s) {
+    int start = 0, end = s.length() - 1;
+    char left, right;
+    while (start < end) {
+      left = s.charAt(start);
+      right = s.charAt(end);
+      if (!Character.isLetterOrDigit(left)) {
+        start++;
+        continue;
+      }
+      if (!Character.isLetterOrDigit(right)) {
+        end--;
+        continue;
+      }
+      if (Character.toLowerCase(left) != Character.toLowerCase(right)) {
+        return false;
+      }
+      start++;
+      end--;
     }
+    return true;
+  }
 }

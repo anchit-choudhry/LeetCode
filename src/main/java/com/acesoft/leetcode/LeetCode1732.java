@@ -26,14 +26,14 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1732 {
 
-    public int largestAltitude(int[] gain) {
-        int altChange = 0, highestAlt = Integer.MIN_VALUE;
-        for (int altGain : gain) {
-            altChange += altGain;
-            if (highestAlt < altChange) {
-                highestAlt = altChange;
-            }
-        }
-        return highestAlt < 1 ? 0 : highestAlt;
+  public int largestAltitude(int[] gain) {
+    int altChange = 0, highestAlt = Integer.MIN_VALUE;
+    for (int altGain : gain) {
+      altChange += altGain;
+      if (highestAlt < altChange) {
+        highestAlt = altChange;
+      }
     }
+    return highestAlt < 1 ? 0 : highestAlt;
+  }
 }

@@ -52,22 +52,22 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1880 {
 
-    public boolean isSumEqual(String firstWord, String secondWord, String targetWord) {
-        int i, j = 0, firstNum = 0, secondNum = 0, targetNum = 0;
-        for (i = firstWord.length() - 1; i >= 0; i--) {
-            firstNum += (int) Math.pow(10, j++)
-                    * Integer.parseInt(String.valueOf(firstWord.charAt(i) - 'a'));
-        }
-        j = 0;
-        for (i = secondWord.length() - 1; i >= 0; i--) {
-            secondNum += (int) Math.pow(10, j++)
-                    * Integer.parseInt(String.valueOf(secondWord.charAt(i) - 'a'));
-        }
-        j = 0;
-        for (i = targetWord.length() - 1; i >= 0; i--) {
-            targetNum += (int) Math.pow(10, j++)
-                    * Integer.parseInt(String.valueOf(targetWord.charAt(i) - 'a'));
-        }
-        return firstNum + secondNum == targetNum;
+  public boolean isSumEqual(String firstWord, String secondWord, String targetWord) {
+    int i, j = 0, firstNum = 0, secondNum = 0, targetNum = 0;
+    for (i = firstWord.length() - 1; i >= 0; i--) {
+      firstNum += (int) Math.pow(10, j++)
+          * Integer.parseInt(String.valueOf(firstWord.charAt(i) - 'a'));
     }
+    j = 0;
+    for (i = secondWord.length() - 1; i >= 0; i--) {
+      secondNum += (int) Math.pow(10, j++)
+          * Integer.parseInt(String.valueOf(secondWord.charAt(i) - 'a'));
+    }
+    j = 0;
+    for (i = targetWord.length() - 1; i >= 0; i--) {
+      targetNum += (int) Math.pow(10, j++)
+          * Integer.parseInt(String.valueOf(targetWord.charAt(i) - 'a'));
+    }
+    return firstNum + secondNum == targetNum;
+  }
 }

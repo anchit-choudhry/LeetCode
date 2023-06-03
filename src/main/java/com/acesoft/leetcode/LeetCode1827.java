@@ -34,19 +34,19 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1827 {
 
-    public int minOperations(int[] nums) {
-        if (nums.length == 1) {
-            return 0;
-        }
-        int i, sum = 0, temp;
-        for (i = 1; i < nums.length; i++) {
-            if (nums[i] > nums[i - 1]) {
-                continue;
-            }
-            temp = nums[i - 1] + 1;
-            sum += temp - nums[i];
-            nums[i] = temp;
-        }
-        return sum;
+  public int minOperations(int[] nums) {
+    if (nums.length == 1) {
+      return 0;
     }
+    int i, sum = 0, temp;
+    for (i = 1; i < nums.length; i++) {
+      if (nums[i] > nums[i - 1]) {
+        continue;
+      }
+      temp = nums[i - 1] + 1;
+      sum += temp - nums[i];
+      nums[i] = temp;
+    }
+    return sum;
+  }
 }

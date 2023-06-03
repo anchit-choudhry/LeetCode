@@ -48,21 +48,21 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1389 {
 
-    // Suboptimal solution
-    public int[] createTargetArray(int[] nums, int[] index) {
-        int i, j;
-        int[] target = new int[nums.length];
-        for (i = 0; i < nums.length; i++) {
-            target[i] = -1;
-        }
-        for (i = 0; i < nums.length; i++) {
-            if (target[index[i]] != -1) {
-                for (j = nums.length - 1; j >= index[i] + 1; j--) {
-                    target[j] = target[j - 1];
-                }
-            }
-            target[index[i]] = nums[i];
-        }
-        return target;
+  // Suboptimal solution
+  public int[] createTargetArray(int[] nums, int[] index) {
+    int i, j;
+    int[] target = new int[nums.length];
+    for (i = 0; i < nums.length; i++) {
+      target[i] = -1;
     }
+    for (i = 0; i < nums.length; i++) {
+      if (target[index[i]] != -1) {
+        for (j = nums.length - 1; j >= index[i] + 1; j--) {
+          target[j] = target[j - 1];
+        }
+      }
+      target[index[i]] = nums[i];
+    }
+    return target;
+  }
 }

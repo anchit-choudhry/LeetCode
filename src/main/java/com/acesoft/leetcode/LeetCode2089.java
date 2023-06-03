@@ -38,19 +38,19 @@ import java.util.List;
  */
 public class LeetCode2089 {
 
-    public List<Integer> targetIndices(int[] nums, int target) {
-        List<Integer> num = new ArrayList<>();
-        int i, lessThan = 0, equals = 0;
-        for (i = 0; i < nums.length; i++) {
-            if (nums[i] < target) {
-                lessThan++;
-            } else if (nums[i] == target) {
-                equals++;
-            }
-        }
-        for (i = 0; i < equals; i++) {
-            num.add(lessThan++);
-        }
-        return num;
+  public List<Integer> targetIndices(int[] nums, int target) {
+    List<Integer> num = new ArrayList<>();
+    int i, lessThan = 0, equals = 0;
+    for (i = 0; i < nums.length; i++) {
+      if (nums[i] < target) {
+        lessThan++;
+      } else if (nums[i] == target) {
+        equals++;
+      }
     }
+    for (i = 0; i < equals; i++) {
+      num.add(lessThan++);
+    }
+    return num;
+  }
 }

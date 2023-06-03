@@ -30,39 +30,39 @@ import java.util.Collections;
  */
 public class LeetCode2165 {
 
-    public long smallestNumber(long num) {
-        if (num == 0) {
-            return num;
-        }
-        long result = 0L, temp = num, rem;
-        int i = 0, j = 0, len = 0;
-        while (temp != 0) {
-            temp /= 10;
-            len++;
-        }
-        temp = num < 0 ? num * -1 : num;
-        Long[] digits = new Long[len];
-        while (temp != 0) {
-            rem = temp % 10;
-            temp /= 10;
-            digits[i++] = rem;
-        }
-        if (num < 0) {
-            Arrays.sort(digits, Collections.reverseOrder());
-        } else {
-            Arrays.sort(digits);
-            if (digits[0] == 0L) {
-                while (digits[j] == 0L) {
-                    j++;
-                }
-                digits[0] = digits[j];
-                digits[j] = 0L;
-            }
-        }
-        j = 0;
-        for (i = len - 1; i > -1; i--) {
-            result += (long) Math.pow(10, j++) * digits[i];
-        }
-        return num > -1 ? result : result * -1;
+  public long smallestNumber(long num) {
+    if (num == 0) {
+      return num;
     }
+    long result = 0L, temp = num, rem;
+    int i = 0, j = 0, len = 0;
+    while (temp != 0) {
+      temp /= 10;
+      len++;
+    }
+    temp = num < 0 ? num * -1 : num;
+    Long[] digits = new Long[len];
+    while (temp != 0) {
+      rem = temp % 10;
+      temp /= 10;
+      digits[i++] = rem;
+    }
+    if (num < 0) {
+      Arrays.sort(digits, Collections.reverseOrder());
+    } else {
+      Arrays.sort(digits);
+      if (digits[0] == 0L) {
+        while (digits[j] == 0L) {
+          j++;
+        }
+        digits[0] = digits[j];
+        digits[j] = 0L;
+      }
+    }
+    j = 0;
+    for (i = len - 1; i > -1; i--) {
+      result += (long) Math.pow(10, j++) * digits[i];
+    }
+    return num > -1 ? result : result * -1;
+  }
 }

@@ -36,33 +36,33 @@ package com.acesoft.leetcode;
  */
 public class LeetCode200 {
 
-    private char[][] grid;
-    private int m, n;
+  private char[][] grid;
+  private int m, n;
 
-    private void checkIsland(int x, int y) {
-        if (x < 0 || x >= grid.length || y < 0 || y >= grid[0].length || grid[x][y] == '0') {
-            return;
-        }
-        grid[x][y] = '0';
-        checkIsland(x + 1, y);
-        checkIsland(x - 1, y);
-        checkIsland(x, y + 1);
-        checkIsland(x, y - 1);
+  private void checkIsland(int x, int y) {
+    if (x < 0 || x >= grid.length || y < 0 || y >= grid[0].length || grid[x][y] == '0') {
+      return;
     }
+    grid[x][y] = '0';
+    checkIsland(x + 1, y);
+    checkIsland(x - 1, y);
+    checkIsland(x, y + 1);
+    checkIsland(x, y - 1);
+  }
 
-    public int numIslands(char[][] grid) {
-        this.grid = grid;
-        m = grid.length;
-        n = grid[0].length;
-        int i, j, count = 0;
-        for (i = 0; i < m; i++) {
-            for (j = 0; j < n; j++) {
-                if (grid[i][j] == '1') {
-                    checkIsland(i, j);
-                    count++;
-                }
-            }
+  public int numIslands(char[][] grid) {
+    this.grid = grid;
+    m = grid.length;
+    n = grid[0].length;
+    int i, j, count = 0;
+    for (i = 0; i < m; i++) {
+      for (j = 0; j < n; j++) {
+        if (grid[i][j] == '1') {
+          checkIsland(i, j);
+          count++;
         }
-        return count;
+      }
     }
+    return count;
+  }
 }

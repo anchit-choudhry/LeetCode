@@ -31,21 +31,21 @@ import java.util.Arrays;
  */
 public class LeetCode2133 {
 
-    public boolean checkValid(int[][] matrix) {
-        int i, j, len = matrix[0].length;
-        int[] rowSet = new int[101];
-        int[] colSet = new int[101];
-        for (i = 0; i < len; i++) {
-            Arrays.fill(rowSet, 0);
-            Arrays.fill(colSet, 0);
-            for (j = 0; j < len; j++) {
-                if (rowSet[matrix[i][j]] != 0 || colSet[matrix[j][i]] != 0) {
-                    return false;
-                }
-                rowSet[matrix[i][j]]++;
-                colSet[matrix[j][i]]++;
-            }
+  public boolean checkValid(int[][] matrix) {
+    int i, j, len = matrix[0].length;
+    int[] rowSet = new int[101];
+    int[] colSet = new int[101];
+    for (i = 0; i < len; i++) {
+      Arrays.fill(rowSet, 0);
+      Arrays.fill(colSet, 0);
+      for (j = 0; j < len; j++) {
+        if (rowSet[matrix[i][j]] != 0 || colSet[matrix[j][i]] != 0) {
+          return false;
         }
-        return true;
+        rowSet[matrix[i][j]]++;
+        colSet[matrix[j][i]]++;
+      }
     }
+    return true;
+  }
 }

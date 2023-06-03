@@ -29,26 +29,26 @@ package com.acesoft.leetcode;
  */
 public class LeetCode2544 {
 
-    public int alternateDigitSum(int n) {
-        int sum = 0;
-        int num = n;
-        int rem;
-        int numLength = 0;
-        while (num != 0) {
-            num /= 10;
-            numLength++;
-        }
-        num = n;
-        while (num != 0) {
-            rem = num % 10;
-            if (numLength % 2 == 0) {
-                sum -= rem;
-            } else {
-                sum += rem;
-            }
-            num /= 10;
-            numLength--;
-        }
-        return sum;
+  public int alternateDigitSum(int n) {
+    int sum = 0;
+    int num = n;
+    int rem;
+    int numLength = 0;
+    while (num != 0) {
+      num /= 10;
+      numLength++;
     }
+    num = n;
+    while (num != 0) {
+      rem = num % 10;
+      if (numLength % 2 == 0) {
+        sum -= rem;
+      } else {
+        sum += rem;
+      }
+      num /= 10;
+      numLength--;
+    }
+    return sum;
+  }
 }

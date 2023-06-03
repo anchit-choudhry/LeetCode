@@ -34,24 +34,25 @@ import com.acesoft.model.TreeNode;
  * }
  */
 public class LeetCode1302 {
-    private int[] calcDeepestLeavesSum(TreeNode root, int val, int maxDepth) {
-        if (root == null) {
-            return new int[] { val, maxDepth };
-        }
-        int[] leftSide = calcDeepestLeavesSum(root.getLeft(), root.getVal(), maxDepth + 1);
-        int[] rightSide = calcDeepestLeavesSum(root.getRight(), root.getVal(), maxDepth + 1);
-        if (leftSide[1] == rightSide[1]) {
-            return new int[] { leftSide[0] + rightSide[0], leftSide[1] };
-        } else if (leftSide[1] > rightSide[1]) {
-            return leftSide;
-        }
-        return rightSide;
-    }
 
-    public int deepestLeavesSum(TreeNode root) {
-        if (root.getRight() == null && root.getLeft() == null) {
-            return root.getVal();
-        }
-        return calcDeepestLeavesSum(root, root.getVal(), 0)[0] / 2;
+  private int[] calcDeepestLeavesSum(TreeNode root, int val, int maxDepth) {
+    if (root == null) {
+      return new int[]{val, maxDepth};
     }
+    int[] leftSide = calcDeepestLeavesSum(root.getLeft(), root.getVal(), maxDepth + 1);
+    int[] rightSide = calcDeepestLeavesSum(root.getRight(), root.getVal(), maxDepth + 1);
+    if (leftSide[1] == rightSide[1]) {
+      return new int[]{leftSide[0] + rightSide[0], leftSide[1]};
+    } else if (leftSide[1] > rightSide[1]) {
+      return leftSide;
+    }
+    return rightSide;
+  }
+
+  public int deepestLeavesSum(TreeNode root) {
+    if (root.getRight() == null && root.getLeft() == null) {
+      return root.getVal();
+    }
+    return calcDeepestLeavesSum(root, root.getVal(), 0)[0] / 2;
+  }
 }

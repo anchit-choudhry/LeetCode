@@ -43,18 +43,18 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1614 {
 
-    public int maxDepth(String s) {
-        int paranthesis = 0, temp = 0;
-        for (char ch : s.toCharArray()) {
-            if (ch == '(') {
-                temp++;
-            } else if (ch == ')') {
-                if (temp > paranthesis) {
-                    paranthesis = temp;
-                }
-                temp--;
-            }
+  public int maxDepth(String s) {
+    int paranthesis = 0, temp = 0;
+    for (char ch : s.toCharArray()) {
+      if (ch == '(') {
+        temp++;
+      } else if (ch == ')') {
+        if (temp > paranthesis) {
+          paranthesis = temp;
         }
-        return paranthesis;
+        temp--;
+      }
     }
+    return paranthesis;
+  }
 }

@@ -21,17 +21,17 @@ import java.util.Date;
  */
 public class LeetCode1360 {
 
-    // Suboptimal solution using built-in libraries
-    public int daysBetweenDates(String date1, String date2) {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        Date d1, d2;
-        try {
-            d1 = sdf.parse(date1);
-            d2 = sdf.parse(date2);
-        } catch (ParseException exp) {
-            return 0;
-        }
-        long diff = (d2.getTime() - d1.getTime()) / 86_400_000;
-        return (int) (diff < 0 ? diff * -1 : diff);
+  // Suboptimal solution using built-in libraries
+  public int daysBetweenDates(String date1, String date2) {
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+    Date d1, d2;
+    try {
+      d1 = sdf.parse(date1);
+      d2 = sdf.parse(date2);
+    } catch (ParseException exp) {
+      return 0;
     }
+    long diff = (d2.getTime() - d1.getTime()) / 86_400_000;
+    return (int) (diff < 0 ? diff * -1 : diff);
+  }
 }

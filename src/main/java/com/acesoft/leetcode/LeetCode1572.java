@@ -34,15 +34,15 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1572 {
 
-    public int diagonalSum(int[][] mat) {
-        int i, sum = 0, temp;
-        for (i = 0; i < mat[0].length; i++) {
-            sum += mat[i][i];
-            temp = mat[i].length - i - 1;
-            if (i != temp) {
-                sum += mat[i][temp];
-            }
-        }
-        return sum;
+  public int diagonalSum(int[][] mat) {
+    int i, sum = 0, temp;
+    for (i = 0; i < mat[0].length; i++) {
+      sum += mat[i][i];
+      temp = mat[i].length - i - 1;
+      if (i != temp) {
+        sum += mat[i][temp];
+      }
     }
+    return sum;
+  }
 }

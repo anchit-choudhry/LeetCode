@@ -36,23 +36,23 @@ package com.acesoft.leetcode;
  */
 public class LeetCode2309 {
 
-    public String greatestLetter(String s) {
-        int temp;
-        int[] lower = new int[26];
-        int[] upper = new int[26];
-        for (char ch : s.toCharArray()) {
-            temp = ch - 'a';
-            if (temp > -1) {
-                lower[temp] = 1;
-            } else {
-                upper[temp + 32] = 1;
-            }
-        }
-        for (temp = 25; temp > -1; temp--) {
-            if (lower[temp] == 1 && upper[temp] == 1) {
-                return Character.toString(65 + temp);
-            }
-        }
-        return "";
+  public String greatestLetter(String s) {
+    int temp;
+    int[] lower = new int[26];
+    int[] upper = new int[26];
+    for (char ch : s.toCharArray()) {
+      temp = ch - 'a';
+      if (temp > -1) {
+        lower[temp] = 1;
+      } else {
+        upper[temp + 32] = 1;
+      }
     }
+    for (temp = 25; temp > -1; temp--) {
+      if (lower[temp] == 1 && upper[temp] == 1) {
+        return Character.toString(65 + temp);
+      }
+    }
+    return "";
+  }
 }

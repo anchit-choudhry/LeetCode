@@ -33,18 +33,18 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1848 {
 
-    public int getMinDistance(int[] nums, int target, int start) {
-        int i = -1, result = -1, temp;
-        for (int num : nums) {
-            i++;
-            if (num != target) {
-                continue;
-            }
-            temp = Math.abs(i - start);
-            if (result == -1 || temp < result) {
-                result = temp;
-            }
-        }
-        return result;
+  public int getMinDistance(int[] nums, int target, int start) {
+    int i = -1, result = -1, temp;
+    for (int num : nums) {
+      i++;
+      if (num != target) {
+        continue;
+      }
+      temp = Math.abs(i - start);
+      if (result == -1 || temp < result) {
+        result = temp;
+      }
     }
+    return result;
+  }
 }

@@ -28,12 +28,12 @@ package com.acesoft.leetcode;
  */
 public class LeetCode53 {
 
-    public int maxSubArray(int[] nums) {
-        int max = Integer.MIN_VALUE, sum = 0, i;
-        for (i = 0; i < nums.length; i++) {
-            sum = Math.max(sum, 0) + nums[i];
-            max = Math.max(max, sum);
-        }
-        return max;
+  public int maxSubArray(int[] nums) {
+    int max = Integer.MIN_VALUE, sum = 0, i;
+    for (i = 0; i < nums.length; i++) {
+      sum = Math.max(sum, 0) + nums[i];
+      max = Math.max(max, sum);
     }
+    return max;
+  }
 }

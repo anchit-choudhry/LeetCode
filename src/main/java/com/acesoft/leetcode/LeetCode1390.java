@@ -23,24 +23,24 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1390 {
 
-    public int sumFourDivisors(int[] nums) {
-        int sum = 0, localSum, i, div;
-        for (int num : nums) {
-            div = 2;
-            localSum = 1 + num;
-            for (i = 2; i * i <= num; i++) {
-                if (num % i == 0) {
-                    localSum += i == num / i ? i : num / i + i;
-                    div += i == num / i ? 1 : 2;
-                }
-                if (div > 4) {
-                    break;
-                }
-            }
-            if (div == 4) {
-                sum += localSum;
-            }
+  public int sumFourDivisors(int[] nums) {
+    int sum = 0, localSum, i, div;
+    for (int num : nums) {
+      div = 2;
+      localSum = 1 + num;
+      for (i = 2; i * i <= num; i++) {
+        if (num % i == 0) {
+          localSum += i == num / i ? i : num / i + i;
+          div += i == num / i ? 1 : 2;
         }
-        return sum;
+        if (div > 4) {
+          break;
+        }
+      }
+      if (div == 4) {
+        sum += localSum;
+      }
     }
+    return sum;
+  }
 }

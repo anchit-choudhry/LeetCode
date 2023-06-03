@@ -25,20 +25,20 @@ package com.acesoft.leetcode;
  */
 public class LeetCode389 {
 
-    public char findTheDifference(String s, String t) {
-        int[] alphabets = new int[26];
-        int i;
-        for (char ch : s.toCharArray()) {
-            alphabets[ch - 'a']++;
-        }
-        for (char ch : t.toCharArray()) {
-            alphabets[ch - 'a']--;
-        }
-        for (i = 0; i < 26; i++) {
-            if (alphabets[i] < 0) {
-                break;
-            }
-        }
-        return (char) (97 + i);
+  public char findTheDifference(String s, String t) {
+    int[] alphabets = new int[26];
+    int i;
+    for (char ch : s.toCharArray()) {
+      alphabets[ch - 'a']++;
     }
+    for (char ch : t.toCharArray()) {
+      alphabets[ch - 'a']--;
+    }
+    for (i = 0; i < 26; i++) {
+      if (alphabets[i] < 0) {
+        break;
+      }
+    }
+    return (char) (97 + i);
+  }
 }

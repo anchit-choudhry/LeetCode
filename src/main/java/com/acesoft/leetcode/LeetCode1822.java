@@ -33,15 +33,15 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1822 {
 
-    public int arraySign(int[] nums) {
-        int multi = 1;
-        for (int num : nums) {
-            if (num == 0) {
-                return 0;
-            } else if (num < 0) {
-                multi *= -1;
-            }
-        }
-        return multi;
+  public int arraySign(int[] nums) {
+    int multi = 1;
+    for (int num : nums) {
+      if (num == 0) {
+        return 0;
+      } else if (num < 0) {
+        multi *= -1;
+      }
     }
+    return multi;
+  }
 }

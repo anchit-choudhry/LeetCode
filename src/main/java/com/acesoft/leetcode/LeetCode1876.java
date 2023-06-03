@@ -30,17 +30,17 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1876 {
 
-    public int countGoodSubstrings(String s) {
-        int i, a, b, c, count = 0;
-        for (i = 0; i < s.length() - 2; i++) {
-            a = s.charAt(i) - 'a';
-            b = s.charAt(i + 1) - 'a';
-            c = s.charAt(i + 2) - 'a';
-            if (!(a != b && b != c && c != a)) {
-                continue;
-            }
-            count++;
-        }
-        return count;
+  public int countGoodSubstrings(String s) {
+    int i, a, b, c, count = 0;
+    for (i = 0; i < s.length() - 2; i++) {
+      a = s.charAt(i) - 'a';
+      b = s.charAt(i + 1) - 'a';
+      c = s.charAt(i + 2) - 'a';
+      if (!(a != b && b != c && c != a)) {
+        continue;
+      }
+      count++;
     }
+    return count;
+  }
 }

@@ -36,67 +36,67 @@ import java.util.Map;
  */
 public class LeetCode1365 {
 
-    // Optimal solution
-    public int[] smallerNumbersThanCurrent(int[] nums) {
-        if (nums.length < 1) {
-            return new int[] {};
-        }
-        int i;
-        int[] arr = new int[nums.length], temp = new int[101];
-        for (i = 0; i < nums.length; i++) {
-            temp[nums[i]]++;
-        }
-        for (i = 1; i < 101; i++) {
-            temp[i] += temp[i - 1];
-        }
-        for (i = 0; i < nums.length; i++) {
-            arr[i] = nums[i] == 0 ? 0 : temp[nums[i] - 1];
-        }
-        return arr;
+  // Optimal solution
+  public int[] smallerNumbersThanCurrent(int[] nums) {
+    if (nums.length < 1) {
+      return new int[]{};
     }
-
-    // Sub optimal solution
-    public int[] smallerNumbersThanCurrent1(int[] nums) {
-        if (nums.length < 1) {
-            return new int[] {};
-        }
-        int i, j, count;
-        int[] arr = new int[nums.length];
-        Map<Integer, Integer> hs = new HashMap<>();
-        for (i = 0; i < nums.length; i++) {
-            if (hs.get(nums[i]) != null) {
-                arr[i] = hs.get(nums[i]);
-                continue;
-            }
-            count = 0;
-            for (j = 0; j < nums.length; j++) {
-                if (nums[i] > nums[j]) {
-                    count++;
-                }
-            }
-            hs.put(nums[i], count);
-            arr[i] = count;
-        }
-        return arr;
+    int i;
+    int[] arr = new int[nums.length], temp = new int[101];
+    for (i = 0; i < nums.length; i++) {
+      temp[nums[i]]++;
     }
-
-    // Naive solution
-    public int[] smallerNumbersThanCurrent2(int[] nums) {
-        if (nums.length < 1) {
-            return new int[] {};
-        }
-        int i, j, count;
-        int[] arr = new int[nums.length];
-
-        for (i = 0; i < nums.length; i++) {
-            count = 0;
-            for (j = 0; j < nums.length; j++) {
-                if (nums[i] > nums[j]) {
-                    count++;
-                }
-            }
-            arr[i] = count;
-        }
-        return arr;
+    for (i = 1; i < 101; i++) {
+      temp[i] += temp[i - 1];
     }
+    for (i = 0; i < nums.length; i++) {
+      arr[i] = nums[i] == 0 ? 0 : temp[nums[i] - 1];
+    }
+    return arr;
+  }
+
+  // Sub optimal solution
+  public int[] smallerNumbersThanCurrent1(int[] nums) {
+    if (nums.length < 1) {
+      return new int[]{};
+    }
+    int i, j, count;
+    int[] arr = new int[nums.length];
+    Map<Integer, Integer> hs = new HashMap<>();
+    for (i = 0; i < nums.length; i++) {
+      if (hs.get(nums[i]) != null) {
+        arr[i] = hs.get(nums[i]);
+        continue;
+      }
+      count = 0;
+      for (j = 0; j < nums.length; j++) {
+        if (nums[i] > nums[j]) {
+          count++;
+        }
+      }
+      hs.put(nums[i], count);
+      arr[i] = count;
+    }
+    return arr;
+  }
+
+  // Naive solution
+  public int[] smallerNumbersThanCurrent2(int[] nums) {
+    if (nums.length < 1) {
+      return new int[]{};
+    }
+    int i, j, count;
+    int[] arr = new int[nums.length];
+
+    for (i = 0; i < nums.length; i++) {
+      count = 0;
+      for (j = 0; j < nums.length; j++) {
+        if (nums[i] > nums[j]) {
+          count++;
+        }
+      }
+      arr[i] = count;
+    }
+    return arr;
+  }
 }

@@ -22,17 +22,17 @@ package com.acesoft.leetcode;
  */
 public class LeetCode867 {
 
-    public int[][] transpose(int[][] A) {
-        int rows = A.length, cols = A[0].length;
-        if (cols < 1) {
-            return new int[][] {};
-        }
-        int[][] b = new int[cols][rows];
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                b[j][i] = A[i][j];
-            }
-        }
-        return b;
+  public int[][] transpose(int[][] A) {
+    int rows = A.length, cols = A[0].length;
+    if (cols < 1) {
+      return new int[][]{};
     }
+    int[][] b = new int[cols][rows];
+    for (int i = 0; i < rows; i++) {
+      for (int j = 0; j < cols; j++) {
+        b[j][i] = A[i][j];
+      }
+    }
+    return b;
+  }
 }

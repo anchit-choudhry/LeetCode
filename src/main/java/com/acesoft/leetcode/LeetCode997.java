@@ -47,18 +47,18 @@ package com.acesoft.leetcode;
  */
 public class LeetCode997 {
 
-    public int findJudge(int n, int[][] trust) {
-        int i;
-        int[] nums = new int[n];
-        for (int[] conn : trust) {
-            nums[conn[1] - 1]++;
-            nums[conn[0] - 1]--;
-        }
-        for (i = 0; i < n; i++) {
-            if (nums[i] == n - 1) {
-                return i + 1;
-            }
-        }
-        return -1;
+  public int findJudge(int n, int[][] trust) {
+    int i;
+    int[] nums = new int[n];
+    for (int[] conn : trust) {
+      nums[conn[1] - 1]++;
+      nums[conn[0] - 1]--;
     }
+    for (i = 0; i < n; i++) {
+      if (nums[i] == n - 1) {
+        return i + 1;
+      }
+    }
+    return -1;
+  }
 }

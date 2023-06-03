@@ -36,18 +36,18 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1800 {
 
-    public int maxAscendingSum(int[] nums) {
-        int globalSum = 0, sum = nums[0], i;
-        for (i = 1; i < nums.length; i++) {
-            if (nums[i] > nums[i - 1]) {
-                sum += nums[i];
-            } else {
-                if (globalSum < sum) {
-                    globalSum = sum;
-                }
-                sum = nums[i];
-            }
+  public int maxAscendingSum(int[] nums) {
+    int globalSum = 0, sum = nums[0], i;
+    for (i = 1; i < nums.length; i++) {
+      if (nums[i] > nums[i - 1]) {
+        sum += nums[i];
+      } else {
+        if (globalSum < sum) {
+          globalSum = sum;
         }
-        return Math.max(globalSum, sum);
+        sum = nums[i];
+      }
     }
+    return Math.max(globalSum, sum);
+  }
 }

@@ -35,26 +35,26 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1267 {
 
-    public int countServers(int[][] grid) {
-        int[] rows = new int[grid.length];
-        int[] cols = new int[grid[0].length];
-        int i, j, servers = 0;
-        for (i = 0; i < rows.length; i++) {
-            for (j = 0; j < cols.length; j++) {
-                if (grid[i][j] == 1) {
-                    rows[i]++;
-                    cols[j]++;
-                    servers++;
-                }
-            }
+  public int countServers(int[][] grid) {
+    int[] rows = new int[grid.length];
+    int[] cols = new int[grid[0].length];
+    int i, j, servers = 0;
+    for (i = 0; i < rows.length; i++) {
+      for (j = 0; j < cols.length; j++) {
+        if (grid[i][j] == 1) {
+          rows[i]++;
+          cols[j]++;
+          servers++;
         }
-        for (i = 0; i < rows.length; i++) {
-            for (j = 0; j < cols.length; j++) {
-                if (grid[i][j] == 1 && rows[i] == 1 && cols[j] == 1) {
-                    servers--;
-                }
-            }
-        }
-        return servers;
+      }
     }
+    for (i = 0; i < rows.length; i++) {
+      for (j = 0; j < cols.length; j++) {
+        if (grid[i][j] == 1 && rows[i] == 1 && cols[j] == 1) {
+          servers--;
+        }
+      }
+    }
+    return servers;
+  }
 }

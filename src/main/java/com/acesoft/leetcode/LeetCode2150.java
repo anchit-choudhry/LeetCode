@@ -38,27 +38,27 @@ import java.util.List;
  */
 public class LeetCode2150 {
 
-    public List<Integer> findLonely(int[] nums) {
-        Arrays.sort(nums);
-        int i, current;
-        List<Integer> result = new ArrayList<>();
-        for (i = 0; i < nums.length; i++) {
-            current = nums[i];
-            if (i < nums.length - 1 && current == nums[i + 1]) {
-                while (current == nums[i]) {
-                    i++;
-                    if (i > nums.length - 1) {
-                        i = i + 2;
-                        break;
-                    }
-                }
-                i--;
-            } else if (i < nums.length - 1 && current + 1 == nums[i + 1]) {
-            } else if (i > 0 && nums[i] - 1 == nums[i - 1]) {
-            } else {
-                result.add(nums[i]);
-            }
+  public List<Integer> findLonely(int[] nums) {
+    Arrays.sort(nums);
+    int i, current;
+    List<Integer> result = new ArrayList<>();
+    for (i = 0; i < nums.length; i++) {
+      current = nums[i];
+      if (i < nums.length - 1 && current == nums[i + 1]) {
+        while (current == nums[i]) {
+          i++;
+          if (i > nums.length - 1) {
+            i = i + 2;
+            break;
+          }
         }
-        return result;
+        i--;
+      } else if (i < nums.length - 1 && current + 1 == nums[i + 1]) {
+      } else if (i > 0 && nums[i] - 1 == nums[i - 1]) {
+      } else {
+        result.add(nums[i]);
+      }
     }
+    return result;
+  }
 }

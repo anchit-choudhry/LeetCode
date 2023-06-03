@@ -32,14 +32,14 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1835 {
 
-    public int getXORSum(int[] arr1, int[] arr2) {
-        int left = 0, right = 0;
-        for (int arr : arr1) {
-            left ^= arr;
-        }
-        for (int arr : arr2) {
-            right ^= arr;
-        }
-        return left & right;
+  public int getXORSum(int[] arr1, int[] arr2) {
+    int left = 0, right = 0;
+    for (int arr : arr1) {
+      left ^= arr;
     }
+    for (int arr : arr2) {
+      right ^= arr;
+    }
+    return left & right;
+  }
 }

@@ -23,12 +23,12 @@ package com.acesoft.leetcode;
  */
 public class LeetCode540 {
 
-    // Naive solution
-    public int singleNonDuplicate(int[] nums) {
-        int i, res = nums[0];
-        for (i = 1; i < nums.length; i++) {
-            res ^= nums[i];
-        }
-        return res;
+  // Naive solution
+  public int singleNonDuplicate(int[] nums) {
+    int i, res = nums[0];
+    for (i = 1; i < nums.length; i++) {
+      res ^= nums[i];
     }
+    return res;
+  }
 }

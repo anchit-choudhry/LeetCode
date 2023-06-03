@@ -38,37 +38,37 @@ import java.util.Stack;
  */
 public class LeetCode844 {
 
-    // Subooptimal solution using Stack
-    public boolean backspaceCompare(String S, String T) {
-        int i;
-        Stack<Character> ss = new Stack<>();
-        Stack<Character> tt = new Stack<>();
-        for (i = 0; i < S.length(); i++) {
-            if (S.charAt(i) == '#') {
-                if (ss.size() > 0) {
-                    ss.pop();
-                }
-            } else {
-                ss.push(S.charAt(i));
-            }
+  // Subooptimal solution using Stack
+  public boolean backspaceCompare(String S, String T) {
+    int i;
+    Stack<Character> ss = new Stack<>();
+    Stack<Character> tt = new Stack<>();
+    for (i = 0; i < S.length(); i++) {
+      if (S.charAt(i) == '#') {
+        if (ss.size() > 0) {
+          ss.pop();
         }
-        for (i = 0; i < T.length(); i++) {
-            if (T.charAt(i) == '#') {
-                if (tt.size() > 0) {
-                    tt.pop();
-                }
-            } else {
-                tt.push(T.charAt(i));
-            }
-        }
-        if (ss.size() != tt.size()) {
-            return false;
-        }
-        while (tt.size() != 0) {
-            if (!tt.pop().equals(ss.pop())) {
-                return false;
-            }
-        }
-        return true;
+      } else {
+        ss.push(S.charAt(i));
+      }
     }
+    for (i = 0; i < T.length(); i++) {
+      if (T.charAt(i) == '#') {
+        if (tt.size() > 0) {
+          tt.pop();
+        }
+      } else {
+        tt.push(T.charAt(i));
+      }
+    }
+    if (ss.size() != tt.size()) {
+      return false;
+    }
+    while (tt.size() != 0) {
+      if (!tt.pop().equals(ss.pop())) {
+        return false;
+      }
+    }
+    return true;
+  }
 }

@@ -27,19 +27,19 @@ import java.util.stream.IntStream;
  */
 public class LeetCode728 {
 
-    public List<Integer> selfDividingNumbers(int left, int right) {
-        IntPredicate isSelfDiv = n -> {
-            int temp = n, rem;
-            while (temp != 0) {
-                rem = temp % 10;
-                if (rem == 0 || n % rem != 0) {
-                    return false;
-                }
-                temp /= 10;
-            }
-            return true;
-        };
-        return IntStream.rangeClosed(left, right).filter(isSelfDiv).boxed()
-                .collect(Collectors.toList());
-    }
+  public List<Integer> selfDividingNumbers(int left, int right) {
+    IntPredicate isSelfDiv = n -> {
+      int temp = n, rem;
+      while (temp != 0) {
+        rem = temp % 10;
+        if (rem == 0 || n % rem != 0) {
+          return false;
+        }
+        temp /= 10;
+      }
+      return true;
+    };
+    return IntStream.rangeClosed(left, right).filter(isSelfDiv).boxed()
+        .collect(Collectors.toList());
+  }
 }

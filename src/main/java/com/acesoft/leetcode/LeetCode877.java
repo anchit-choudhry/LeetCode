@@ -33,8 +33,8 @@ package com.acesoft.leetcode;
  */
 public class LeetCode877 {
 
-    // Most optimal solution
-    public boolean stoneGame(int[] piles) {
-        return true;
-    }
+  // Most optimal solution
+  public boolean stoneGame(int[] piles) {
+    return true;
+  }
 }

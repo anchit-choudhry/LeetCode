@@ -39,38 +39,38 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1419 {
 
-    public int minNumberOfFrogs(String croakOfFrogs) {
-        int c = 0, r = 0, o = 0, a = 0, k = 0, current = 0, max = 0;
-        for (char ch : croakOfFrogs.toCharArray()) {
-            switch (ch) {
-            case 'c':
-                c++;
-                current++;
-                break;
-            case 'r':
-                r++;
-                break;
-            case 'o':
-                o++;
-                break;
-            case 'a':
-                a++;
-                break;
-            case 'k':
-                k++;
-                current--;
-                break;
-            default:
-                return -1;
-            }
-            max = Math.max(current, max);
-            if (c < r || r < o || o < a || a < k) {
-                return -1;
-            }
-        }
-        if (current == 0 && c == r && r == o && o == a && a == k) {
-            return max;
-        }
+  public int minNumberOfFrogs(String croakOfFrogs) {
+    int c = 0, r = 0, o = 0, a = 0, k = 0, current = 0, max = 0;
+    for (char ch : croakOfFrogs.toCharArray()) {
+      switch (ch) {
+        case 'c':
+          c++;
+          current++;
+          break;
+        case 'r':
+          r++;
+          break;
+        case 'o':
+          o++;
+          break;
+        case 'a':
+          a++;
+          break;
+        case 'k':
+          k++;
+          current--;
+          break;
+        default:
+          return -1;
+      }
+      max = Math.max(current, max);
+      if (c < r || r < o || o < a || a < k) {
         return -1;
+      }
     }
+    if (current == 0 && c == r && r == o && o == a && a == k) {
+      return max;
+    }
+    return -1;
+  }
 }

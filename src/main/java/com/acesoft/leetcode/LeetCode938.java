@@ -38,14 +38,14 @@ import com.acesoft.model.TreeNode;
  */
 public class LeetCode938 {
 
-    private int getSumTree(TreeNode root, int low, int high) {
-        return root == null ? 0
-                : (root.getVal() >= low && root.getVal() <= high ? root.getVal() : 0)
-                        + getSumTree(root.getLeft(), low, high)
-                        + getSumTree(root.getRight(), low, high);
-    }
+  private int getSumTree(TreeNode root, int low, int high) {
+    return root == null ? 0
+        : (root.getVal() >= low && root.getVal() <= high ? root.getVal() : 0)
+            + getSumTree(root.getLeft(), low, high)
+            + getSumTree(root.getRight(), low, high);
+  }
 
-    public int rangeSumBST(TreeNode root, int low, int high) {
-        return getSumTree(root, low, high);
-    }
+  public int rangeSumBST(TreeNode root, int low, int high) {
+    return getSumTree(root, low, high);
+  }
 }

@@ -59,66 +59,66 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1694 {
 
-    public String reformatNumber(String number) {
-        int len = 0, i = 0, tmp;
-        StringBuilder result = new StringBuilder();
-        for (char num : number.toCharArray()) {
-            if (num == ' ' || num == '-') {
-                continue;
-            }
-            len++;
-        }
-        while (len > 0) {
-            if (len > 4) {
-                tmp = 3;
-                while (tmp > 0) {
-                    if (number.charAt(i) == ' ' || number.charAt(i) == '-') {
-                        i++;
-                        continue;
-                    }
-                    result.append(number.charAt(i++));
-                    tmp--;
-                }
-                result.append('-');
-                len -= 3;
-            } else if (len == 4) {
-                tmp = 4;
-                while (tmp > 0) {
-                    if (number.charAt(i) == ' ' || number.charAt(i) == '-') {
-                        i++;
-                        continue;
-                    }
-                    result.append(number.charAt(i++));
-                    tmp--;
-                    if (tmp == 2) {
-                        result.append('-');
-                    }
-                }
-                break;
-            } else if (len == 3) {
-                tmp = 3;
-                while (tmp > 0) {
-                    if (number.charAt(i) == ' ' || number.charAt(i) == '-') {
-                        i++;
-                        continue;
-                    }
-                    result.append(number.charAt(i++));
-                    tmp--;
-                }
-                break;
-            } else {
-                tmp = 2;
-                while (tmp > 0) {
-                    if (number.charAt(i) == ' ' || number.charAt(i) == '-') {
-                        i++;
-                        continue;
-                    }
-                    result.append(number.charAt(i++));
-                    tmp--;
-                }
-                break;
-            }
-        }
-        return result.toString();
+  public String reformatNumber(String number) {
+    int len = 0, i = 0, tmp;
+    StringBuilder result = new StringBuilder();
+    for (char num : number.toCharArray()) {
+      if (num == ' ' || num == '-') {
+        continue;
+      }
+      len++;
     }
+    while (len > 0) {
+      if (len > 4) {
+        tmp = 3;
+        while (tmp > 0) {
+          if (number.charAt(i) == ' ' || number.charAt(i) == '-') {
+            i++;
+            continue;
+          }
+          result.append(number.charAt(i++));
+          tmp--;
+        }
+        result.append('-');
+        len -= 3;
+      } else if (len == 4) {
+        tmp = 4;
+        while (tmp > 0) {
+          if (number.charAt(i) == ' ' || number.charAt(i) == '-') {
+            i++;
+            continue;
+          }
+          result.append(number.charAt(i++));
+          tmp--;
+          if (tmp == 2) {
+            result.append('-');
+          }
+        }
+        break;
+      } else if (len == 3) {
+        tmp = 3;
+        while (tmp > 0) {
+          if (number.charAt(i) == ' ' || number.charAt(i) == '-') {
+            i++;
+            continue;
+          }
+          result.append(number.charAt(i++));
+          tmp--;
+        }
+        break;
+      } else {
+        tmp = 2;
+        while (tmp > 0) {
+          if (number.charAt(i) == ' ' || number.charAt(i) == '-') {
+            i++;
+            continue;
+          }
+          result.append(number.charAt(i++));
+          tmp--;
+        }
+        break;
+      }
+    }
+    return result.toString();
+  }
 }

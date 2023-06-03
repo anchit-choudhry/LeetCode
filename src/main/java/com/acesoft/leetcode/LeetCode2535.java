@@ -33,22 +33,22 @@ package com.acesoft.leetcode;
  */
 public class LeetCode2535 {
 
-    public int differenceOfSum(int[] nums) {
-        int i, num, sum = 0, rem, tmpSum;
-        for (i = 0; i < nums.length; i++) {
-            num = nums[i];
-            if (num < 10) {
-                continue;
-            }
-            sum += num;
-            tmpSum = 0;
-            while (num != 0) {
-                rem = num % 10;
-                tmpSum += rem;
-                num /= 10;
-            }
-            sum -= tmpSum;
-        }
-        return sum;
+  public int differenceOfSum(int[] nums) {
+    int i, num, sum = 0, rem, tmpSum;
+    for (i = 0; i < nums.length; i++) {
+      num = nums[i];
+      if (num < 10) {
+        continue;
+      }
+      sum += num;
+      tmpSum = 0;
+      while (num != 0) {
+        rem = num % 10;
+        tmpSum += rem;
+        num /= 10;
+      }
+      sum -= tmpSum;
     }
+    return sum;
+  }
 }

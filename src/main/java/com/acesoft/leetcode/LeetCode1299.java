@@ -18,16 +18,16 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1299 {
 
-    public int[] replaceElements(int[] arr) {
-        if (arr.length < 2) {
-            return new int[] { -1 };
-        }
-        int i, max = -1, temp = max;
-        for (i = arr.length - 1; i > -1; i--) {
-            max = arr[i];
-            arr[i] = temp;
-            max = temp = Math.max(max, temp);
-        }
-        return arr;
+  public int[] replaceElements(int[] arr) {
+    if (arr.length < 2) {
+      return new int[]{-1};
     }
+    int i, max = -1, temp = max;
+    for (i = arr.length - 1; i > -1; i--) {
+      max = arr[i];
+      arr[i] = temp;
+      max = temp = Math.max(max, temp);
+    }
+    return arr;
+  }
 }

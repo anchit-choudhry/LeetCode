@@ -35,12 +35,12 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1486 {
 
-    public int xorOperation(int n, int start) {
-        int i, two = 2, xor = start;
-        for (i = 1; i < n; i++) {
-            xor ^= start + two;
-            two = two + 2;
-        }
-        return xor;
+  public int xorOperation(int n, int start) {
+    int i, two = 2, xor = start;
+    for (i = 1; i < n; i++) {
+      xor ^= start + two;
+      two = two + 2;
     }
+    return xor;
+  }
 }

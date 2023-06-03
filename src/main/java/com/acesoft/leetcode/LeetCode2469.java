@@ -32,7 +32,7 @@ package com.acesoft.leetcode;
  */
 public class LeetCode2469 {
 
-    public double[] convertTemperature(double celsius) {
-        return new double[] { celsius + 273.15, 32 + (celsius * 1.8) };
-    }
+  public double[] convertTemperature(double celsius) {
+    return new double[]{celsius + 273.15, 32 + (celsius * 1.8)};
+  }
 }

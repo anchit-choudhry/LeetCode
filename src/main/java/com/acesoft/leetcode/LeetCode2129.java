@@ -41,22 +41,22 @@ package com.acesoft.leetcode;
  */
 public class LeetCode2129 {
 
-    public String capitalizeTitle(String title) {
-        int i, len = 0;
-        char[] charArray = title.toCharArray();
-        for (i = 0; i <= charArray.length; i++) {
-            if (i == charArray.length || charArray[i] == ' ') {
-                if (len > 2 && charArray[i - len] - 'a' > -1) {
-                    charArray[i - len] -= 32;
-                }
-                len = 0;
-                continue;
-            }
-            len++;
-            if (charArray[i] - 'a' < 0) {
-                charArray[i] += 32;
-            }
+  public String capitalizeTitle(String title) {
+    int i, len = 0;
+    char[] charArray = title.toCharArray();
+    for (i = 0; i <= charArray.length; i++) {
+      if (i == charArray.length || charArray[i] == ' ') {
+        if (len > 2 && charArray[i - len] - 'a' > -1) {
+          charArray[i - len] -= 32;
         }
-        return String.valueOf(charArray);
+        len = 0;
+        continue;
+      }
+      len++;
+      if (charArray[i] - 'a' < 0) {
+        charArray[i] += 32;
+      }
     }
+    return String.valueOf(charArray);
+  }
 }

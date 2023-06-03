@@ -26,28 +26,28 @@ import com.acesoft.model.TreeNode;
  */
 public class LeetCode226 {
 
-    // Optimal solution
-    public TreeNode invertTree(TreeNode root) {
-        if (root == null) {
-            return null;
-        }
-        TreeNode left = invertTree(root.getLeft());
-        TreeNode right = invertTree(root.getRight());
-        root.setLeft(right);
-        root.setRight(left);
-        return root;
-        /*
-         * Subtoptimal solution call return root == null ? null :
-         * swapTreeNodes(root.getVal(), root.getLeft(), root.getRight());
-         */
+  // Optimal solution
+  public TreeNode invertTree(TreeNode root) {
+    if (root == null) {
+      return null;
     }
+    TreeNode left = invertTree(root.getLeft());
+    TreeNode right = invertTree(root.getRight());
+    root.setLeft(right);
+    root.setRight(left);
+    return root;
+    /*
+     * Subtoptimal solution call return root == null ? null :
+     * swapTreeNodes(root.getVal(), root.getLeft(), root.getRight());
+     */
+  }
 
-    // Suboptimal solution
-    private TreeNode swapTreeNodes(int v, TreeNode left, TreeNode right) {
-        return new TreeNode(v,
-                right == null ? null
-                        : swapTreeNodes(right.getVal(), right.getLeft(), right.getRight()),
-                left == null ? null
-                        : swapTreeNodes(left.getVal(), left.getLeft(), left.getRight()));
-    }
+  // Suboptimal solution
+  private TreeNode swapTreeNodes(int v, TreeNode left, TreeNode right) {
+    return new TreeNode(v,
+        right == null ? null
+            : swapTreeNodes(right.getVal(), right.getLeft(), right.getRight()),
+        left == null ? null
+            : swapTreeNodes(left.getVal(), left.getLeft(), left.getRight()));
+  }
 }

@@ -41,53 +41,53 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1417 {
 
-    // Suboptimal solution
-    public String reformat(String s) {
-        int nums = 0, chars = 0, ascii, i = 0, j = 0, k = 0;
-        char[] cArr = new char[s.length()];
-        char[] nArr = new char[s.length()];
-        StringBuilder newString = new StringBuilder();
-        for (char ch : s.toCharArray()) {
-            ascii = ch;
-            if (ascii > 47 && ascii < 58) {
-                nums++;
-                nArr[i++] = ch;
-            } else {
-                chars++;
-                cArr[j++] = ch;
-            }
-        }
-        i = j = 0;
-        if (nums == chars || nums - chars == -1 || nums - chars == 1) {
-            for (k = 0; k < s.length(); k++) {
-                if (k % 2 == 0) {
-                    if (nums - chars >= 0) {
-                        if (nArr[i] == 0) {
-                            return "";
-                        }
-                        newString.append(nArr[i++]);
-                    } else {
-                        if (cArr[j] == 0) {
-                            return "";
-                        }
-                        newString.append(cArr[j++]);
-                    }
-                } else {
-                    if (nums - chars < 0) {
-                        if (nArr[i] == 0) {
-                            return "";
-                        }
-                        newString.append(nArr[i++]);
-                    } else {
-                        if (cArr[j] == 0) {
-                            return "";
-                        }
-                        newString.append(cArr[j++]);
-                    }
-                }
-            }
-            return newString.toString();
-        }
-        return "";
+  // Suboptimal solution
+  public String reformat(String s) {
+    int nums = 0, chars = 0, ascii, i = 0, j = 0, k = 0;
+    char[] cArr = new char[s.length()];
+    char[] nArr = new char[s.length()];
+    StringBuilder newString = new StringBuilder();
+    for (char ch : s.toCharArray()) {
+      ascii = ch;
+      if (ascii > 47 && ascii < 58) {
+        nums++;
+        nArr[i++] = ch;
+      } else {
+        chars++;
+        cArr[j++] = ch;
+      }
     }
+    i = j = 0;
+    if (nums == chars || nums - chars == -1 || nums - chars == 1) {
+      for (k = 0; k < s.length(); k++) {
+        if (k % 2 == 0) {
+          if (nums - chars >= 0) {
+            if (nArr[i] == 0) {
+              return "";
+            }
+            newString.append(nArr[i++]);
+          } else {
+            if (cArr[j] == 0) {
+              return "";
+            }
+            newString.append(cArr[j++]);
+          }
+        } else {
+          if (nums - chars < 0) {
+            if (nArr[i] == 0) {
+              return "";
+            }
+            newString.append(nArr[i++]);
+          } else {
+            if (cArr[j] == 0) {
+              return "";
+            }
+            newString.append(cArr[j++]);
+          }
+        }
+      }
+      return newString.toString();
+    }
+    return "";
+  }
 }

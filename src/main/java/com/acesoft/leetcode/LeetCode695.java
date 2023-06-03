@@ -30,37 +30,37 @@ package com.acesoft.leetcode;
  */
 public class LeetCode695 {
 
-    private int[][] grid;
-    private int max = 0, m, n;
+  private int[][] grid;
+  private int max = 0, m, n;
 
-    private int checkIsland(int x, int y, int sum) {
-        if (x < 0 || x >= grid.length || y < 0 || y >= grid[0].length || grid[x][y] == 0) {
-            return sum;
-        }
-        grid[x][y] = 0;
-        sum++;
-        sum = checkIsland(x + 1, y, sum);
-        sum = checkIsland(x - 1, y, sum);
-        sum = checkIsland(x, y + 1, sum);
-        sum = checkIsland(x, y - 1, sum);
-        return sum;
+  private int checkIsland(int x, int y, int sum) {
+    if (x < 0 || x >= grid.length || y < 0 || y >= grid[0].length || grid[x][y] == 0) {
+      return sum;
     }
+    grid[x][y] = 0;
+    sum++;
+    sum = checkIsland(x + 1, y, sum);
+    sum = checkIsland(x - 1, y, sum);
+    sum = checkIsland(x, y + 1, sum);
+    sum = checkIsland(x, y - 1, sum);
+    return sum;
+  }
 
-    public int maxAreaOfIsland(int[][] grid) {
-        this.grid = grid;
-        m = grid.length;
-        n = grid[0].length;
-        int i, j, count = 0;
-        for (i = 0; i < m; i++) {
-            for (j = 0; j < n; j++) {
-                if (grid[i][j] == 1) {
-                    count = checkIsland(i, j, 0);
-                    if (count > max) {
-                        max = count;
-                    }
-                }
-            }
+  public int maxAreaOfIsland(int[][] grid) {
+    this.grid = grid;
+    m = grid.length;
+    n = grid[0].length;
+    int i, j, count = 0;
+    for (i = 0; i < m; i++) {
+      for (j = 0; j < n; j++) {
+        if (grid[i][j] == 1) {
+          count = checkIsland(i, j, 0);
+          if (count > max) {
+            max = count;
+          }
         }
-        return max;
+      }
     }
+    return max;
+  }
 }

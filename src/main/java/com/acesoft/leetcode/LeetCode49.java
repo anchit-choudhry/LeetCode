@@ -25,23 +25,23 @@ import java.util.Map;
  */
 public class LeetCode49 {
 
-    // Optimal solution
-    public List<List<String>> groupAnagrams(String[] strs) {
-        if (strs == null || strs.length == 0) {
-            return new ArrayList<>();
-        }
-        Map<String, List<String>> words = new HashMap<>();
-        for (String str : strs) {
-            char[] charArr = new char[26];
-            for (char ch : str.toCharArray()) {
-                charArr[ch - 'a']++;
-            }
-            String cArrToStr = String.valueOf(charArr);
-            if (!words.containsKey(cArrToStr)) {
-                words.put(cArrToStr, new ArrayList<>());
-            }
-            words.get(cArrToStr).add(str);
-        }
-        return new ArrayList<>(words.values());
+  // Optimal solution
+  public List<List<String>> groupAnagrams(String[] strs) {
+    if (strs == null || strs.length == 0) {
+      return new ArrayList<>();
     }
+    Map<String, List<String>> words = new HashMap<>();
+    for (String str : strs) {
+      char[] charArr = new char[26];
+      for (char ch : str.toCharArray()) {
+        charArr[ch - 'a']++;
+      }
+      String cArrToStr = String.valueOf(charArr);
+      if (!words.containsKey(cArrToStr)) {
+        words.put(cArrToStr, new ArrayList<>());
+      }
+      words.get(cArrToStr).add(str);
+    }
+    return new ArrayList<>(words.values());
+  }
 }

@@ -32,16 +32,16 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1668 {
 
-    public int maxRepeating(String sequence, String word) {
-        int count = 0;
-        String newString = word;
-        while (true) {
-            if (sequence.indexOf(newString) < 0) {
-                break;
-            }
-            count++;
-            newString += word;
-        }
-        return count;
+  public int maxRepeating(String sequence, String word) {
+    int count = 0;
+    String newString = word;
+    while (true) {
+      if (sequence.indexOf(newString) < 0) {
+        break;
+      }
+      count++;
+      newString += word;
     }
+    return count;
+  }
 }

@@ -30,20 +30,20 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1854 {
 
-    public int maximumPopulation(int[][] logs) {
-        int[] year = new int[100];
-        int i, max = 0, maxYear = 0;
-        for (int[] log : logs) {
-            for (i = log[0]; i < log[1]; i++) {
-                year[i - 1950]++;
-            }
-        }
-        for (i = 0; i < 100; i++) {
-            if (year[i] > max) {
-                max = year[i];
-                maxYear = i;
-            }
-        }
-        return maxYear + 1950;
+  public int maximumPopulation(int[][] logs) {
+    int[] year = new int[100];
+    int i, max = 0, maxYear = 0;
+    for (int[] log : logs) {
+      for (i = log[0]; i < log[1]; i++) {
+        year[i - 1950]++;
+      }
     }
+    for (i = 0; i < 100; i++) {
+      if (year[i] > max) {
+        max = year[i];
+        maxYear = i;
+      }
+    }
+    return maxYear + 1950;
+  }
 }

@@ -23,15 +23,15 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1304 {
 
-    public int[] sumZero(int n) {
-        int[] arr = new int[n];
-        int startVal = (n / 2) * -1, i;
-        for (i = 0; i < n; i++) {
-            if (startVal == 0 && n % 2 == 0) {
-                startVal++;
-            }
-            arr[i] = startVal++;
-        }
-        return arr;
+  public int[] sumZero(int n) {
+    int[] arr = new int[n];
+    int startVal = (n / 2) * -1, i;
+    for (i = 0; i < n; i++) {
+      if (startVal == 0 && n % 2 == 0) {
+        startVal++;
+      }
+      arr[i] = startVal++;
     }
+    return arr;
+  }
 }

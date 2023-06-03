@@ -50,16 +50,16 @@ import java.util.Arrays;
  */
 public class Leetcode2144 {
 
-    public int minimumCost(int[] cost) {
-        int i, count = 0, sum = 0;
-        Arrays.sort(cost);
-        for (i = cost.length - 1; i >= 0; i--) {
-            if (++count == 3) {
-                count = 0;
-                continue;
-            }
-            sum += cost[i];
-        }
-        return sum;
+  public int minimumCost(int[] cost) {
+    int i, count = 0, sum = 0;
+    Arrays.sort(cost);
+    for (i = cost.length - 1; i >= 0; i--) {
+      if (++count == 3) {
+        count = 0;
+        continue;
+      }
+      sum += cost[i];
     }
+    return sum;
+  }
 }

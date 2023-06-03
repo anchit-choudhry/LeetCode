@@ -41,28 +41,28 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1652 {
 
-    // Suboptimal solution
-    public int[] decrypt(int[] code, int k) {
-        int[] arr = new int[code.length];
-        if (k == 0) {
-            return arr;
-        }
-        int i, j, times, sum;
-        for (i = 0; i < code.length; i++) {
-            j = k > 0 ? i + 1 : i - 1;
-            times = k > 0 ? k : k * -1;
-            sum = 0;
-            while (times-- > 0) {
-                if (j == code.length) {
-                    j = 0;
-                }
-                if (j < 0) {
-                    j = code.length - 1;
-                }
-                sum += code[k > 0 ? j++ : j--];
-            }
-            arr[i] = sum;
-        }
-        return arr;
+  // Suboptimal solution
+  public int[] decrypt(int[] code, int k) {
+    int[] arr = new int[code.length];
+    if (k == 0) {
+      return arr;
     }
+    int i, j, times, sum;
+    for (i = 0; i < code.length; i++) {
+      j = k > 0 ? i + 1 : i - 1;
+      times = k > 0 ? k : k * -1;
+      sum = 0;
+      while (times-- > 0) {
+        if (j == code.length) {
+          j = 0;
+        }
+        if (j < 0) {
+          j = code.length - 1;
+        }
+        sum += code[k > 0 ? j++ : j--];
+      }
+      arr[i] = sum;
+    }
+    return arr;
+  }
 }

@@ -31,24 +31,24 @@ import java.util.List;
  */
 public class LeetCode350 {
 
-    public int[] intersect(int[] nums1, int[] nums2) {
-        int[] temp = new int[1001];
-        List<Integer> result = new ArrayList<>();
-        for (int num : nums1) {
-            temp[num]++;
-        }
-        for (int num : nums2) {
-            if (temp[num] > 0) {
-                temp[num]--;
-                result.add(num);
-            }
-        }
-        int[] res = new int[result.size()];
-        for (int i = 0; i < res.length; i++) {
-            res[i] = result.get(i);
-        }
-        temp = null;
-        result = null;
-        return res;
+  public int[] intersect(int[] nums1, int[] nums2) {
+    int[] temp = new int[1001];
+    List<Integer> result = new ArrayList<>();
+    for (int num : nums1) {
+      temp[num]++;
     }
+    for (int num : nums2) {
+      if (temp[num] > 0) {
+        temp[num]--;
+        result.add(num);
+      }
+    }
+    int[] res = new int[result.size()];
+    for (int i = 0; i < res.length; i++) {
+      res[i] = result.get(i);
+    }
+    temp = null;
+    result = null;
+    return res;
+  }
 }

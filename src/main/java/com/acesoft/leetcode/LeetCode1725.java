@@ -33,17 +33,17 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1725 {
 
-    public int countGoodRectangles(int[][] rectangles) {
-        int max = -1, freq = 0, i, temp;
-        for (i = 0; i < rectangles.length; i++) {
-            temp = Math.min(rectangles[i][0], rectangles[i][1]);
-            if (max < temp) {
-                freq = 1;
-                max = temp;
-            } else if (max == temp) {
-                freq++;
-            }
-        }
-        return freq;
+  public int countGoodRectangles(int[][] rectangles) {
+    int max = -1, freq = 0, i, temp;
+    for (i = 0; i < rectangles.length; i++) {
+      temp = Math.min(rectangles[i][0], rectangles[i][1]);
+      if (max < temp) {
+        freq = 1;
+        max = temp;
+      } else if (max == temp) {
+        freq++;
+      }
     }
+    return freq;
+  }
 }

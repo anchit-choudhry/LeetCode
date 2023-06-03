@@ -28,36 +28,36 @@ import java.util.Set;
  */
 public class LeetCode2180 {
 
-    Set<Integer> numIsEven = new HashSet<>();
-    Set<Integer> numNotEven = new HashSet<>();
+  Set<Integer> numIsEven = new HashSet<>();
+  Set<Integer> numNotEven = new HashSet<>();
 
-    public int countEven(int num) {
-        int count = 0, i;
-        for (i = num; i > 1; i--) {
-            if (returnSumOfDigitsEven(i)) {
-                count++;
-            }
-        }
-        return count;
+  public int countEven(int num) {
+    int count = 0, i;
+    for (i = num; i > 1; i--) {
+      if (returnSumOfDigitsEven(i)) {
+        count++;
+      }
     }
+    return count;
+  }
 
-    private boolean returnSumOfDigitsEven(int num) {
-        if (numIsEven.contains(num)) {
-            return true;
-        }
-        if (numNotEven.contains(num)) {
-            return false;
-        }
-        int sum = 0;
-        while (num != 0) {
-            sum += num % 10;
-            num /= 10;
-        }
-        if (sum % 2 == 0) {
-            numIsEven.add(num);
-            return true;
-        }
-        numNotEven.add(num);
-        return false;
+  private boolean returnSumOfDigitsEven(int num) {
+    if (numIsEven.contains(num)) {
+      return true;
     }
+    if (numNotEven.contains(num)) {
+      return false;
+    }
+    int sum = 0;
+    while (num != 0) {
+      sum += num % 10;
+      num /= 10;
+    }
+    if (sum % 2 == 0) {
+      numIsEven.add(num);
+      return true;
+    }
+    numNotEven.add(num);
+    return false;
+  }
 }

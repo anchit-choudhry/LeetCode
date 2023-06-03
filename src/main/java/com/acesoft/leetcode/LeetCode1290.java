@@ -38,30 +38,30 @@ import com.acesoft.model.ListNode;
  */
 public class LeetCode1290 {
 
-    // Optimal solution using Bitwise Left Shift
-    public int getDecimalValue(ListNode head) {
-        int sum = 0;
-        while (head != null) {
-            sum = (sum << 1) | head.getVal();
-            head = head.getNext();
-        }
-        return sum;
+  // Optimal solution using Bitwise Left Shift
+  public int getDecimalValue(ListNode head) {
+    int sum = 0;
+    while (head != null) {
+      sum = (sum << 1) | head.getVal();
+      head = head.getNext();
     }
+    return sum;
+  }
 
-    // Suboptimal solution
-    public int getDecimalValue1(ListNode head) {
-        int count = 1, i = 1, sum = 0;
-        ListNode tmp = head;
-        while (tmp.getNext() != null) {
-            tmp = tmp.getNext();
-            count++;
-        }
-        tmp = head;
-        while (tmp != null) {
-            sum += tmp.getVal() * (int) Math.pow(2, count - i);
-            i++;
-            tmp = tmp.getNext();
-        }
-        return sum;
+  // Suboptimal solution
+  public int getDecimalValue1(ListNode head) {
+    int count = 1, i = 1, sum = 0;
+    ListNode tmp = head;
+    while (tmp.getNext() != null) {
+      tmp = tmp.getNext();
+      count++;
     }
+    tmp = head;
+    while (tmp != null) {
+      sum += tmp.getVal() * (int) Math.pow(2, count - i);
+      i++;
+      tmp = tmp.getNext();
+    }
+    return sum;
+  }
 }

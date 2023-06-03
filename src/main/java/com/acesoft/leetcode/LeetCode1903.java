@@ -29,15 +29,15 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1903 {
 
-    public String largestOddNumber(String num) {
-        int rem, index = 0, j = num.length();
-        while (--j > -1) {
-            rem = Character.getNumericValue(num.charAt(j));
-            if (rem % 2 == 1) {
-                break;
-            }
-            index++;
-        }
-        return num.substring(0, num.length() - index);
+  public String largestOddNumber(String num) {
+    int rem, index = 0, j = num.length();
+    while (--j > -1) {
+      rem = Character.getNumericValue(num.charAt(j));
+      if (rem % 2 == 1) {
+        break;
+      }
+      index++;
     }
+    return num.substring(0, num.length() - index);
+  }
 }

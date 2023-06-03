@@ -28,51 +28,51 @@ import java.util.Set;
  */
 public class LeetCode771 {
 
-    // Naive solution but very fast
-    public int numJewelsInStones(String J, String S) {
-        if (J == null || S == null || J.length() == 0 || S.length() == 0) {
-            return 0;
-        }
-        int sum = 0, i;
-        for (i = 0; i < S.length(); i++) {
-            if (J.indexOf(S.charAt(i)) > -1) {
-                sum++;
-            }
-        }
-        return sum;
+  // Naive solution but very fast
+  public int numJewelsInStones(String J, String S) {
+    if (J == null || S == null || J.length() == 0 || S.length() == 0) {
+      return 0;
     }
+    int sum = 0, i;
+    for (i = 0; i < S.length(); i++) {
+      if (J.indexOf(S.charAt(i)) > -1) {
+        sum++;
+      }
+    }
+    return sum;
+  }
 
-    // Solution using Set; useful when number of Jewels are large to have fast lookup
-    public int numJewelsInStones1(String J, String S) {
-        if (J == null || S == null || J.length() == 0 || S.length() == 0) {
-            return 0;
-        }
-        int sum = 0, i;
-        Set<Character> jewels = new HashSet<>();
-        for (i = 0; i < J.length(); i++) {
-            jewels.add(J.charAt(i));
-        }
-        for (i = 0; i < S.length(); i++) {
-            if (jewels.contains(S.charAt(i))) {
-                sum++;
-            }
-        }
-        return sum;
+  // Solution using Set; useful when number of Jewels are large to have fast lookup
+  public int numJewelsInStones1(String J, String S) {
+    if (J == null || S == null || J.length() == 0 || S.length() == 0) {
+      return 0;
     }
+    int sum = 0, i;
+    Set<Character> jewels = new HashSet<>();
+    for (i = 0; i < J.length(); i++) {
+      jewels.add(J.charAt(i));
+    }
+    for (i = 0; i < S.length(); i++) {
+      if (jewels.contains(S.charAt(i))) {
+        sum++;
+      }
+    }
+    return sum;
+  }
 
-    // Solution storing Jewels as int of ASCII characters
-    public int numJewelsInStones2(String J, String S) {
-        if (J == null || S == null || J.length() == 0 || S.length() == 0) {
-            return 0;
-        }
-        int sum = 0, i;
-        int[] ascii = new int[123];
-        for (i = 0; i < J.length(); i++) {
-            ascii[J.charAt(i)] = 1;
-        }
-        for (i = 0; i < S.length(); i++) {
-            sum += ascii[S.charAt(i)];
-        }
-        return sum;
+  // Solution storing Jewels as int of ASCII characters
+  public int numJewelsInStones2(String J, String S) {
+    if (J == null || S == null || J.length() == 0 || S.length() == 0) {
+      return 0;
     }
+    int sum = 0, i;
+    int[] ascii = new int[123];
+    for (i = 0; i < J.length(); i++) {
+      ascii[J.charAt(i)] = 1;
+    }
+    for (i = 0; i < S.length(); i++) {
+      sum += ascii[S.charAt(i)];
+    }
+    return sum;
+  }
 }

@@ -29,24 +29,24 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1791 {
 
-    // Optimal solution
-    public int findCenter(int[][] edges) {
-        return edges[0][0] == edges[1][0] || edges[0][0] == edges[1][1] ? edges[0][0] : edges[0][1];
-    }
+  // Optimal solution
+  public int findCenter(int[][] edges) {
+    return edges[0][0] == edges[1][0] || edges[0][0] == edges[1][1] ? edges[0][0] : edges[0][1];
+  }
 
-    // Suboptimal solution
-    public int findCenter1(int[][] edges) {
-        int[] node = new int[edges.length + 1];
-        for (int[] edge : edges) {
-            node[edge[1] - 1]++;
-            node[edge[0] - 1]++;
-            if (node[edge[1] - 1] == edges.length - 1) {
-                return edge[1];
-            }
-            if (node[edge[0] - 1] == edges.length - 1) {
-                return edge[0];
-            }
-        }
-        return -1;
+  // Suboptimal solution
+  public int findCenter1(int[][] edges) {
+    int[] node = new int[edges.length + 1];
+    for (int[] edge : edges) {
+      node[edge[1] - 1]++;
+      node[edge[0] - 1]++;
+      if (node[edge[1] - 1] == edges.length - 1) {
+        return edge[1];
+      }
+      if (node[edge[0] - 1] == edges.length - 1) {
+        return edge[0];
+      }
     }
+    return -1;
+  }
 }

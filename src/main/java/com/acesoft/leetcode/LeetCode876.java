@@ -26,30 +26,30 @@ import com.acesoft.model.ListNode;
  */
 public class LeetCode876 {
 
-    // Naive approach
-    public ListNode middleNode(ListNode head) {
-        int i = 0, middle;
-        ListNode tmp = head;
-        while (tmp.getNext() != null) {
-            tmp = tmp.getNext();
-            i++;
-        }
-        middle = (i / 2) + i % 2;
-        i = 0;
-        while (i < middle) {
-            head = head.getNext();
-            i++;
-        }
-        return head;
+  // Naive approach
+  public ListNode middleNode(ListNode head) {
+    int i = 0, middle;
+    ListNode tmp = head;
+    while (tmp.getNext() != null) {
+      tmp = tmp.getNext();
+      i++;
     }
+    middle = (i / 2) + i % 2;
+    i = 0;
+    while (i < middle) {
+      head = head.getNext();
+      i++;
+    }
+    return head;
+  }
 
-    // Using slow and fast pointer
-    public ListNode middleNode1(ListNode head) {
-        ListNode slow = head, fast = head;
-        while (fast != null && fast.getNext() != null) {
-            slow = slow.getNext();
-            fast = slow.getNext().getNext();
-        }
-        return slow;
+  // Using slow and fast pointer
+  public ListNode middleNode1(ListNode head) {
+    ListNode slow = head, fast = head;
+    while (fast != null && fast.getNext() != null) {
+      slow = slow.getNext();
+      fast = slow.getNext().getNext();
     }
+    return slow;
+  }
 }

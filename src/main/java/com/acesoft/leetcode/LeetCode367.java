@@ -18,19 +18,19 @@ package com.acesoft.leetcode;
  */
 public class LeetCode367 {
 
-    public boolean isPerfectSquare(int num) {
-        int low = 1, high = num, middle, rem;
-        while (low <= high) {
-            middle = low + (high - low) / 2;
-            rem = num / middle;
-            if (num / middle == middle && num % middle == 0) {
-                return true;
-            } else if (rem < middle) {
-                high = middle - 1;
-            } else {
-                low = middle + 1;
-            }
-        }
-        return false;
+  public boolean isPerfectSquare(int num) {
+    int low = 1, high = num, middle, rem;
+    while (low <= high) {
+      middle = low + (high - low) / 2;
+      rem = num / middle;
+      if (num / middle == middle && num % middle == 0) {
+        return true;
+      } else if (rem < middle) {
+        high = middle - 1;
+      } else {
+        low = middle + 1;
+      }
     }
+    return false;
+  }
 }

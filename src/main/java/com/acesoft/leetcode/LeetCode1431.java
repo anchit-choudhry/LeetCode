@@ -45,18 +45,18 @@ import java.util.List;
  */
 public class LeetCode1431 {
 
-    public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
-        int max = -1;
-        List<Boolean> moreC = new ArrayList<>(candies.length);
-        for (int candy : candies) {
-            if (max < candy) {
-                max = candy;
-            }
-        }
-        max -= extraCandies;
-        for (int candy : candies) {
-            moreC.add(candy >= max);
-        }
-        return moreC;
+  public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
+    int max = -1;
+    List<Boolean> moreC = new ArrayList<>(candies.length);
+    for (int candy : candies) {
+      if (max < candy) {
+        max = candy;
+      }
     }
+    max -= extraCandies;
+    for (int candy : candies) {
+      moreC.add(candy >= max);
+    }
+    return moreC;
+  }
 }

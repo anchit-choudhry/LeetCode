@@ -41,18 +41,18 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1816 {
 
-    public String truncateSentence(String s, int k) {
-        int pos = 0, spaces = 0;
-        for (char ch : s.toCharArray()) {
-            pos++;
-            if (ch == ' ') {
-                spaces++;
-                if (spaces == k) {
-                    pos--;
-                    break;
-                }
-            }
+  public String truncateSentence(String s, int k) {
+    int pos = 0, spaces = 0;
+    for (char ch : s.toCharArray()) {
+      pos++;
+      if (ch == ' ') {
+        spaces++;
+        if (spaces == k) {
+          pos--;
+          break;
         }
-        return s.substring(0, pos);
+      }
     }
+    return s.substring(0, pos);
+  }
 }

@@ -41,29 +41,29 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1352 {
 
-    static class ProductOfNumbers {
+  static class ProductOfNumbers {
 
-        public int[] arr;
-        public int count;
+    public int[] arr;
+    public int count;
 
-        public ProductOfNumbers() {
-            arr = new int[40000];
-            count = 0;
-        }
-
-        public void add(int num) {
-            arr[count++] = num;
-        }
-
-        public int getProduct(int k) {
-            if (k > count) {
-                return -1;
-            }
-            int product = 1, i = 0;
-            while (k-- > 0) {
-                product *= arr[count - ++i];
-            }
-            return product;
-        }
+    public ProductOfNumbers() {
+      arr = new int[40000];
+      count = 0;
     }
+
+    public void add(int num) {
+      arr[count++] = num;
+    }
+
+    public int getProduct(int k) {
+      if (k > count) {
+        return -1;
+      }
+      int product = 1, i = 0;
+      while (k-- > 0) {
+        product *= arr[count - ++i];
+      }
+      return product;
+    }
+  }
 }

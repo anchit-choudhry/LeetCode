@@ -27,21 +27,21 @@ import java.util.Set;
  */
 public class LeetCode202 {
 
-    public boolean isHappy(int n) {
-        Set<Integer> hs = new HashSet<>();
-        int mod, sum;
-        while (hs.add(n)) {
-            sum = 0;
-            while (n != 0) {
-                mod = n % 10;
-                n /= 10;
-                sum += mod * mod;
-            }
-            if (sum == 1) {
-                return true;
-            }
-            n = sum;
-        }
-        return false;
+  public boolean isHappy(int n) {
+    Set<Integer> hs = new HashSet<>();
+    int mod, sum;
+    while (hs.add(n)) {
+      sum = 0;
+      while (n != 0) {
+        mod = n % 10;
+        n /= 10;
+        sum += mod * mod;
+      }
+      if (sum == 1) {
+        return true;
+      }
+      n = sum;
     }
+    return false;
+  }
 }

@@ -39,13 +39,13 @@ import java.util.stream.Collectors;
  */
 public class LeetCode1859 {
 
-    public String sortSentence(String s) {
-        String[] splits = s.split(" ");
-        Arrays.sort(splits,
-                (a, b) -> Integer.compare(
-                        Integer.parseInt(String.valueOf(a.charAt(a.length() - 1))),
-                        Integer.parseInt(String.valueOf(b.charAt(b.length() - 1)))));
-        return Arrays.stream(splits).map(x -> x.substring(0, x.length() - 1))
-                .collect(Collectors.joining(" "));
-    }
+  public String sortSentence(String s) {
+    String[] splits = s.split(" ");
+    Arrays.sort(splits,
+        (a, b) -> Integer.compare(
+            Integer.parseInt(String.valueOf(a.charAt(a.length() - 1))),
+            Integer.parseInt(String.valueOf(b.charAt(b.length() - 1)))));
+    return Arrays.stream(splits).map(x -> x.substring(0, x.length() - 1))
+        .collect(Collectors.joining(" "));
+  }
 }

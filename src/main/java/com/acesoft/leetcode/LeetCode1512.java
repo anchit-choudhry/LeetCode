@@ -32,27 +32,27 @@ import java.util.Map;
  */
 public class LeetCode1512 {
 
-    // Optimal solution O(n); can be further optimized by using an index based arr of length 100
-    public int numIdenticalPairs(int[] nums) {
-        int count = 0;
-        Map<Integer, Integer> lookup = new HashMap<>();
-        for (int num : nums) {
-            lookup.put(num, lookup.getOrDefault(num, 0) + 1);
-            count += lookup.get(num) - 1;
-        }
-        return count;
+  // Optimal solution O(n); can be further optimized by using an index based arr of length 100
+  public int numIdenticalPairs(int[] nums) {
+    int count = 0;
+    Map<Integer, Integer> lookup = new HashMap<>();
+    for (int num : nums) {
+      lookup.put(num, lookup.getOrDefault(num, 0) + 1);
+      count += lookup.get(num) - 1;
     }
+    return count;
+  }
 
-    // Suboptimal solution O(n^2)
-    public int numIdenticalPairs1(int[] nums) {
-        int count = 0, i, j;
-        for (i = 0; i < nums.length; i++) {
-            for (j = i + 1; j < nums.length; j++) {
-                if (nums[i] == nums[j]) {
-                    count++;
-                }
-            }
+  // Suboptimal solution O(n^2)
+  public int numIdenticalPairs1(int[] nums) {
+    int count = 0, i, j;
+    for (i = 0; i < nums.length; i++) {
+      for (j = i + 1; j < nums.length; j++) {
+        if (nums[i] == nums[j]) {
+          count++;
         }
-        return count;
+      }
     }
+    return count;
+  }
 }

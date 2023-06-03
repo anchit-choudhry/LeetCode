@@ -44,24 +44,24 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1385 {
 
-    // Suboptimal solution
-    public int findTheDistanceValue1(int[] arr1, int[] arr2, int d) {
-        int i, j, diff, count = 0;
-        boolean flag;
-        for (i = 0; i < arr1.length; i++) {
-            flag = true;
-            for (j = 0; j < arr2.length; j++) {
-                diff = arr1[i] - arr2[j];
-                diff = diff < -1 ? diff * -1 : diff;
-                if (diff <= d) {
-                    flag = false;
-                    break;
-                }
-            }
-            if (flag) {
-                count++;
-            }
+  // Suboptimal solution
+  public int findTheDistanceValue1(int[] arr1, int[] arr2, int d) {
+    int i, j, diff, count = 0;
+    boolean flag;
+    for (i = 0; i < arr1.length; i++) {
+      flag = true;
+      for (j = 0; j < arr2.length; j++) {
+        diff = arr1[i] - arr2[j];
+        diff = diff < -1 ? diff * -1 : diff;
+        if (diff <= d) {
+          flag = false;
+          break;
         }
-        return count;
+      }
+      if (flag) {
+        count++;
+      }
     }
+    return count;
+  }
 }

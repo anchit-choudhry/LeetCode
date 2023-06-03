@@ -32,25 +32,25 @@ package com.acesoft.leetcode;
  */
 public class LeetCode2124 {
 
-    public boolean checkString(String s) {
-        if (s.length() == 1) {
-            return true;
-        }
-        boolean aSeen = false, bSeen = false;
-        for (char ch : s.toCharArray()) {
-            if (ch == 'b') {
-                if (!aSeen) {
-                    aSeen = true;
-                }
-                bSeen = true;
-            }
-            if (ch == 'a') {
-                if (bSeen) {
-                    return false;
-                }
-                aSeen = true;
-            }
-        }
-        return true;
+  public boolean checkString(String s) {
+    if (s.length() == 1) {
+      return true;
     }
+    boolean aSeen = false, bSeen = false;
+    for (char ch : s.toCharArray()) {
+      if (ch == 'b') {
+        if (!aSeen) {
+          aSeen = true;
+        }
+        bSeen = true;
+      }
+      if (ch == 'a') {
+        if (bSeen) {
+          return false;
+        }
+        aSeen = true;
+      }
+    }
+    return true;
+  }
 }

@@ -41,20 +41,20 @@ package com.acesoft.leetcode;
  */
 public class LeetCode2287 {
 
-    public int rearrangeCharacters(String s, String target) {
-        int min = Integer.MAX_VALUE, temp;
-        int[] alphabets = new int[26];
-        int[] targetArr = new int[26];
-        for (char ch : s.toCharArray()) {
-            alphabets[ch - 'a']++;
-        }
-        for (char ch : target.toCharArray()) {
-            targetArr[ch - 'a']++;
-        }
-        for (char ch : target.toCharArray()) {
-            temp = ch - 'a';
-            min = Math.min(min, alphabets[temp] / targetArr[temp]);
-        }
-        return min;
+  public int rearrangeCharacters(String s, String target) {
+    int min = Integer.MAX_VALUE, temp;
+    int[] alphabets = new int[26];
+    int[] targetArr = new int[26];
+    for (char ch : s.toCharArray()) {
+      alphabets[ch - 'a']++;
     }
+    for (char ch : target.toCharArray()) {
+      targetArr[ch - 'a']++;
+    }
+    for (char ch : target.toCharArray()) {
+      temp = ch - 'a';
+      min = Math.min(min, alphabets[temp] / targetArr[temp]);
+    }
+    return min;
+  }
 }

@@ -33,15 +33,15 @@ import com.acesoft.model.TreeNode;
  */
 public class LeetCode814 {
 
-    public TreeNode pruneTree(TreeNode root) {
-        if (root == null) {
-            return null;
-        }
-        root.setLeft(pruneTree(root.getLeft()));
-        root.setRight(pruneTree(root.getRight()));
-        if (root.getLeft() == null && root.getRight() == null && root.getVal() == 0) {
-            root = null;
-        }
-        return root;
+  public TreeNode pruneTree(TreeNode root) {
+    if (root == null) {
+      return null;
     }
+    root.setLeft(pruneTree(root.getLeft()));
+    root.setRight(pruneTree(root.getRight()));
+    if (root.getLeft() == null && root.getRight() == null && root.getVal() == 0) {
+      root = null;
+    }
+    return root;
+  }
 }

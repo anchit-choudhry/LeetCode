@@ -21,21 +21,21 @@ import java.util.Map;
  */
 public class LeetCode169 {
 
-    public int majorityElement(int[] nums) {
-        Map<Integer, Integer> majority = new HashMap<>();
-        int size = nums.length / 2, temp;
-        for (int num : nums) {
-            temp = majority.getOrDefault(num, 0);
-            if (temp == 0) {
-                majority.put(num, 1);
-            } else {
-                if (temp + 1 > size) {
-                    return num;
-                } else {
-                    majority.put(num, temp + 1);
-                }
-            }
+  public int majorityElement(int[] nums) {
+    Map<Integer, Integer> majority = new HashMap<>();
+    int size = nums.length / 2, temp;
+    for (int num : nums) {
+      temp = majority.getOrDefault(num, 0);
+      if (temp == 0) {
+        majority.put(num, 1);
+      } else {
+        if (temp + 1 > size) {
+          return num;
+        } else {
+          majority.put(num, temp + 1);
         }
-        return nums.length == 1 ? nums[0] : -1;
+      }
     }
+    return nums.length == 1 ? nums[0] : -1;
+  }
 }

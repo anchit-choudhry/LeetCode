@@ -34,13 +34,13 @@ import java.util.List;
  */
 public class LeetCode412 {
 
-    public List<String> fizzBuzz(int n) {
-        int i;
-        List<String> ret = new ArrayList<>();
-        for (i = 1; i <= n; i++) {
-            ret.add(i % 3 != 0 && i % 5 != 0 ? String.valueOf(i)
-                    : (i % 3 == 0 ? "Fizz" : "") + (i % 5 == 0 ? "Buzz" : ""));
-        }
-        return ret;
+  public List<String> fizzBuzz(int n) {
+    int i;
+    List<String> ret = new ArrayList<>();
+    for (i = 1; i <= n; i++) {
+      ret.add(i % 3 != 0 && i % 5 != 0 ? String.valueOf(i)
+          : (i % 3 == 0 ? "Fizz" : "") + (i % 5 == 0 ? "Buzz" : ""));
     }
+    return ret;
+  }
 }

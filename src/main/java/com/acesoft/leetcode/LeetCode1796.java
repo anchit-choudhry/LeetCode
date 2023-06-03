@@ -24,23 +24,23 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1796 {
 
-    public int secondHighest(String s) {
-        int largest = -1, secondLargest = -1;
-        for (char ch : s.toCharArray()) {
-            if (ch > 47 && ch < 58) {
-                if (ch - 48 == largest) {
-                    continue;
-                }
-                if (ch - 48 > largest) {
-                    secondLargest = largest;
-                    largest = ch - 48;
-                    continue;
-                }
-                if (ch - 48 > secondLargest) {
-                    secondLargest = ch - 48;
-                }
-            }
+  public int secondHighest(String s) {
+    int largest = -1, secondLargest = -1;
+    for (char ch : s.toCharArray()) {
+      if (ch > 47 && ch < 58) {
+        if (ch - 48 == largest) {
+          continue;
         }
-        return secondLargest;
+        if (ch - 48 > largest) {
+          secondLargest = largest;
+          largest = ch - 48;
+          continue;
+        }
+        if (ch - 48 > secondLargest) {
+          secondLargest = ch - 48;
+        }
+      }
     }
+    return secondLargest;
+  }
 }

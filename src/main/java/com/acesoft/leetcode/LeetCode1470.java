@@ -27,12 +27,12 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1470 {
 
-    public int[] shuffle(int[] nums, int n) {
-        int[] newArray = new int[n * 2];
-        for (int i = 0; i < n; i++) {
-            newArray[i * 2] = nums[i];
-            newArray[i * 2 + 1] = nums[i + n];
-        }
-        return newArray;
+  public int[] shuffle(int[] nums, int n) {
+    int[] newArray = new int[n * 2];
+    for (int i = 0; i < n; i++) {
+      newArray[i * 2] = nums[i];
+      newArray[i * 2 + 1] = nums[i + n];
     }
+    return newArray;
+  }
 }

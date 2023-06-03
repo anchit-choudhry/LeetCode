@@ -34,17 +34,17 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1716 {
 
-    public int totalMoney(int n) {
-        int sum = 0, add = 0, i = 1;
-        while (n - 7 > 0) {
-            sum += 28;
-            n -= 7;
-            sum += add++ * 7;
-        }
-        while (n > 0) {
-            n--;
-            sum += add + i++;
-        }
-        return sum;
+  public int totalMoney(int n) {
+    int sum = 0, add = 0, i = 1;
+    while (n - 7 > 0) {
+      sum += 28;
+      n -= 7;
+      sum += add++ * 7;
     }
+    while (n > 0) {
+      n--;
+      sum += add + i++;
+    }
+    return sum;
+  }
 }

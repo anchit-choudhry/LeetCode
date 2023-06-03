@@ -27,25 +27,25 @@ package com.acesoft.leetcode;
  */
 public class LeetCode861 {
 
-    public int matrixScore(int[][] A) {
-        if (A.length < 1) {
-            return 0;
-        }
-        int sum = 0;
-        for (int i = 0; i < A.length; i++) {
-            if (A[i][0] == 1) {
-                continue;
-            }
-            for (int j = 0; j < A[i].length; j++) {
-                A[i][j] = A[i][j] == 0 ? 1 : 0;
-            }
-        }
-        for (int[] ints : A) {
-            for (int anInt : ints) {
-                System.out.print(anInt + " ");
-            }
-            System.out.println();
-        }
-        return sum;
+  public int matrixScore(int[][] A) {
+    if (A.length < 1) {
+      return 0;
     }
+    int sum = 0;
+    for (int i = 0; i < A.length; i++) {
+      if (A[i][0] == 1) {
+        continue;
+      }
+      for (int j = 0; j < A[i].length; j++) {
+        A[i][j] = A[i][j] == 0 ? 1 : 0;
+      }
+    }
+    for (int[] ints : A) {
+      for (int anInt : ints) {
+        System.out.print(anInt + " ");
+      }
+      System.out.println();
+    }
+    return sum;
+  }
 }

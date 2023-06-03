@@ -31,22 +31,22 @@ package com.acesoft.leetcode;
  */
 public class LeetCode278 {
 
-    public int firstBadVersion(int n) {
-        int low = 1, end = n, mid = -1;
-        while (low <= end) {
-            mid = low + ((end - low) / 2);
-            if (isBadVersion(mid)) {
-                end = mid - 1;
-            } else {
-                low = mid + 1;
-            }
-        }
-        return low;
+  public int firstBadVersion(int n) {
+    int low = 1, end = n, mid = -1;
+    while (low <= end) {
+      mid = low + ((end - low) / 2);
+      if (isBadVersion(mid)) {
+        end = mid - 1;
+      } else {
+        low = mid + 1;
+      }
     }
+    return low;
+  }
 
-    private boolean isBadVersion(final int version) {
-        // this method only kept to fix the missing method error. It is implemented on
-        // LeetCode side
-        return true;
-    }
+  private boolean isBadVersion(final int version) {
+    // this method only kept to fix the missing method error. It is implemented on
+    // LeetCode side
+    return true;
+  }
 }

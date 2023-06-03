@@ -39,21 +39,21 @@ import java.util.Set;
  */
 public class LeetCode1805 {
 
-    public int numDifferentIntegers(String word) {
-        Set<String> numbers = new HashSet<>();
-        StringBuilder sb = new StringBuilder();
-        for (char ch : word.toCharArray()) {
-            if (ch > 47 && ch < 58) {
-                sb.append(ch);
-                continue;
-            } else if (sb.length() > 0) {
-                numbers.add(sb.toString().replaceFirst("^0+(?!$)", ""));
-                sb.setLength(0);
-            }
-        }
-        if (sb.length() > 0) {
-            numbers.add(sb.toString().replaceFirst("^0+(?!$)", ""));
-        }
-        return numbers.size();
+  public int numDifferentIntegers(String word) {
+    Set<String> numbers = new HashSet<>();
+    StringBuilder sb = new StringBuilder();
+    for (char ch : word.toCharArray()) {
+      if (ch > 47 && ch < 58) {
+        sb.append(ch);
+        continue;
+      } else if (sb.length() > 0) {
+        numbers.add(sb.toString().replaceFirst("^0+(?!$)", ""));
+        sb.setLength(0);
+      }
     }
+    if (sb.length() > 0) {
+      numbers.add(sb.toString().replaceFirst("^0+(?!$)", ""));
+    }
+    return numbers.size();
+  }
 }

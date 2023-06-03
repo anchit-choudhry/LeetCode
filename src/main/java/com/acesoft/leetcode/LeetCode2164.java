@@ -43,33 +43,33 @@ Constraints:
  */
 public class LeetCode2164 {
 
-    public int[] sortEvenOdd(int[] nums) {
-        int i;
-        List<Integer> odd = new ArrayList<>();
-        List<Integer> even = new ArrayList<>();
-        int[] sortedNums = new int[nums.length];
+  public int[] sortEvenOdd(int[] nums) {
+    int i;
+    List<Integer> odd = new ArrayList<>();
+    List<Integer> even = new ArrayList<>();
+    int[] sortedNums = new int[nums.length];
 
-        for (i = 0; i < nums.length; i++) {
-            if (i % 2 == 0) {
-                even.add(nums[i]);
-            } else {
-                odd.add(nums[i]);
-            }
-        }
-
-        Collections.sort(odd, Collections.reverseOrder());
-        Collections.sort(even);
-
-        i = 0;
-        for (int num : even) {
-            sortedNums[i] = num;
-            i = i + 2;
-        }
-        i = 1;
-        for (int num : odd) {
-            sortedNums[i] = num;
-            i = i + 2;
-        }
-        return sortedNums;
+    for (i = 0; i < nums.length; i++) {
+      if (i % 2 == 0) {
+        even.add(nums[i]);
+      } else {
+        odd.add(nums[i]);
+      }
     }
+
+    Collections.sort(odd, Collections.reverseOrder());
+    Collections.sort(even);
+
+    i = 0;
+    for (int num : even) {
+      sortedNums[i] = num;
+      i = i + 2;
+    }
+    i = 1;
+    for (int num : odd) {
+      sortedNums[i] = num;
+      i = i + 2;
+    }
+    return sortedNums;
+  }
 }

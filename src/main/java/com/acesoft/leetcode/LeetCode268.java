@@ -20,21 +20,21 @@ package com.acesoft.leetcode;
  */
 public class LeetCode268 {
 
-    // Optimal Solution using Formula
-    public int missingNumber(int[] nums) {
-        int sum = 0;
-        for (int i : nums) {
-            sum += i;
-        }
-        return (nums.length * (nums.length + 1) / 2) - sum;
+  // Optimal Solution using Formula
+  public int missingNumber(int[] nums) {
+    int sum = 0;
+    for (int i : nums) {
+      sum += i;
     }
+    return (nums.length * (nums.length + 1) / 2) - sum;
+  }
 
-    // Optimal Solution using XOR
-    public int missingNumber1(int[] nums) {
-        int res = nums.length;
-        for (int i = 0; i < nums.length; i++) {
-            res = res ^ i ^ nums[i];
-        }
-        return res;
+  // Optimal Solution using XOR
+  public int missingNumber1(int[] nums) {
+    int res = nums.length;
+    for (int i = 0; i < nums.length; i++) {
+      res = res ^ i ^ nums[i];
     }
+    return res;
+  }
 }

@@ -25,31 +25,31 @@ package com.acesoft.leetcode;
  */
 public class LeetCode64 {
 
-    private int[][] cache;
+  private int[][] cache;
 
-    private int getShortestPath(int m, int n, int[][] grid) {
-        if (m == 0 && n == 0) {
-            return grid[m][n];
-        }
-        if (cache[m][n] != 0) {
-            return cache[m][n];
-        }
-        if (m == 0) {
-            cache[m][n] = grid[m][n] + getShortestPath(m, n - 1, grid);
-            return cache[m][n];
-        }
-        if (n == 0) {
-            cache[m][n] = grid[m][n] + getShortestPath(m - 1, n, grid);
-            return cache[m][n];
-        }
-        cache[m][n] = grid[m][n]
-                + Math.min(getShortestPath(m - 1, n, grid), getShortestPath(m, n - 1, grid));
-        return cache[m][n];
+  private int getShortestPath(int m, int n, int[][] grid) {
+    if (m == 0 && n == 0) {
+      return grid[m][n];
     }
+    if (cache[m][n] != 0) {
+      return cache[m][n];
+    }
+    if (m == 0) {
+      cache[m][n] = grid[m][n] + getShortestPath(m, n - 1, grid);
+      return cache[m][n];
+    }
+    if (n == 0) {
+      cache[m][n] = grid[m][n] + getShortestPath(m - 1, n, grid);
+      return cache[m][n];
+    }
+    cache[m][n] = grid[m][n]
+        + Math.min(getShortestPath(m - 1, n, grid), getShortestPath(m, n - 1, grid));
+    return cache[m][n];
+  }
 
-    public int minPathSum(int[][] grid) {
-        int x = grid.length, y = grid[0].length;
-        cache = new int[x][y];
-        return getShortestPath(x - 1, y - 1, grid);
-    }
+  public int minPathSum(int[][] grid) {
+    int x = grid.length, y = grid[0].length;
+    cache = new int[x][y];
+    return getShortestPath(x - 1, y - 1, grid);
+  }
 }

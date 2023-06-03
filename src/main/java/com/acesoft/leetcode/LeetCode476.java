@@ -25,11 +25,11 @@ package com.acesoft.leetcode;
  */
 public class LeetCode476 {
 
-    public int findComplement(int num) {
-        int i = 0, j = 0;
-        while (i < num) {
-            i += (int) Math.pow(2, j++);
-        }
-        return i - num;
+  public int findComplement(int num) {
+    int i = 0, j = 0;
+    while (i < num) {
+      i += (int) Math.pow(2, j++);
     }
+    return i - num;
+  }
 }

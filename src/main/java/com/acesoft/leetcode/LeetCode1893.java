@@ -33,23 +33,23 @@ import java.util.Arrays;
  */
 public class LeetCode1893 {
 
-    public boolean isCovered(int[][] ranges, int left, int right) {
-        Arrays.sort(ranges, (a, b) -> Integer.compare(a[0], b[0]));
-        int min = left;
-        for (int[] range : ranges) {
-            if (range[0] > min) {
-                break;
-            }
-            if (range[1] < min) {
-                continue;
-            }
-            if (range[0] <= min && right <= range[1]) {
-                return true;
-            }
-            if (range[0] <= min && range[1] < right) {
-                min = range[1] + 1;
-            }
-        }
-        return false;
+  public boolean isCovered(int[][] ranges, int left, int right) {
+    Arrays.sort(ranges, (a, b) -> Integer.compare(a[0], b[0]));
+    int min = left;
+    for (int[] range : ranges) {
+      if (range[0] > min) {
+        break;
+      }
+      if (range[1] < min) {
+        continue;
+      }
+      if (range[0] <= min && right <= range[1]) {
+        return true;
+      }
+      if (range[0] <= min && range[1] < right) {
+        min = range[1] + 1;
+      }
     }
+    return false;
+  }
 }

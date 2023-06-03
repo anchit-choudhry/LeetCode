@@ -31,24 +31,24 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1684 {
 
-    public int countConsistentStrings(String allowed, String[] words) {
-        int[] alphabets = new int[26];
-        for (char allow : allowed.toCharArray()) {
-            alphabets[allow - 97]++;
-        }
-        int count = 0;
-        for (String word : words) {
-            boolean flag = true;
-            for (char letter : word.toCharArray()) {
-                if (alphabets[letter - 97] == 0) {
-                    flag = false;
-                    break;
-                }
-            }
-            if (flag) {
-                count++;
-            }
-        }
-        return count;
+  public int countConsistentStrings(String allowed, String[] words) {
+    int[] alphabets = new int[26];
+    for (char allow : allowed.toCharArray()) {
+      alphabets[allow - 97]++;
     }
+    int count = 0;
+    for (String word : words) {
+      boolean flag = true;
+      for (char letter : word.toCharArray()) {
+        if (alphabets[letter - 97] == 0) {
+          flag = false;
+          break;
+        }
+      }
+      if (flag) {
+        count++;
+      }
+    }
+    return count;
+  }
 }

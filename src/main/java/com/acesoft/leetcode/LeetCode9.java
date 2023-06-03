@@ -33,25 +33,25 @@ package com.acesoft.leetcode;
  */
 public class LeetCode9 {
 
-    public boolean isPalindrome(int x) {
-        if (x < 0) {
-            return false;
-        }
-        if (x < 10) {
-            return true;
-        }
-        int len = 0, i = 0;
-        int[] arr = new int[10];
-        while (x != 0) {
-            arr[i++] = x % 10;
-            x /= 10;
-            len++;
-        }
-        for (i = 0; i < len / 2; i++) {
-            if (arr[i] != arr[len - 1 - i]) {
-                return false;
-            }
-        }
-        return true;
+  public boolean isPalindrome(int x) {
+    if (x < 0) {
+      return false;
     }
+    if (x < 10) {
+      return true;
+    }
+    int len = 0, i = 0;
+    int[] arr = new int[10];
+    while (x != 0) {
+      arr[i++] = x % 10;
+      x /= 10;
+      len++;
+    }
+    for (i = 0; i < len / 2; i++) {
+      if (arr[i] != arr[len - 1 - i]) {
+        return false;
+      }
+    }
+    return true;
+  }
 }

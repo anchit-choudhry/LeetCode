@@ -23,26 +23,26 @@ package com.acesoft.leetcode;
  */
 public class LeetCode2605 {
 
-    public int minNumber(int[] nums1, int[] nums2) {
-        int min1 = 10;
-        int min2 = 10;
-        int sameMin = 10;
-        int[] arr = new int[10];
+  public int minNumber(int[] nums1, int[] nums2) {
+    int min1 = 10;
+    int min2 = 10;
+    int sameMin = 10;
+    int[] arr = new int[10];
 
-        for (int num : nums1) {
-            if (min1 > num) {
-                min1 = num;
-            }
-            arr[num - 1] = num;
-        }
-        for (int num : nums2) {
-            if (arr[num - 1] > 0 && num < sameMin) {
-                sameMin = num;
-            }
-            if (min2 > num) {
-                min2 = num;
-            }
-        }
-        return sameMin != 10 ? sameMin : min1 > min2 ? min2 * 10 + min1 : min1 * 10 + min2;
+    for (int num : nums1) {
+      if (min1 > num) {
+        min1 = num;
+      }
+      arr[num - 1] = num;
     }
+    for (int num : nums2) {
+      if (arr[num - 1] > 0 && num < sameMin) {
+        sameMin = num;
+      }
+      if (min2 > num) {
+        min2 = num;
+      }
+    }
+    return sameMin != 10 ? sameMin : min1 > min2 ? min2 * 10 + min1 : min1 * 10 + min2;
+  }
 }

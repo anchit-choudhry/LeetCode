@@ -34,24 +34,24 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1710 {
 
-    public int maximumUnits(int[][] boxTypes, int truckSize) {
-        int[] buckets = new int[1001];
-        int i, maxSize = 0;
-        for (i = 0; i < boxTypes.length; i++) {
-            buckets[boxTypes[i][1]] += boxTypes[i][0];
-        }
-        for (i = 1000; i > 0; i--) {
-            if (buckets[i] == 0) {
-                continue;
-            }
-            if (truckSize > buckets[i]) {
-                maxSize += buckets[i] * i;
-                truckSize -= buckets[i];
-            } else {
-                maxSize += truckSize * i;
-                break;
-            }
-        }
-        return maxSize;
+  public int maximumUnits(int[][] boxTypes, int truckSize) {
+    int[] buckets = new int[1001];
+    int i, maxSize = 0;
+    for (i = 0; i < boxTypes.length; i++) {
+      buckets[boxTypes[i][1]] += boxTypes[i][0];
     }
+    for (i = 1000; i > 0; i--) {
+      if (buckets[i] == 0) {
+        continue;
+      }
+      if (truckSize > buckets[i]) {
+        maxSize += buckets[i] * i;
+        truckSize -= buckets[i];
+      } else {
+        maxSize += truckSize * i;
+        break;
+      }
+    }
+    return maxSize;
+  }
 }

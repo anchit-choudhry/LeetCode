@@ -36,7 +36,7 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1678 {
 
-    public String interpret(String command) {
-        return command.replace("()", "o").replace("(al)", "al");
-    }
+  public String interpret(String command) {
+    return command.replace("()", "o").replace("(al)", "al");
+  }
 }

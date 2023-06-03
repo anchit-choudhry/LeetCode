@@ -28,16 +28,16 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1464 {
 
-    public int maxProduct(int[] nums) {
-        int i = 0, largest = -1, secLargest = -1;
-        for (i = 0; i < nums.length; i++) {
-            if (nums[i] >= largest) {
-                secLargest = largest;
-                largest = nums[i];
-            } else if (nums[i] > secLargest) {
-                secLargest = nums[i];
-            }
-        }
-        return --largest * --secLargest;
+  public int maxProduct(int[] nums) {
+    int i = 0, largest = -1, secLargest = -1;
+    for (i = 0; i < nums.length; i++) {
+      if (nums[i] >= largest) {
+        secLargest = largest;
+        largest = nums[i];
+      } else if (nums[i] > secLargest) {
+        secLargest = nums[i];
+      }
     }
+    return --largest * --secLargest;
+  }
 }

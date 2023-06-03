@@ -41,12 +41,12 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1528 {
 
-    public String restoreString(String s, int[] indices) {
-        char[] str = new char[indices.length];
-        int i = 0;
-        for (int index : indices) {
-            str[index] = s.charAt(i++);
-        }
-        return new String(str);
+  public String restoreString(String s, int[] indices) {
+    char[] str = new char[indices.length];
+    int i = 0;
+    for (int index : indices) {
+      str[index] = s.charAt(i++);
     }
+    return new String(str);
+  }
 }

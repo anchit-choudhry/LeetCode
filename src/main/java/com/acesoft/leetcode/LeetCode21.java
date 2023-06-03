@@ -14,45 +14,45 @@ import com.acesoft.model.ListNode;
  */
 public class LeetCode21 {
 
-    // Iterative solution
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        ListNode sorted = new ListNode(0);
-        ListNode pointer = sorted;
-        while (l1 != null && l2 != null) {
-            if (l1.getVal() <= l2.getVal()) {
-                pointer.setNext(l1);
-                l1 = l1.getNext();
-            } else {
-                pointer.setNext(l2);
-                l2 = l2.getNext();
-            }
-            pointer = pointer.getNext();
-        }
-        if (l1 != null) {
-            pointer.setNext(l1);
-        }
-        if (l2 != null) {
-            pointer.setNext(l2);
-        }
-        return sorted.getNext();
+  // Iterative solution
+  public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+    ListNode sorted = new ListNode(0);
+    ListNode pointer = sorted;
+    while (l1 != null && l2 != null) {
+      if (l1.getVal() <= l2.getVal()) {
+        pointer.setNext(l1);
+        l1 = l1.getNext();
+      } else {
+        pointer.setNext(l2);
+        l2 = l2.getNext();
+      }
+      pointer = pointer.getNext();
     }
+    if (l1 != null) {
+      pointer.setNext(l1);
+    }
+    if (l2 != null) {
+      pointer.setNext(l2);
+    }
+    return sorted.getNext();
+  }
 
-    // Recursive solution
-    public ListNode mergeTwoLists2(ListNode l1, ListNode l2) {
-        if (l1 == null) {
-            return l2;
-        }
-        if (l2 == null) {
-            return l1;
-        }
-        ListNode pointer = null;
-        if (l1.getVal() <= l2.getVal()) {
-            pointer = l1;
-            pointer.setNext(mergeTwoLists2(l1.getNext(), l2));
-        } else {
-            pointer = l2;
-            pointer.setNext(mergeTwoLists2(l1, l2.getNext()));
-        }
-        return pointer;
+  // Recursive solution
+  public ListNode mergeTwoLists2(ListNode l1, ListNode l2) {
+    if (l1 == null) {
+      return l2;
     }
+    if (l2 == null) {
+      return l1;
+    }
+    ListNode pointer = null;
+    if (l1.getVal() <= l2.getVal()) {
+      pointer = l1;
+      pointer.setNext(mergeTwoLists2(l1.getNext(), l2));
+    } else {
+      pointer = l2;
+      pointer.setNext(mergeTwoLists2(l1, l2.getNext()));
+    }
+    return pointer;
+  }
 }

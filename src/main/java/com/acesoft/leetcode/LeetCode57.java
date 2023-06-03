@@ -43,38 +43,38 @@ import java.util.List;
  */
 public class LeetCode57 {
 
-    public int[][] insert(int[][] intervals, int[] newInterval) {
-        int[][] result;
-        int i = 0;
-        if (intervals.length == 0) {
-            return new int[][] { newInterval };
-        }
-        List<int[]> merged = new ArrayList<>();
-        int[][] combinedIntervals = new int[intervals.length + 1][2];
-        for (int[] arr : intervals) {
-            combinedIntervals[i++] = arr;
-        }
-        combinedIntervals[i++] = newInterval;
-        Arrays.sort(combinedIntervals, (a, b) -> Integer.compare(a[0], b[0]));
-        merged.add(combinedIntervals[0]);
-        for (int[] interval : combinedIntervals) {
-            int[] temp = merged.get(merged.size() - 1);
-            if (temp[1] >= interval[0]) {
-                if (temp[1] >= interval[1]) {
-                    continue;
-                } else {
-                    merged.remove(merged.size() - 1);
-                    merged.add(new int[] { temp[0], interval[1] });
-                }
-            } else {
-                merged.add(interval);
-            }
-        }
-        result = new int[merged.size()][2];
-        i = 0;
-        for (int[] arr : merged) {
-            result[i++] = arr;
-        }
-        return result;
+  public int[][] insert(int[][] intervals, int[] newInterval) {
+    int[][] result;
+    int i = 0;
+    if (intervals.length == 0) {
+      return new int[][]{newInterval};
     }
+    List<int[]> merged = new ArrayList<>();
+    int[][] combinedIntervals = new int[intervals.length + 1][2];
+    for (int[] arr : intervals) {
+      combinedIntervals[i++] = arr;
+    }
+    combinedIntervals[i++] = newInterval;
+    Arrays.sort(combinedIntervals, (a, b) -> Integer.compare(a[0], b[0]));
+    merged.add(combinedIntervals[0]);
+    for (int[] interval : combinedIntervals) {
+      int[] temp = merged.get(merged.size() - 1);
+      if (temp[1] >= interval[0]) {
+        if (temp[1] >= interval[1]) {
+          continue;
+        } else {
+          merged.remove(merged.size() - 1);
+          merged.add(new int[]{temp[0], interval[1]});
+        }
+      } else {
+        merged.add(interval);
+      }
+    }
+    result = new int[merged.size()][2];
+    i = 0;
+    for (int[] arr : merged) {
+      result[i++] = arr;
+    }
+    return result;
+  }
 }

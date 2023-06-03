@@ -30,22 +30,22 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1736 {
 
-    public String maximumTime(String time) {
-        char[] timeC = time.toCharArray();
-        if (time.charAt(0) == '?' && time.charAt(1) == '?') {
-            timeC[0] = '2';
-            timeC[1] = '3';
-        } else if (time.charAt(0) == '?') {
-            timeC[0] = Integer.parseInt(String.valueOf(time.charAt(1))) < 4 ? '2' : '1';
-        } else if (time.charAt(1) == '?') {
-            timeC[1] = Integer.parseInt(String.valueOf(time.charAt(0))) < 2 ? '9' : '3';
-        }
-        if (time.charAt(3) == '?') {
-            timeC[3] = '5';
-        }
-        if (time.charAt(4) == '?') {
-            timeC[4] = '9';
-        }
-        return String.valueOf(timeC);
+  public String maximumTime(String time) {
+    char[] timeC = time.toCharArray();
+    if (time.charAt(0) == '?' && time.charAt(1) == '?') {
+      timeC[0] = '2';
+      timeC[1] = '3';
+    } else if (time.charAt(0) == '?') {
+      timeC[0] = Integer.parseInt(String.valueOf(time.charAt(1))) < 4 ? '2' : '1';
+    } else if (time.charAt(1) == '?') {
+      timeC[1] = Integer.parseInt(String.valueOf(time.charAt(0))) < 2 ? '9' : '3';
     }
+    if (time.charAt(3) == '?') {
+      timeC[3] = '5';
+    }
+    if (time.charAt(4) == '?') {
+      timeC[4] = '9';
+    }
+    return String.valueOf(timeC);
+  }
 }

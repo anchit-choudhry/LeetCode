@@ -20,15 +20,15 @@ package com.acesoft.leetcode;
  */
 public class LeetCode709 {
 
-    public String toLowerCase(String str) {
-        if (str.length() < 1) {
-            return str;
-        }
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < str.length(); i++) {
-            char ch = str.charAt(i);
-            sb.append(ch > 64 && ch < 91 ? (char) (ch + 32) : ch);
-        }
-        return sb.toString();
+  public String toLowerCase(String str) {
+    if (str.length() < 1) {
+      return str;
     }
+    StringBuilder sb = new StringBuilder();
+    for (int i = 0; i < str.length(); i++) {
+      char ch = str.charAt(i);
+      sb.append(ch > 64 && ch < 91 ? (char) (ch + 32) : ch);
+    }
+    return sb.toString();
+  }
 }

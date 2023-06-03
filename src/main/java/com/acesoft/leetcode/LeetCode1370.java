@@ -52,30 +52,30 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1370 {
 
-    public String sortString(String s) {
-        if (s.length() < 2) {
-            return s;
-        }
-        int i;
-        int[] charLen = new int[26];
-        StringBuilder result = new StringBuilder();
-        for (char ch : s.toCharArray()) {
-            charLen[ch - 97]++;
-        }
-        while (result.length() != s.length()) {
-            for (i = 0; i < 26; i++) {
-                if (charLen[i] > 0) {
-                    result.append((char) (97 + i));
-                    charLen[i]--;
-                }
-            }
-            for (i = 25; i > -1; i--) {
-                if (charLen[i] > 0) {
-                    result.append((char) (97 + i));
-                    charLen[i]--;
-                }
-            }
-        }
-        return result.toString();
+  public String sortString(String s) {
+    if (s.length() < 2) {
+      return s;
     }
+    int i;
+    int[] charLen = new int[26];
+    StringBuilder result = new StringBuilder();
+    for (char ch : s.toCharArray()) {
+      charLen[ch - 97]++;
+    }
+    while (result.length() != s.length()) {
+      for (i = 0; i < 26; i++) {
+        if (charLen[i] > 0) {
+          result.append((char) (97 + i));
+          charLen[i]--;
+        }
+      }
+      for (i = 25; i > -1; i--) {
+        if (charLen[i] > 0) {
+          result.append((char) (97 + i));
+          charLen[i]--;
+        }
+      }
+    }
+    return result.toString();
+  }
 }
