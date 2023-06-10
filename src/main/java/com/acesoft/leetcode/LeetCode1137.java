@@ -26,23 +26,23 @@ package com.acesoft.leetcode;
  */
 public class LeetCode1137 {
 
-    private int[] fibo = new int[38];
+  private final int[] fibo = new int[38];
 
-    private int threebonacci(int n) {
-        if (n <= 0) {
-            return 0;
-        }
-        if (n <= 2) {
-            return 1;
-        }
-        if (fibo[n] != 0) {
-            return fibo[n];
-        }
-        fibo[n] = threebonacci(n - 1) + threebonacci(n - 2) + threebonacci(n - 3);
-        return fibo[n];
+  private int threebonacci(int n) {
+    if (n <= 0) {
+      return 0;
     }
+    if (n <= 2) {
+      return 1;
+    }
+    if (fibo[n] != 0) {
+      return fibo[n];
+    }
+    fibo[n] = threebonacci(n - 1) + threebonacci(n - 2) + threebonacci(n - 3);
+    return fibo[n];
+  }
 
-    public int tribonacci(int n) {
-        return threebonacci(n);
-    }
+  public int tribonacci(int n) {
+    return threebonacci(n);
+  }
 }

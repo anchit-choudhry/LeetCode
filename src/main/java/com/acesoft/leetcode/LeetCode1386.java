@@ -46,37 +46,37 @@ import java.util.Set;
  */
 public class LeetCode1386 {
 
-    public int maxNumberOfFamilies(int n, int[][] reservedSeats) {
-        Map<Integer, Set<Integer>> hm = new HashMap<>();
-        int count = 0, max;
-        for (int[] reserve : reservedSeats) {
-            if (hm.containsKey(reserve[0])) {
-                hm.get(reserve[0]).add(reserve[1]);
-            } else {
-                Set<Integer> hs = new HashSet<>();
-                hs.add(reserve[1]);
-                hm.put(reserve[0], hs);
-            }
-        }
-        List<Integer> left = Arrays.asList(new Integer[] { 2, 3, 4, 5 });
-        List<Integer> right = Arrays.asList(new Integer[] { 6, 7, 8, 9 });
-        List<Integer> middle = Arrays.asList(new Integer[] { 4, 5, 6, 7 });
-        for (Map.Entry<Integer, Set<Integer>> entry : hm.entrySet()) {
-            max = 0;
-            Set<Integer> hs = entry.getValue();
-            if (!hs.stream().anyMatch(left::contains)) {
-                max++;
-            }
-            if (!hs.stream().anyMatch(right::contains)) {
-                max++;
-            }
-            if (max == 0 && !hs.stream().anyMatch(middle::contains)) {
-                max++;
-            }
-            if (max > 0) {
-                count += max;
-            }
-        }
-        return count + ((n - hm.size()) * 2);
+  public int maxNumberOfFamilies(int n, int[][] reservedSeats) {
+    Map<Integer, Set<Integer>> hm = new HashMap<>();
+    int count = 0, max;
+    for (int[] reserve : reservedSeats) {
+      if (hm.containsKey(reserve[0])) {
+        hm.get(reserve[0]).add(reserve[1]);
+      } else {
+        Set<Integer> hs = new HashSet<>();
+        hs.add(reserve[1]);
+        hm.put(reserve[0], hs);
+      }
     }
+    List<Integer> left = Arrays.asList(2, 3, 4, 5);
+    List<Integer> right = Arrays.asList(6, 7, 8, 9);
+    List<Integer> middle = Arrays.asList(4, 5, 6, 7);
+    for (Map.Entry<Integer, Set<Integer>> entry : hm.entrySet()) {
+      max = 0;
+      Set<Integer> hs = entry.getValue();
+      if (!hs.stream().anyMatch(left::contains)) {
+        max++;
+      }
+      if (!hs.stream().anyMatch(right::contains)) {
+        max++;
+      }
+      if (max == 0 && !hs.stream().anyMatch(middle::contains)) {
+        max++;
+      }
+      if (max > 0) {
+        count += max;
+      }
+    }
+    return count + ((n - hm.size()) * 2);
+  }
 }

@@ -30,21 +30,21 @@ package com.acesoft.leetcode;
  */
 public class LeetCode509 {
 
-    private int[] cache = new int[31];
+  private final int[] cache = new int[31];
 
-    public int fib(int n) {
-        if (n == 0) {
-            return 0;
-        }
-        if (n == 1) {
-            return 1;
-        }
-        int temp = cache[n];
-        if (temp != 0) {
-            return temp;
-        }
-        temp = fib(n - 1) + fib(n - 2);
-        cache[n] = temp;
-        return temp;
+  public int fib(int n) {
+    if (n == 0) {
+      return 0;
     }
+    if (n == 1) {
+      return 1;
+    }
+    int temp = cache[n];
+    if (temp != 0) {
+      return temp;
+    }
+    temp = fib(n - 1) + fib(n - 2);
+    cache[n] = temp;
+    return temp;
+  }
 }

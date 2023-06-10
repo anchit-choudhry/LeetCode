@@ -41,22 +41,22 @@ import java.util.TreeSet;
  */
 public class LeetCode1845 {
 
-    class SeatManager {
+  class SeatManager {
 
-        private TreeSet<Integer> seats = new TreeSet<>();
+    private final TreeSet<Integer> seats = new TreeSet<>();
 
-        public SeatManager(int n) {
-            for (int i = 1; i <= n; i++) {
-                seats.add(i);
-            }
-        }
-
-        public int reserve() {
-            return seats.pollFirst();
-        }
-
-        public void unreserve(int seatNumber) {
-            seats.add(seatNumber);
-        }
+    public SeatManager(int n) {
+      for (int i = 1; i <= n; i++) {
+        seats.add(i);
+      }
     }
+
+    public int reserve() {
+      return seats.pollFirst();
+    }
+
+    public void unreserve(int seatNumber) {
+      seats.add(seatNumber);
+    }
+  }
 }

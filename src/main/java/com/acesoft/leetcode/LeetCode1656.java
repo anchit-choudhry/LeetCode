@@ -49,25 +49,25 @@ import java.util.List;
  */
 public class LeetCode1656 {
 
-    class OrderedStream {
+  class OrderedStream {
 
-        private String[] arr;
-        private int len;
-        private int pointer;
+    private final String[] arr;
+    private final int len;
+    private int pointer;
 
-        public OrderedStream(int n) {
-            len = n;
-            pointer = 0;
-            arr = new String[n];
-        }
-
-        public List<String> insert(int idKey, String value) {
-            arr[idKey - 1] = value;
-            List<String> output = new ArrayList<>();
-            while (pointer < len && arr[pointer] != null) {
-                output.add(arr[pointer++]);
-            }
-            return output;
-        }
+    public OrderedStream(int n) {
+      len = n;
+      pointer = 0;
+      arr = new String[n];
     }
+
+    public List<String> insert(int idKey, String value) {
+      arr[idKey - 1] = value;
+      List<String> output = new ArrayList<>();
+      while (pointer < len && arr[pointer] != null) {
+        output.add(arr[pointer++]);
+      }
+      return output;
+    }
+  }
 }

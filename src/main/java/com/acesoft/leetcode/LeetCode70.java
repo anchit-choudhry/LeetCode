@@ -27,17 +27,17 @@ package com.acesoft.leetcode;
  */
 public class LeetCode70 {
 
-    private int[] cache = new int[46];
+  private final int[] cache = new int[46];
 
-    public int climbStairs(int n) {
-        if (n < 2) {
-            return 1;
-        }
-        if (cache[n] != 0) {
-            return cache[n];
-        }
-        int temp = climbStairs(n - 1) + climbStairs(n - 2);
-        cache[n] = temp;
-        return temp;
+  public int climbStairs(int n) {
+    if (n < 2) {
+      return 1;
     }
+    if (cache[n] != 0) {
+      return cache[n];
+    }
+    int temp = climbStairs(n - 1) + climbStairs(n - 2);
+    cache[n] = temp;
+    return temp;
+  }
 }
