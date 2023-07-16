@@ -29,18 +29,18 @@ package com.acesoft.leetcode;
  */
 public class LeetCode2239 {
 
-    public int findClosestNumber(int[] nums) {
-        int diff = Integer.MAX_VALUE, outNum = Integer.MIN_VALUE, currDiff;
-        for (int num : nums) {
-            currDiff = Math.abs(num - 0);
-            if (currDiff <= diff) {
-                if (currDiff == diff && num < outNum) {
-                    continue;
-                }
-                diff = currDiff;
-                outNum = num;
-            }
+  public int findClosestNumber(int[] nums) {
+    int diff = Integer.MAX_VALUE, outNum = Integer.MIN_VALUE, currDiff;
+    for (int num : nums) {
+      currDiff = Math.abs(num - 0);
+      if (currDiff <= diff) {
+        if (currDiff == diff && num < outNum) {
+          continue;
         }
-        return outNum;
+        diff = currDiff;
+        outNum = num;
+      }
     }
+    return outNum;
+  }
 }
