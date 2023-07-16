@@ -1,3 +1,4 @@
+---
 # This workflow executes several linters on changed files based on languages used in your code base whenever
 # you push a code or open a pull request.
 #
@@ -25,6 +26,4 @@ jobs:
         uses: github/super-linter@v5
         env:
           DEFAULT_BRANCH: "main"
-          DISABLE_ERRORS: true
-          YAML_ERROR_ON_WARNING: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
