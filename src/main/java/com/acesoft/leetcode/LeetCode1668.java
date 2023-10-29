@@ -36,7 +36,7 @@ public class LeetCode1668 {
     int count = 0;
     String newString = word;
     while (true) {
-      if (sequence.indexOf(newString) < 0) {
+      if (!sequence.contains(newString)) {
         break;
       }
       count++;

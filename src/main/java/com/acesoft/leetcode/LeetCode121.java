@@ -37,7 +37,7 @@ public class LeetCode121 {
     for (i = 1; i < prices.length; i++) {
       if (prices[i] > buy) {
         profit = prices[i] - buy;
-        maxProfit = maxProfit < profit ? profit : maxProfit;
+        maxProfit = Math.max(maxProfit, profit);
       } else if (prices[i] < buy) {
         buy = prices[i];
       }

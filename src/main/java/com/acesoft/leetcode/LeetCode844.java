@@ -45,7 +45,7 @@ public class LeetCode844 {
     Stack<Character> tt = new Stack<>();
     for (i = 0; i < S.length(); i++) {
       if (S.charAt(i) == '#') {
-        if (ss.size() > 0) {
+        if (!ss.isEmpty()) {
           ss.pop();
         }
       } else {
@@ -54,7 +54,7 @@ public class LeetCode844 {
     }
     for (i = 0; i < T.length(); i++) {
       if (T.charAt(i) == '#') {
-        if (tt.size() > 0) {
+        if (!tt.isEmpty()) {
           tt.pop();
         }
       } else {
@@ -64,7 +64,7 @@ public class LeetCode844 {
     if (ss.size() != tt.size()) {
       return false;
     }
-    while (tt.size() != 0) {
+    while (!tt.isEmpty()) {
       if (!tt.pop().equals(ss.pop())) {
         return false;
       }

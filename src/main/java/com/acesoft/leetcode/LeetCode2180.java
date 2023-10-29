@@ -28,8 +28,8 @@ import java.util.Set;
  */
 public class LeetCode2180 {
 
-  Set<Integer> numIsEven = new HashSet<>();
-  Set<Integer> numNotEven = new HashSet<>();
+  final Set<Integer> numIsEven = new HashSet<>();
+  final Set<Integer> numNotEven = new HashSet<>();
 
   public int countEven(int num) {
     int count = 0, i;

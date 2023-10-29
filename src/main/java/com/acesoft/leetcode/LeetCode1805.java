@@ -46,12 +46,12 @@ public class LeetCode1805 {
       if (ch > 47 && ch < 58) {
         sb.append(ch);
         continue;
-      } else if (sb.length() > 0) {
+      } else if (!sb.isEmpty()) {
         numbers.add(sb.toString().replaceFirst("^0+(?!$)", ""));
         sb.setLength(0);
       }
     }
-    if (sb.length() > 0) {
+    if (!sb.isEmpty()) {
       numbers.add(sb.toString().replaceFirst("^0+(?!$)", ""));
     }
     return numbers.size();

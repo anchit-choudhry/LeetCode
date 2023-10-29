@@ -55,7 +55,7 @@ public class LeetCode1817 {
     Map<Integer, Set<Integer>> data = new HashMap<>();
     int[] arr = new int[k];
     for (int[] log : logs) {
-      data.putIfAbsent(log[0], new HashSet<Integer>());
+      data.putIfAbsent(log[0], new HashSet<>());
       data.get(log[0]).add(log[1]);
     }
     for (Set<Integer> vals : data.values()) {

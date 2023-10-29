@@ -21,7 +21,7 @@ package com.acesoft.leetcode;
 public class LeetCode709 {
 
   public String toLowerCase(String str) {
-    if (str.length() < 1) {
+    if (str.isEmpty()) {
       return str;
     }
     StringBuilder sb = new StringBuilder();
