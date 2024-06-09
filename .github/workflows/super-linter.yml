@@ -17,13 +17,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4.1.6
         with:
           # Full git history is needed to get a proper list of changed files within `super-linter`
           fetch-depth: 0
 
       - name: Lint Code Base
-        uses: github/super-linter@v5
+        uses: github/super-linter@v6.6.0
         env:
           DEFAULT_BRANCH: "main"
           DISABLE_ERRORS: true

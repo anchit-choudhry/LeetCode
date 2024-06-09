@@ -1,5 +1,6 @@
 package com.acesoft.leetcode;
 
+import java.io.Serial;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,6 +9,8 @@ public class LeetCode13 {
   // Suboptimal solution
   public int romanToInt(String s) {
     Map<String, Integer> sToV = new HashMap<>() {
+
+      @Serial
       private static final long serialVersionUID = 1L;
 
       {
