@@ -25,19 +25,22 @@ package com.acesoft.leetcode;
  * Constraints:
  * 1 <= n <= 45
  */
-public class LeetCode70 {
+public final class LeetCode70 {
 
   private final int[] cache = new int[46];
 
-  public int climbStairs(int n) {
-    if (n < 2) {
-      return 1;
+  public int climbStairs(final int n) {
+    if (n < 1) {
+      return 0;
+    }
+    if (n < 3) {
+      return n;
     }
     if (cache[n] != 0) {
       return cache[n];
     }
-    int temp = climbStairs(n - 1) + climbStairs(n - 2);
-    cache[n] = temp;
-    return temp;
+    final int count = climbStairs(n - 1) + climbStairs(n - 2);
+    cache[n] = count;
+    return count;
   }
 }
