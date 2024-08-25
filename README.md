@@ -13,7 +13,7 @@
 [![Apache Maven](https://img.shields.io/badge/apache_maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white
 )](https://maven.apache.org)
 
-LeetCode Problems: [https://leetcode.com/problemset/all](https://leetcode.com/problemset/all)
+LeetCode Problems: [https://leetcode.com/problemset](https://leetcode.com/problemset)
 
 Please feel free to reach out to me for questions/corrections.
 Open to PRs for optimizing the current solutions
