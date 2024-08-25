@@ -1,6 +1,7 @@
 package com.acesoft.leetcode;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,20 +24,25 @@ import java.util.Map;
  *  All inputs will be in lowercase.
  *  The order of your output does not matter.
  */
-public class LeetCode49 {
+public final class LeetCode49 {
 
   // Optimal solution
-  public List<List<String>> groupAnagrams(String[] strs) {
+  public List<List<String>> groupAnagrams(final String[] strs) {
     if (strs == null || strs.length == 0) {
       return new ArrayList<>();
     }
-    Map<String, List<String>> words = new HashMap<>();
-    for (String str : strs) {
-      char[] charArr = new char[26];
+    final List<List<String>> result = new ArrayList<>();
+    if (strs.length == 1) {
+      result.add(Arrays.asList(strs));
+      return result;
+    }
+    final Map<String, List<String>> words = new HashMap<>();
+    for (final String str : strs) {
+      final char[] charArr = new char[26];
       for (char ch : str.toCharArray()) {
-        charArr[ch - 'a']++;
+        charArr[ch - 97]++;
       }
-      String cArrToStr = String.valueOf(charArr);
+      final String cArrToStr = String.valueOf(charArr);
       if (!words.containsKey(cArrToStr)) {
         words.put(cArrToStr, new ArrayList<>());
       }

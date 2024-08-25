@@ -51,72 +51,67 @@ import java.util.Set;
  *  At least one call will be made to all, one, count, or toString.
  *  At most 5 calls will be made to toString.
  */
-public class LeetCode2166 {
+public final class LeetCode2166 {
 
-    class Bitset {
+  static class Bitset {
 
-        private Set<Integer> ones = new HashSet<>();
-        private int size;
-        private Set<Integer> zeroes = new HashSet<>();
+    private final int size;
+    private Set<Integer> ones = new HashSet<>();
+    private Set<Integer> zeroes = new HashSet<>();
 
-        public Bitset(int size) {
-            this.size = size;
-            int i;
-            for (i = 0; i < size; i++) {
-                zeroes.add(i);
-            }
-        }
-
-        public boolean all() {
-            return ones.size() == size;
-        }
-
-        public int count() {
-            return ones.size();
-        }
-
-        public void fix(int idx) {
-            ones.add(idx);
-            zeroes.remove(idx);
-        }
-
-        public void flip() {
-            Set<Integer> temp;
-            temp = ones;
-            ones = zeroes;
-            zeroes = temp;
-            temp = null;
-        }
-
-        public boolean one() {
-            return !ones.isEmpty();
-        }
-
-        @Override
-        public String toString() {
-            StringBuilder sb = new StringBuilder();
-            int i;
-            for (i = 0; i < size; i++) {
-                sb.append(ones.contains(i) ? "1" : "0");
-            }
-            return sb.toString();
-        }
-
-        public void unfix(int idx) {
-            ones.remove(idx);
-            zeroes.add(idx);
-        }
+    public Bitset(final int size) {
+      this.size = size;
+      int i;
+      for (i = 0; i < size; i++) {
+        zeroes.add(i);
+      }
     }
 
-    /*
-     * Your Bitset object will be instantiated and called as such:
-     * Bitset obj = new Bitset(size);
-     * obj.fix(idx);
-     * obj.unfix(idx);
-     * obj.flip();
-     * boolean param_4 = obj.all();
-     * boolean param_5 = obj.one();
-     * int param_6 = obj.count();
-     * String param_7 = obj.toString();
-     */
+    public boolean all() {
+      return ones.size() == size;
+    }
+
+    public int count() {
+      return ones.size();
+    }
+
+    public void fix(final int idx) {
+      ones.add(idx);
+      zeroes.remove(idx);
+    }
+
+    public void flip() {
+      Set<Integer> temp;
+      temp = ones;
+      ones = zeroes;
+      zeroes = temp;
+      temp = null;
+    }
+
+    public boolean one() {
+      return !ones.isEmpty();
+    }
+
+    @Override
+    public String toString() {
+      StringBuilder sb = new StringBuilder();
+      int i;
+      for (i = 0; i < size; i++) {
+        sb.append(ones.contains(i) ? "1" : "0");
+      }
+      return sb.toString();
+    }
+
+    public void unfix(final int idx) {
+      ones.remove(idx);
+      zeroes.add(idx);
+    }
+  }
+
+  /*
+   * Your Bitset object will be instantiated and called as such: Bitset obj = new
+   * Bitset(size); obj.fix(idx); obj.unfix(idx); obj.flip(); boolean param_4 =
+   * obj.all(); boolean param_5 = obj.one(); int param_6 = obj.count(); String
+   * param_7 = obj.toString();
+   */
 }

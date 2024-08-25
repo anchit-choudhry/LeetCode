@@ -17,7 +17,7 @@ import java.util.Map;
  *  Because nums[0] + nums[1] = 2 + 7 = 9,
  *  return [0, 1].
  */
-public class LeetCode1 {
+public final class LeetCode1 {
 
   // Naive solution
   public int[] twoSum(int[] nums, int target) {
@@ -62,16 +62,18 @@ public class LeetCode1 {
   }
 
   // Improved solution #2
-  public int[] twoSum2(int[] nums, int target) {
-    int elemTwo;
-    Map<Integer, Integer> dict = new HashMap<>();
-    for (int i = 0; i < nums.length; i++) {
-      elemTwo = target - nums[i];
-      if (dict.containsKey(elemTwo)) {
-        return new int[]{dict.get(elemTwo), i};
+  public int[] twoSum2(final int[] nums, final int target) {
+    int i, first = -1, second = -1, temp;
+    Integer tempIndex;
+    final Map<Integer, Integer> index = new HashMap<>();
+    for (i = 0; i < nums.length; i++) {
+      temp = target - nums[i];
+      tempIndex = index.get(temp);
+      if (index.get(temp) != null) {
+        return new int[]{tempIndex, i};
       }
-      dict.put(nums[i], i);
+      index.put(nums[i], i);
     }
-    return new int[2];
+    return new int[]{first, second};
   }
 }
