@@ -48,6 +48,8 @@ public final class LeetCode3248 {
         case "DOWN":
           row++;
           break;
+        default:
+          throw new RuntimeException("Invalid input received");
       }
     }
     return (n * row) + column;
