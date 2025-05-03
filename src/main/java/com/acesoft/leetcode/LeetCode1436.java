@@ -46,7 +46,7 @@ public class LeetCode1436 {
   public String destCity(List<List<String>> paths) {
     Set<String> cities = new HashSet<>();
     for (List<String> path : paths) {
-      cities.add(path.get(0));
+      cities.add(path.getFirst());
     }
     for (List<String> path : paths) {
       if (!cities.contains(path.get(1))) {
