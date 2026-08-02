@@ -15,5 +15,7 @@
 
 LeetCode Problems: [https://leetcode.com/problemset](https://leetcode.com/problemset)
 
+Disclaimer: These problems are analyzed and handwritten without the use of AI assistive technologies. The primary goal is to understand the problem, learn, and improve Computer Science programming concepts while sharing solutions for feedback - not to just publish solutions using AI.
+
 Please feel free to reach out to me for questions/corrections.
 Open to PRs for optimizing the current solutions
